@@ -1,0 +1,56 @@
+.style42 h1{
+  font-size: 4rem;
+  text-align: center;
+  margin: 7rem;
+}
+
+.style42 p{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+label{
+  font-size: 2.5rem;
+  color:#1d3848;
+  font-weight:bold;
+  margin-bottom: 7px;
+}
+
+input, textarea, select {
+  color:#1d3848;
+  font-size:2rem;
+  border: 1px solid #e1e1e1;
+  background-color: #f8f8f8;
+  margin-bottom: 2rem;
+  padding: 13px;
+  border-radius: 2px;
+}
+
+.style77{
+  background-color: #1d3848;
+  color:white;
+  margin-top:23px;
+  padding: 2rem;
+  border: 0px;
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  text-decoration: none;
+}
+
+.style23 address{
+  margin-bottom: 2rem;
+}
+
+.style23 strong{
+  font-weight: bold;
+  color: #54a0d1;
+  font-size: 20px;
+}
+
+.style23 p{
+  font-size: 2rem;
+  text-align: justify;
+  line-height: 28px;
+  letter-spacing: 0;
+  margin: 2.5rem 0;
+}
