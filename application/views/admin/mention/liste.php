@@ -9,7 +9,7 @@
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
-            <i class="fa fa-users"></i> Détails de Enzymarine
+            <i class="fa fa-users"></i> Détails de Gustocoffee
         </div>
         <div class="card-body table-responsive">
             <table class="table table-striped" id="table">

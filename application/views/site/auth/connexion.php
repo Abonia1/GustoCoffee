@@ -5,7 +5,7 @@
 
     <section class="col-xs-12 col-sm-6 contact-form">
     	<?= form_open(); ?>
-            <h2>Déjà client EnzyMarine ?</h2>
+            <h2>Déjà client Gustocoffee ?</h2>
 
             <div class="row">
                 <div class="col-xs-12">
@@ -25,9 +25,9 @@
 
     <section class="col-xs-12 col-sm-6 contact-form">
     	<?= form_open('inscription'); ?>
-            <h2>Nouveau client EnzyMarine ?</h2>
+            <h2>Nouveau client Gustocoffee ?</h2>
 
-            <p>Indiquez votre adresse e-mail pour créer votre compte en quelques secondes et profitez de nos produits de nettoyage</p>
+            <p>Indiquez votre adresse e-mail pour créer votre compte en quelques secondes et profitez de nos services</p>
 
             <div class="row">
                 <div class="col-xs-12">

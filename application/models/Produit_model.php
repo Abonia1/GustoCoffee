@@ -34,7 +34,7 @@ class Produit_model extends CI_Model {
      */
     public function produits_accueil()
     {
-        $this->db->select('nom, slug, description_courte, image');
+        $this->db->select('nom, description_courte, image');
         $query = $this->db->get('produit');
 
         if( $query->num_rows() >= 1 )

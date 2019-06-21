@@ -23,20 +23,20 @@
 
     <section class="container">
         <adress class="col-xs-12 col-sm-4 coordonnees">
-            <h2>EnzyMarine</h2>
-            <p>6 Avenue du Gros Murger<br>95520, Herblay</p>
+            <h2>GustoCoffee</h2>
+            <p>1 Rue de Paris<br>75520, Paris</p>
         </adress>
 
         <div class="col-xs-12 col-sm-8 col-md-5 support">
             <h2>Besoin d'aide ?</h2>
-            <p>Nous répondons à vos questions du lundi au vendredi de 8h à 20h et le samedi de 9h à 18h</p>
+            <p>Nous répondons à vos questions du lundi au vendredi de 8h à 20h </p>
 
             <h2>Pour toute question</h2>
-            <p>01 50 51 52 53<br><a href="mailto:contact@enzymarine.fr">contact@enzymarine.fr</a></p>
+            <p>01 50 51 52 00<br><a href="mailto:contact@enzymarine.fr">contact@gustocoffee.fr</a></p>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-3 social">
-            <h2>Rejoignez la communauté EnzyMarine</h2>
+            <h2>Rejoignez la communauté GustoCoffee</h2>
             <a href="http://www.facebook.com">
                 <img src="<?= site_url('assets/images/facebook.svg'); ?>" alt="Facebook" width="10%">
             </a>
@@ -48,7 +48,7 @@
 
         <div class="col-xs-12 copyright">
             <p>
-                Copyright <?= date('Y'); ?> EnzyMarine - <a href="<?= site_url('mentions-legales'); ?>">Mentions légales</a>
+                Copyright <?= date('Y'); ?> GustoCoffee - <a href="<?= site_url('mentions-legales'); ?>">Mentions légales</a>
             </p>
         </div>
     </section>

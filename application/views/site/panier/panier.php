@@ -1,6 +1,6 @@
 <div class="container profil-container">
     <div class="titre col-xs-12">
-        <h1>Mon panier</h1>
+        <h1>Mon Reservation</h1>
 
         <div class="ancre">
             <hr>
@@ -13,13 +13,13 @@
         <ul>
             <li><a href="<?= site_url('profil'); ?>">Mes informations</a></li>
             <li><a href="<?= site_url('profil/commandes'); ?>">Mes commandes</a></li>
-            <li><a href="<?= site_url('panier'); ?>">Mon panier</a></li>
+            <li><a href="<?= site_url('panier'); ?>">Mon reservation</a></li>
             <li><a href="<?= site_url('deconnexion'); ?>">Me déconnecter</a></li>
         </ul>
     </section>
 
     <section class="col-xs-12 col-sm-9 profil-table">
-        <h2>Mon panier</h2>
+        <h2>Mon Reservation</h2>
 
         <table>
             <thead>

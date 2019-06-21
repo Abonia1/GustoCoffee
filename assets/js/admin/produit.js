@@ -1,4 +1,4 @@
-var url="http://localhost/EnzyMarine/admin/produit/";
+var url="http://localhost/Gustocoffee/admin/produit/";
 $(document).ready(function() {
 	//Variable pour les caractere
 	var caracDiv = $('#p_scents_caractere');

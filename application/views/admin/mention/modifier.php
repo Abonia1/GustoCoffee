@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <strong>Modifier les Détail de Enzymarine</strong>
+                <strong>Modifier les Détail de Gustocoffee</strong>
                 les champs marqués d'une * sont obligatoires
             </div>
 

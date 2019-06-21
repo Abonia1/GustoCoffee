@@ -22,7 +22,7 @@
                         <?= $produit->description_longue; ?>
                     </p>
 
-                    <a href="<?= site_url('produit/'.$produit->slug); ?>">En savoir plus</a>
+                    <a href="<?= site_url('produit/'.$produit->nom); ?>">En savoir plus</a>
                 </article>
 
                 <aside class="col-xs-12 col-sm-3 list blue-list">

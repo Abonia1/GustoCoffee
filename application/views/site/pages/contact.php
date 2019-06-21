@@ -58,13 +58,6 @@
 
        <div class="row">
            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    	       <?= form_label('Produit', 'produit'); ?>
-    	       <?= form_dropdown('produit', $produit, '', array('id' =>'produit', 'class' => (empty(form_error('produit')) ? "" : "has-error") . " col-xs-12 col-sm-12 col-md-12 col-lg-12")); ?>
-           </div>
-       </div>
-
-       <div class="row">
-           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                <?= form_label('Message *', 'message'); ?>
                <?= form_textarea(array('name' => 'message', 'id' => 'message', 'class' => (empty(form_error('message')) ? "" : "has-error") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('message'))); ?>
            </div>
@@ -94,12 +87,12 @@
 
     <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 contact-information">
         <address>
-            <h2>EnzyMarine</h2>
-            <p>25 Avenue du Gros Murger<br>
-            95220 - Herblay</p>
+            <h2>Gustocoffee</h2>
+            <p>1 Rue de Paris<br>
+            75220 - Paris</p>
 
-            <p>Téléphone : 09 84 40 54 45<br>
-            Mail: contact@enzymarine.fr</p>
+            <p>Téléphone : 01 23 45 67 89<br>
+            Mail: contact@Gustocoffee.fr</p>
 
             <p>RCS Pontoise 790 971 287</p>
         </address>

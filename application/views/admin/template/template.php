@@ -31,7 +31,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <img src="" class="img-avatar" alt="admin@enzymarine.fr">
+                        <img src="" class="img-avatar" alt="admin@Gustocoffee.fr">
                         <span class="d-md-down-none">Admin</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">

@@ -5,7 +5,7 @@
     	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    	<title>EnzyMarine - Pour un résultat clean</title>
+    	<title>Gustocoffee - Pour un résultat clean</title>
 
     	<link rel="stylesheet" href="<?= site_url('assets/css/bootstrap-grid.css'); ?>" media="all">
     	<link rel="stylesheet" href="<?= site_url('assets/css/styles.css'); ?>" media="all">
@@ -27,7 +27,7 @@
 		<div class="container-fluid top-header">
 			<div class="container">
 				<div class="col-xs-12 renseignement-email">
-					<p>Besoin d'un renseignement ? <a href="mailto:contact@enzymarine.fr">contact@enzymarine.fr</a></p>
+					<p>Besoin d'un renseignement ? <a href="mailto:contact@Gustocoffee.fr">contact@Gustocoffee.fr</a></p>
 				</div>
 
 				<!--<div class="col-sm-6 renseignement-telephone">
@@ -41,14 +41,14 @@
 	            <div class="row">
 	                <div class="col-sm-3 col-xs-8">
 	                    <a href="<?= site_url(); ?>">
-							<img src="http://via.placeholder.com/167x73" alt="Logo EnzyMarine">
+							<img src="assets/images/gusto_coffee.png" alt="Logo Gustocoffee">
 						</a>
 	                </div>
 
 
 
 	                <div id="telephone" class="col-sm-offset-5 col-sm-4 col-xs-4">
-	                    <p>Pour toute question<br><strong>01 02 03 04 05</strong></p>
+	                    <p>Pour toute question<br><strong>01 02 03 00 00</strong></p>
 	                </div>
 	            </div>
 
@@ -60,7 +60,7 @@
 		                    </li>
 
 		                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-		                        <a href="<?= site_url('/produits'); ?>">Produits</a>
+		                        <a href="<?= site_url('/produits'); ?>">Services</a>
 		                    </li>
 
 		                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -91,11 +91,11 @@
 			        <button type="button" name="button">CONTACTEZ-NOUS</button>
 
 			        <address class="row">
-			            <p><strong>EnzyMarine</strong></p>
-			            <p>25 Avenur du Gros Murger</p>
-			            <p>95520 Herblay</p>
-			            <p>01 50 51 52 53</p>
-			            <p>contact@enzymarine.fr</p>
+			            <p><strong>Gustocoffee</strong></p>
+			            <p>1 Rue de Paris</p>
+			            <p>75520 Paris</p>
+			            <p>01 50 51 52 00</p>
+			            <p>contact@Gustocoffee.fr</p>
 			        </address>
 			    </article>
 			</section>

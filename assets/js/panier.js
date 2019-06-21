@@ -1,4 +1,4 @@
-  var urlServer="http://localhost/EnzyMarine/";
+  var urlServer="http://localhost/Gustocoffee/";
 
 
   function panierUpdata()

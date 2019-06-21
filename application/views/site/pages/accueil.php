@@ -67,13 +67,13 @@
 <section class="container produit-container">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
         <div class="produit-titre">
-            <h1>Découvrez nos produits</h1>
+            <h1>Découvrez nos Services</h1>
         </div>
     </div>
 
     <?php foreach($produits AS $produit) : ?>
         <article class="col-xs-12 col-sm-6 produit">
-            <a href="<?= site_url('produit/'.$produit->slug); ?>">
+            <a href="<?= site_url('produit/'.$produit->nom); ?>">
                 <div>
                     <img src="<?= site_url('assets/images/produit/accueil/'.$produit->image); ?>" alt="<?= $produit->nom; ?>" />
 

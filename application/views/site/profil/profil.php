@@ -154,12 +154,12 @@
 
        <p>* Ces champs sont obligatoires<br><br>
 
-           Les informations demandées, signalées par un astérisque, sont obligatoires et sont destinées à EnzyMarine, responsable du traitement,
+           Les informations demandées, signalées par un astérisque, sont obligatoires et sont destinées à Gustocoffee, responsable du traitement,
            aux fins de traitement de vos commandes, de gestion de votre compte client, d'études marketing et statistiques dans le but de vous fournir
            les offres les plus adaptées, de suivi de qualité de nos services et de prospection commerciale.
            Conformément à la Loi Informatique et Libertés du 06/01/1978, vous disposez d'un droit d'accès, de rectification et de suppression des
            données vous concernant et d'opposition à leur traitement.
-           Si vous souhaitez l'exercer, vous pouvez écrire à EnzyMarine - 6 Avenue du Gros Murger, 95220 Herblay, en indiquant vos nom, prénom, adresse,
+           Si vous souhaitez l'exercer, vous pouvez écrire à Gustocoffee - 1 Rue de Paris, 75220 Paris, en indiquant vos nom, prénom, adresse,
            email afin d'accélérer la prise en compte de votre demande.
        </p>
     </section>

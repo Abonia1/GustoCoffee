@@ -83,8 +83,8 @@ class Site extends CI_Controller {
 				$this->load->library('email');
 
 				$this->email->from( $this->input->post('email'), $this->input->post('prenom').' '.$this->input->post('nom') );
-				$this->email->to('contact@enzymarine.fr');
-				$this->email->subject('Demande d\'informations sur la gamme EnzyMarine');
+				$this->email->to('contact@Gustocoffee.fr');
+				$this->email->subject('Demande d\'informations sur la gamme Gustocoffee');
 
 				// On inscrit les informations obligatoires
 				$message = "Nom : ".$this->input->post('prenom').' '.$this->input->post('nom');
@@ -134,7 +134,7 @@ class Site extends CI_Controller {
 
 			$produits = array(
 				'-1' => 'Sélectionnez votre produit si nécessaire',
-				'enzymarine' => 'EnzyMarine',
+				'Gustocoffee' => 'Gustocoffee',
 				'vapowax' => 'Vapowax',
 				'hd-x5' => 'HD-X5',
 				'enzylight' => 'Enzylight',
@@ -152,27 +152,27 @@ class Site extends CI_Controller {
 	{
 		$data = array(
 			'generale' => array(
-				'site_url' => 'http://www.enzymarine.fr',
-				'short_url' => 'enzymarine.fr'
+				'site_url' => 'http://www.Gustocoffee.fr',
+				'short_url' => 'Gustocoffee.fr'
 			),
 			'informations_legales' => array(
-				'societe' => 'ADMS SARL',
-				'adresse' => '6 place de la République',
-				'code_postal' => '95000',
-				'ville' => 'Cergy',
-				'telephone' => '01 34 67 95 63',
+				'societe' => 'Gusto Coffee',
+				'adresse' => '1 Rue de Paris',
+				'code_postal' => '75000',
+				'ville' => 'Paris',
+				'telephone' => '01 34 56 78 09',
 				'adresse_email' => 'contact@enzynov.fr',
-				'directeur_publication' => 'M. Anderson DIEUJUSTE'
+				'directeur_publication' => 'M. Jackson'
 			),
 			'proprietaire' => array(
-				'societe' => 'EnzyMarine',
-				'responsable' => 'M. Anderson DIEUJUSTE',
-				'adresse' => '25 AVENUE DU GROS MURGER',
-				'code_postal' => '95220',
-				'ville' => 'HERBLAY',
+				'societe' => 'Gustocoffee',
+				'responsable' => 'M. Jackson',
+				'adresse' => '1 Rue de Paris',
+				'code_postal' => '75220',
+				'ville' => 'PARIS',
 				'pays' => 'FRANCE',
-				'telephone' => '09 84 40 54 45',
-				'rcs' => 'RCS Pontoise 790 971 287'
+				'telephone' => '01 34 56 78 09',
+				'rcs' => 'RCS Paris 790 971 000'
 			)
 		);
 

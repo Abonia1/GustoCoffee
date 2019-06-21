@@ -6,7 +6,7 @@
             <div class="livraison-container">
                 <article class="col-xs-12 col-sm-6">
                     <h1>Commande expédiée sous 24 heures</h1>
-                    <p>Découvrez la gamme de produits spécialisés EnzyMarine et recevez rapidement votre commande grâce à notre réactivité</p>
+                    <p>Découvrez la gamme de produits spécialisés Gustocoffee et recevez rapidement votre commande grâce à notre réactivité</p>
                 </article>
 
                 <aside class="col-xs-12 col-sm-6 livraison-icone">
@@ -23,8 +23,8 @@
 
     <section class="container">
         <adress class="col-xs-12 col-sm-4 coordonnees">
-            <h2>EnzyMarine</h2>
-            <p>6 Avenue du Gros Murger<br>95520, Herblay</p>
+            <h2>Gustocoffee</h2>
+            <p>1 Rue de Paris<br>95520, Paris</p>
         </adress>
 
         <div class="col-xs-12 col-sm-8 col-md-5 support">
@@ -32,11 +32,11 @@
             <p>Nous répondons à vos questions du lundi au vendredi de 8h à 20h et le samedi de 9h à 18h</p>
 
             <h2>Pour toute question</h2>
-            <p>01 50 51 52 53<br><a href="mailto:contact@enzymarine.fr">contact@enzymarine.fr</a></p>
+            <p>01 50 51 52 53<br><a href="mailto:contact@Gustocoffee.fr">contact@Gustocoffee.fr</a></p>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-3 social">
-            <h2>Rejoignez la communauté EnzyMarine</h2>
+            <h2>Rejoignez la communauté Gustocoffee</h2>
             <a href="http://www.facebook.com">
                 <img src="<?= site_url('assets/images/facebook.svg'); ?>" alt="Facebook" width="10%">
             </a>
@@ -48,7 +48,7 @@
 
         <div class="col-xs-12 copyright">
             <p>
-                Copyright <?= date('Y'); ?> EnzyMarine - <a href="<?= site_url('mentions-legales'); ?>">Mentions légales</a>
+                Copyright <?= date('Y'); ?> Gustocoffee - <a href="<?= site_url('mentions-legales'); ?>">Mentions légales</a>
             </p>
         </div>
     </section>
