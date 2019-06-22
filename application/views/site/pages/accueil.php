@@ -66,7 +66,7 @@
 <section class="container-fluid priorite">
     <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1>La priorité à l'environnement</h1>
+            <h1>Enjoy your Time</h1>
 
             <div class="ancre">
                 <hr>
@@ -79,7 +79,7 @@
             </figure>
 
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                <h2>Écologique</h2>
+                <h2>Fresh Air</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus rem atque mollitia nulla, laboriosam dicta. Animi cumque expedita vero modi voluptas doloribus harum, esse fugit suscipit!</p>
             </div>
         </article>
@@ -90,7 +90,7 @@
             </figure>
 
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                <h2>Respect de l'environnement</h2>
+                <h2>Collaborate and discover</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus rem atque mollitia nulla, laboriosam dicta. Animi cumque expedita vero modi voluptas doloribus harum, esse fugit suscipit! Alias illo quia voluptatibus.</p>
             </div>
         </article>
@@ -101,7 +101,7 @@
             </figure>
 
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                <h2>Sans danger</h2>
+                <h2>co-Working</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus rem atque mollitia nulla, laboriosam dicta. Animi cumque expedita vero modi voluptas doloribus harum, esse fugit suscipit! Alias illo quia voluptatibus.</p>
             </div>
         </article>

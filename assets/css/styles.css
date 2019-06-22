@@ -549,7 +549,7 @@ footer .copyright p a:hover {
 *************************************/
 
 .top-header {
-    background-color: #1d3949;
+    background-color: #33903a;
     padding: 5px 0;
 }
 
@@ -605,7 +605,8 @@ header nav ul li:hover a {
 }
 
 header nav ul li:hover {
-    background-color: #1d3949;
+    background-color: #33903a;
+    ;
 }
 
 header #telephone p {

@@ -8,7 +8,7 @@ class Auth extends CI_Controller {
         parent::__construct();
         $this->output->enable_profiler(FALSE);
         
-        //$this->load->library('authentification');
+        $this->load->library('authentification');
     }
     
     // -----------------------------------------------------------------------

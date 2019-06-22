@@ -26,7 +26,7 @@
                 <tr>
                     <th></th>
                     <th></th>
-                    <th>date</th>
+                    <th>Date</th>
                     <th>Time</th>
                     <th>Person</th>
                     <th>Seat Number</th>

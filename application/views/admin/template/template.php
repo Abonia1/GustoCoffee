@@ -2,7 +2,7 @@
 <html class="no-js" lang="fr">
 	<head>
 		<meta charset="UTF-8">
-		<title>Enzynov - Administration</title>
+		<title>GustoCoffee - Administration</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Icons -->
@@ -78,7 +78,7 @@
                         </li>
 
                         <li class="nav-item nav-dropdown">
-                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket-loaded"></i> Commandes</a>
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket-loaded"></i> Reservation</a>
                             <ul class="nav-dropdown-items">
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?= site_url('admin/commande/liste'); ?>"><i class="icon-list"></i> Liste</a>
@@ -101,18 +101,6 @@
                             </ul>
                         </li>
 
-												<li class="nav-item nav-dropdown">
-                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-folder-alt"></i> Priorité à l'environnement</a>
-                            <ul class="nav-dropdown-items">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?= site_url('admin/priorite/liste'); ?>"><i class="icon-list"></i> Liste</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?= site_url('admin/priorite/ajouter'); ?>"><i class="icon-plus"></i> Ajouter</a>
-                                </li>
-                            </ul>
-                        </li>
-
 
 
 
@@ -125,19 +113,6 @@
                                 </li>
                                 
 
-                            </ul>
-                        </li>
-
-
-						 <li class="nav-item nav-dropdown">
-                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-folder-alt"></i> Utilisation</a>
-                            <ul class="nav-dropdown-items">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?= site_url('admin/utilisation/liste'); ?>"><i class="icon-list"></i> Liste</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?= site_url('admin/utilisation/ajouter'); ?>"><i class="icon-plus"></i> Ajouter</a>
-                                </li>
                             </ul>
                         </li>
 
