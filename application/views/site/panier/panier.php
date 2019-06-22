@@ -19,16 +19,17 @@
     </section>
 
     <section class="col-xs-12 col-sm-9 profil-table">
-        <h2>Mon Reservation</h2>
+        <h2>Mon Panier</h2>
 
         <table>
             <thead>
                 <tr>
                     <th></th>
                     <th></th>
-                    <th>Produit</th>
-                    <th>Prix</th>
-                    <th>Quantité</th>
+                    <th>date</th>
+                    <th>Time</th>
+                    <th>Person</th>
+                    <th>Seat Number</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -68,7 +69,7 @@
 
         <div class="col-xs-12">
             <a href="<?= site_url('panier/livraison'); ?>" class="contact-button">Passer la commande</a>
-            <a href="<?= site_url('produits'); ?>" class="contact-button">Continuer mes achats</a>
+            <a href="<?= site_url('produits'); ?>" class="contact-button">Continuer mes reservation</a>
         </div>
     </section>
 </div>

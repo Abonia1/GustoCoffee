@@ -5,14 +5,13 @@
         <div class="container">
             <div class="livraison-container">
                 <article class="col-xs-12 col-sm-6">
-                    <h1>Commande expédiée sous 24 heures</h1>
-                    <p>Découvrez la gamme de produits spécialisés Gustocoffee et recevez rapidement votre commande grâce à notre réactivité</p>
+                    <h1>Reserver Vos Places en avance</h1>
+                    <p>Reserver en avance et profiter nos offres</p>
                 </article>
 
                 <aside class="col-xs-12 col-sm-6 livraison-icone">
                     <figure class="">
-                        <img src="<?= site_url('assets/images/24_heure.png'); ?>" alt="Livraison en 24 heures">
-                        <img src="<?= site_url('assets/images/livraison_rapide.png'); ?>" alt="Livraison rapide">
+
                     </figure>
                 </aside>
             </div>
@@ -29,7 +28,7 @@
 
         <div class="col-xs-12 col-sm-8 col-md-5 support">
             <h2>Besoin d'aide ?</h2>
-            <p>Nous répondons à vos questions du lundi au vendredi de 8h à 20h et le samedi de 9h à 18h</p>
+            <p>Nous répondons à vos questions du lundi au vendredi de 8h à 20h</p>
 
             <h2>Pour toute question</h2>
             <p>01 50 51 52 53<br><a href="mailto:contact@Gustocoffee.fr">contact@Gustocoffee.fr</a></p>

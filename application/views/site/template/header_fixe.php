@@ -71,13 +71,13 @@
 				</div>
 			</div>
         </header>
-	
+<!-- 	
 		<div class="<?= $slide['class']; ?>" id="slider-container">
 	          <div class="container slider-titre">
                   <h1><?= $slide['produit']; ?></h1>
                   <h2><?= $slide['description']; ?></h2>
 	          </div>
-        </div>
+        </div> -->
 
 		<div class="slide-shadow">
 			<img src="<?= site_url('assets/images/slide_shadow.png'); ?>">

@@ -279,15 +279,9 @@ class Product {
       {
         $datas = array();
 
-        $datas['reference'] = $this->CI->input->post('reference');
         $datas['nom'] = $this->CI->input->post('nom');
-        $datas['slug'] = convert_accented_characters(url_title($this->CI->input->post('nom'), 'dash', TRUE));
         $datas['description_courte'] = $this->CI->input->post('description_courte');
         $datas['description_longue'] = $this->CI->input->post('description_longue');
-        $datas['prix_ht'] = $this->CI->input->post('prix_ht');
-        $datas['remise'] = $this->CI->input->post('remise');
-        $datas['stock'] = $this->CI->input->post('stock');
-        $datas['date_modification'] = date('Y-m-d H:i:s');
 
 
 

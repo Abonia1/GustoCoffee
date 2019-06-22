@@ -119,9 +119,10 @@
         <table>
             <thead>
                 <tr>
-                    <th>Produit</th>
-                    <th>Prix</th>
-                    <th>Quantité</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Person</th>
+                    <th>Seat Number</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -131,19 +132,19 @@
                     <?php foreach($this->session->userdata['panier'] AS $key => $val) : ?>
                         <tr>
                             <td>
-                                <?= $val['nom']; ?>
+                                <?= $val['date']; ?>
                             </td>
 
                             <td>
-                                <?= $val['prix']; ?>€
+                                <?= $val['time']; ?>€
                             </td>
 
                             <td>
-                                <?= $val['quantite']; ?>
+                                <?= $val['quantity']; ?>
                             </td>
 
                             <td>
-                                <?= ($val['prix'] * $val['quantite']); ?>€
+                                <?= ($val['prix'] ); ?>€
                             </td>
                         </tr>
                     <?php endforeach; ?>

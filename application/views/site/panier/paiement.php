@@ -45,9 +45,10 @@
         <table>
             <thead>
                 <tr>
-                    <th>Produit</th>
-                    <th>Prix</th>
-                    <th>Quantité</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Person</th>
+                    <th>Seat Number</th>
                     <th>Total</th>
                 </tr>
             </thead>

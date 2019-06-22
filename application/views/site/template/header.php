@@ -36,7 +36,7 @@
 					<p>Besoin d'un renseignement ? <a href="mailto:contact@Gustocoffee.fr">contact@Gustocoffee.fr</a></p>
 				</div>
 
-				<div class="col-sm-6 renseignement-telephone">
+				<div class="col-xs-12 renseignement-telephone">
 					<p>Pour toute question <a href="tel:01 02 03 04 05">01 02 03 04 05</a></p>
 				</div>
 			</div>
@@ -53,7 +53,7 @@
 
 					<div class="col-sm-3 col-xs-12">
 					   <?= form_open(); ?>
-					       <?= form_input(array('name' => 'recherche', 'placeholder' => 'Rechercher un produit', 'id' => 'recherche')); ?>
+					       <?= form_input(array('name' => 'recherche', 'placeholder' => 'Rechercher un service', 'id' => 'recherche')); ?>
 					   <?= form_close(); ?>
 				   </div>
 
@@ -125,50 +125,6 @@
 			</div>
         </header>
 
-		<div class="" id="slider-container-home">
-            <div class="tp-banner-container">
-		        <div class="tp-banner" >
-        			<ul>
-        				<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
-
-        					<div class="caption fade" data-x="0" data-y="70" data-speed="1000" data-start="2000" data-easing="easeOutBack">
-                                <span class="titre">Decouvrir nos Services !</span>
-        					</div>
-
-                            <div class="caption lfb" data-x="800" data-y="40" data-speed="1000" data-start="1000" data-easing="easeOutBack">
-                                <span class="marque">Gustocoffee</span>
-        					</div>
-
-                            <div class="caption lfr" data-x="790" data-y="75" data-speed="1000" data-start="3000" data-easing="easeOutBack">
-                                <span class="formule">Welcome You!</span>
-        					</div>
-
-                            <div class="caption lfb" data-x="840" data-y="100" data-speed="1000" data-start="1000" data-easing="easeOutBack">
-                                 
-        					</div>
-        				</li>
-
-
-						<li id="Gustocoffee-slide-2" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee2.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
-        				</li>
-
-						<li id="Gustocoffee-slide-3" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
-        				</li>
-
-						<li id="Gustocoffee-slide-4" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee2.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
-        				</li>
-
-						<li id="Gustocoffee-slide-5" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
-        				</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
 
 

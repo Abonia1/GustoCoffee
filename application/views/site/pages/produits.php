@@ -1,7 +1,7 @@
 <div class="container produit-liste">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
         <div class="produit-titre">
-            <h1>Notre gamme de produits</h1>
+            <h1>Notre Services </h1>
         </div>
     </div>
 </div>
@@ -11,7 +11,7 @@
         <div class="container">
             <section class="col-xs-12 product">
                 <aside class="col-xs-12 col-sm-3 product-img">
-                    <img src="<?= site_url('assets/images/'.$produit->bidon); ?>" alt="<?= $produit->nom; ?>" width="50%">
+                    <img src="<?= site_url('assets/images/produit/accueil/'.$produit->image); ?>" alt="<?= $produit->nom; ?>" width="50%">
                 </aside>
 
                 <article class="col-xs-12 col-sm-6">
