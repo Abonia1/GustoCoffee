@@ -47,7 +47,7 @@
 	            <div class="row">
 	                <div class="col-sm-3 col-xs-12">
 	                    <a href="<?= site_url(); ?>">
-							<img src="http://via.placeholder.com/167x73" alt="Logo Gustocoffee">
+							<img src="assets/images/gusto_coffee.png" alt="Logo Gustocoffee">
 						</a>
 	                </div>
 

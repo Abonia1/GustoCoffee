@@ -74,8 +74,8 @@
         </div>
 
         <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <img src="<?= site_url('assets/images/ecologie.svg'); ?>" alt="Écologique">
+            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
+                <img src="<?= site_url('assets/images/c4.png'); ?>" alt="Écologique">
             </figure>
 
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
@@ -85,8 +85,8 @@
         </article>
 
         <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <img src="<?= site_url('assets/images/respect_environnement.svg'); ?>" alt="Respect de l'environnement">
+            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
+                <img src="<?= site_url('assets/images/C5.png'); ?>" alt="Respect de l'environnement">
             </figure>
 
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
@@ -96,12 +96,12 @@
         </article>
 
         <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <img src="<?= site_url('assets/images/sans_danger.svg'); ?>" alt="Sans danger">
+            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
+                <img src="<?= site_url('assets/images/c4.png'); ?>" alt="Sans danger">
             </figure>
 
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                <h2>co-Working</h2>
+                <h2>Co-Working</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus rem atque mollitia nulla, laboriosam dicta. Animi cumque expedita vero modi voluptas doloribus harum, esse fugit suscipit! Alias illo quia voluptatibus.</p>
             </div>
         </article>
