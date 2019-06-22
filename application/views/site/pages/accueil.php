@@ -43,13 +43,13 @@
                 </div>
             </div>
         </div>
-<section class="container">
-    <?php foreach ($text['text'] as $t): ?>
+        <section class="container">
+
     <article class="col-xs-12 col-sm-8 col-md-8 col-lg-8 presentation">
-        <h1><?php echo $t->title; ?></h1>
+        <h1>Lorem ipsum dolor sit amet</h1>
 
         <div>
-            <p><?php echo $t->description; ?>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
 
             <a href="<?= site_url('contact'); ?>">NOUS CONTACTER</a>
@@ -57,9 +57,9 @@
     </article>
 
     <aside class="col-xs-12 col-sm-4 col-md-4 col-lg-4 photo-presentation">
-       <img src="<?php echo base_url('assets/images/') .$t->image?>" /> 
+       <img src="assets/images/photo.png" /> 
     </aside>
-    <?php endforeach; ?>
+
 </section>
 
 

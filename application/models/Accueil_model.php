@@ -8,16 +8,16 @@ class Accueil_model extends CI_Model {
         $this->load->database();
     }
 
-function text() {
+// function text() {
    
-   $query = $this->db->get('accueil');
+//    $query = $this->db->get('accueil');
 
-        if($query->num_rows() >= 1)
-        {
-            return $query->result();
-        }
+//         if($query->num_rows() >= 1)
+//         {
+//             return $query->result();
+//         }
 
-        return FALSE;
+//         return FALSE;
 
   //     $this->db->from('imageproduit');  
 
@@ -34,7 +34,7 @@ function text() {
 
   
   
-}
+//}
 
 
 

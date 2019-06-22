@@ -13,14 +13,14 @@ class Site extends CI_Controller {
 	{
 		 $this->load->model('accueil_model');
         $this->load->model('image_model');
-		$data['text'] = $this->accueil_model->text();
+		//$data['text'] = $this->accueil_model->text();
         $data_['imageproduits']=$this->image_model->imageproduits();
 
 		$this->load->model('produit_model');
 		$produits = $this->produit_model->produits_accueil();
 
 		$this->load->view('site/template/header');
-		$this->load->view('site/pages/accueil', array('produits' => $produits,'text' => $data));
+		$this->load->view('site/pages/accueil', array('produits' => $produits));
 		$this->load->view('site/template/footer');
 	}
 
@@ -83,7 +83,7 @@ class Site extends CI_Controller {
 				$this->load->library('email');
 
 				$this->email->from( $this->input->post('email'), $this->input->post('prenom').' '.$this->input->post('nom') );
-				$this->email->to('contact@Gustocoffee.fr');
+				$this->email->to('aboniaa@gmail.com');
 				$this->email->subject('Demande d\'informations sur la gamme Gustocoffee');
 
 				// On inscrit les informations obligatoires
@@ -161,7 +161,7 @@ class Site extends CI_Controller {
 				'code_postal' => '75000',
 				'ville' => 'Paris',
 				'telephone' => '01 34 56 78 09',
-				'adresse_email' => 'contact@enzynov.fr',
+				'adresse_email' => 'contact@gustocoffee.fr',
 				'directeur_publication' => 'M. Jackson'
 			),
 			'proprietaire' => array(
