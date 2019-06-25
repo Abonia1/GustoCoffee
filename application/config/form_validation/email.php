@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // contact---------------------------------------------------
 
+
+
 $config['contact'] = array(
     array(
         'field'  => 'nom',
@@ -50,14 +52,6 @@ $config['contact'] = array(
         'errors'	=>	array(
             'required' => 'Le champ <strong>{field}</strong> est obligatoire',
         )
-    ),
-
-    array(
-        'field'   => 'captcha',
-        'label'   => 'Captcha',
-        'rules'   => 'required|trim',
-        'errors'	=>	array(
-            'required' => 'Le champ <strong>{field}</strong> est obligatoire',
-        )
     )
+
 );

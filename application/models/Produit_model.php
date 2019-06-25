@@ -53,8 +53,8 @@ class Produit_model extends CI_Model {
      */
     public function produits_liste()
     {
-        $this->db->select('p2.nom, p2.description_courte, p2.description_longue');
-        $this->db->from('produit AS p2');
+        $this->db->select('nom, description_courte, description_longue,image');
+        $this->db->from('produit');
         $query = $this->db->get();
 
         if( $query->num_rows() >= 1 )

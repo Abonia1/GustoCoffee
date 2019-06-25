@@ -1,4 +1,5 @@
 <?php
+ob_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Site extends CI_Controller {
@@ -58,33 +59,33 @@ class Site extends CI_Controller {
 	/* Contact */
 	public function contact()
 	{
-		$this->load->helper(array('form', 'captcha'));
+
 		$this->load->library('form_validation');
 
 		$this->config->load( 'form_validation/email' , TRUE );
 		$this->rules = config_item('form_validation/email');
 
-    	$this->form_validation->set_rules($this->rules['contact']);
-
-		$config = array(
-        	'img_path'      => 'assets/images/captcha/',
-        	'img_url'       => base_url().'assets/images/captcha/'
-		);
-
-
-    	if( $this->form_validation->run() !== FALSE )
+		$this->form_validation->set_rules($this->rules['contact']);
+		if( $this->form_validation->run() !== FALSE )
     	{
-			//On vérifie le captcha
-            $captcha_utilisateur = $this->input->post('captcha');
-            $captcha_session = $this->session->userdata('code_captcha');
+			$this->load->library('email');		
 
-			// Captcha est correct
-            if( $captcha_utilisateur === $captcha_session ) {
-				$this->load->library('email');
-
-				$this->email->from( $this->input->post('email'), $this->input->post('prenom').' '.$this->input->post('nom') );
+$config = Array(
+    'protocol' => 'mail',
+    'smtp_host' => 'ssl://smtp.gmail.com',
+    'smtp_port' => 465,
+    'smtp_user' => 'gustocofffee@gmail.com',
+    'smtp_pass' => 'password*000',
+    'mailtype'  => 'html', 
+    'charset'   => 'iso-8859-1'
+);
+			
+				$this->email->initialize($config);
+				//$this->email->from( $this->input->post('email'), $this->input->post('prenom').' '.$this->input->post('nom') );
+				$from = $this->config->item('smtp_user');
+				$this->email->from($from);
 				$this->email->to('aboniaa@gmail.com');
-				$this->email->subject('Demande d\'informations sur la gamme Gustocoffee');
+				$this->email->subject('Demande informations');
 
 				// On inscrit les informations obligatoires
 				$message = "Nom : ".$this->input->post('prenom').' '.$this->input->post('nom');
@@ -96,12 +97,6 @@ class Site extends CI_Controller {
 					$message .= "<br>Téléphone : ".$this->input->post('telephone');
 				}
 
-				// Si un produit est choisi on l'inscrit
-				if( $this->input->post('produit') != "-1" )
-				{
-					$message .= '<br>Produit ciblé : '.$this->input->post('produit');
-				}
-
 				// On termine par noter le message
 				$message .= "<br>Message : ".$this->input->post('message');
 
@@ -110,42 +105,31 @@ class Site extends CI_Controller {
 				// Si l'eail est envoyé, OK on confirme sinon message d'erreur
 				if( $this->email->send() )
 				{
-					$this->session->set_flashdata('success', 'Votre message a bien été envoyé. Notre équipe s\'occupe de votre message dans les plus brefs délais.');
+					$data['text']=$this->input->post('message');
+					//$this->session->set_flashdata('success', 'Votre message a bien été envoyé. Notre équipe s\'occupe de votre message dans les plus brefs délais.');
+					$this->load->view('site/template/header');
+					$this->load->view('site/pages/contactresult',$data);
+					$this->load->view('site/template/footer');
 				}
 				else
 				{
-					$this->session->set_flashdata('error', 'Une erreur est survenue, votre message n\'a pas pu être envoyé. Veuillez réessayer ultérieurement.');
+					echo $this->email->print_debugger();
+					//$this->session->set_flashdata('error', 'Une erreur est survenue, votre message n\'a pas pu être envoyé. Veuillez réessayer ultérieurement.');
+
 				}
+			}
+			else{
 
-				redirect('contact');
-
-            } else{
-				$this->session->set_flashdata('error', 'Le captcha est incorrect, veuillez réessayer.');
-				redirect('contact');
-            }
-		}
-		else
-		{
-			$captcha = create_captcha($config);
-
-			// On efface l'ancien code et on remet le nouveau en session
-			$this->session->unset_userdata('code_captcha');
-        	$this->session->set_userdata('code_captcha', $captcha['word']);
-
-			$produits = array(
-				'-1' => 'Sélectionnez votre produit si nécessaire',
-				'Gustocoffee' => 'Gustocoffee',
-				'vapowax' => 'Vapowax',
-				'hd-x5' => 'HD-X5',
-				'enzylight' => 'Enzylight',
-			);
-
+				
+			//$this->load->view('site/template/header_fixe', array('slide' => $produits[$produit]['slide']));
 			$this->load->view('site/template/header');
-			$this->load->view('site/pages/contact', array('produit' => $produits, 'captcha' => $captcha['image']));
+			$this->load->view('site/pages/contact');
 			$this->load->view('site/template/footer');
-		}
+			}
 
-	}
+			} 
+		
+
 
 	/* Mentions légales */
 	public function mentions_legales()
@@ -181,22 +165,22 @@ class Site extends CI_Controller {
 		$this->load->view('site/template/footer');
 	}
 
-	/* Refresh captcha Ajax */
-	public function refresh() {
-        $config = array(
-        	'img_path'      => 'assets/images/captcha/',
-        	'img_url'       => base_url().'assets/images/captcha/',
-        );
+	// /* Refresh captcha Ajax */
+	// public function refresh() {
+    //     $config = array(
+    //     	'img_path'      => 'assets/images/captcha/',
+    //     	'img_url'       => base_url().'assets/images/captcha/',
+    //     );
 
-        $captcha = create_captcha($config);
+    //     $captcha = create_captcha($config);
 
-		// On efface l'ancien code et on remet le nouveau en session
-		$this->session->unset_userdata('code_captcha');
-		$this->session->set_userdata('code_captcha', $captcha['word']);
+	// 	// On efface l'ancien code et on remet le nouveau en session
+	// 	$this->session->unset_userdata('code_captcha');
+	// 	$this->session->set_userdata('code_captcha', $captcha['word']);
 
-        // Affiche l'image du captcha
-        echo $captcha['image'];
-    }
+    //     // Affiche l'image du captcha
+    //     echo $captcha['image'];
+    // }
 
 	/* Fonction ajout produit panier Ajax */
 	public function ajouter_panier()
@@ -237,6 +221,11 @@ class Site extends CI_Controller {
 		echo $qte * $panier_total[$id]['prix']."€"; //on renvoie le total pour maj le prix affiché
 	}
 
+	public function reservation(){
+		$this->load->view('site/template/header');
+		$this->load->view('site/pages/reservation');
+		$this->load->view('site/template/footer');	
+	}
 
 	public function get_adresse()
 	{

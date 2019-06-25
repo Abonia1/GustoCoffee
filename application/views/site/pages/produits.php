@@ -27,9 +27,9 @@
 
                 <aside class="col-xs-12 col-sm-3 list blue-list">
                     <ul>
-                        <li>Fabriqué en France</li>
-                        <li>Respecte l'environnement</li>
-                        <li>Sans danger</li>
+                        <li>Fresh time </li>
+                        <li>Enjoy something new</li>
+                        <li>We care about you</li>
                     </ul>
                 </aside>
             </section>

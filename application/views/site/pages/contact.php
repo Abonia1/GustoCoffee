@@ -10,25 +10,11 @@
     </section>
 
     <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 contact-form">
-        <?= form_open( 'profil' ); ?>
+        <?= form_open( 'contact' ); ?>
 
         <?= validation_errors('<div class="row"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="alert alert-danger">', '</div></div></div>'); ?>
 
-        <?php if(null !== ($this->session->flashdata('success'))) : ?>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="alert alert-success"><?= $this->session->flashdata('success'); ?></div>
-                </div>
-            </div>
-        <?php endif; ?>
 
-        <?php if(null !== ($this->session->flashdata('error'))) : ?>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="alert alert-danger"><?= $this->session->flashdata('error'); ?></div>
-                </div>
-            </div>
-        <?php endif; ?>
 
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -63,24 +49,7 @@
            </div>
        </div>
 
-       <div class="row">
-           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-               <?= form_label('Veuillez inscrire les caractères de l\'image ci-dessous *', 'captcha'); ?>
-               <?= form_input(array('name' => 'captcha', 'id' => 'captcha', 'class' => (empty(form_error('captcha')) ? "" : "has-error") . " col-xs-12 col-sm-12 col-md-12 col-lg-12")); ?>
-
-               <p>
-                   <span id="captcha-image">
-                       <?= $captcha; ?>
-                   </span>
-
-                   <a href="javascript:void(0);" class="refreshCaptcha" >
-                       <img src="<?= base_url().'assets/images/refresh.png'; ?>" width="28">
-                   </a>
-               </p>
-           </div>
-       </div>
-
-       <?= form_submit('envoyer', 'Envoyer', array('class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
+      <?= form_submit('envoyer', 'Envoyer', array('class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
        <?= form_close( '' ); ?>
     </section>
 
@@ -94,7 +63,7 @@
             <p>Téléphone : 01 23 45 67 89<br>
             Mail: contact@Gustocoffee.fr</p>
 
-            <p>RCS Pontoise 790 971 287</p>
+
         </address>
 
         <article>
