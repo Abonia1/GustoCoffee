@@ -17,10 +17,10 @@
 		<script type="text/javascript" src="<?= site_url('assets/js/jquery.toast.js'); ?>"></script>
 		
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.js"></script>
+		
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   		<link rel="stylesheet" href="/resources/demos/style.css">
-  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<link rel="stylesheet" href="<?= site_url('assets/css/reservation.css'); ?>" media="all">
 		  

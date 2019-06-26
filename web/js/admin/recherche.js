@@ -1,4 +1,4 @@
-var url='http://localhost/plate-forme/admin/';
+var url = 'http://aboweb.local/plate-forme/admin/';
 // var liste=[];
 // var table_produit= {};
 // var produit=[];
@@ -25,7 +25,7 @@ var url='http://localhost/plate-forme/admin/';
 // 		   	},
 
 // 		   	error : function(resultat, statut, erreur){
-		     
+
 // 		  	},
 
 // 		   	complete : function(resultat, statut){
@@ -93,88 +93,84 @@ var url='http://localhost/plate-forme/admin/';
 // 		}
 // 	i=i+1;	
 // 	});
-	
+
 // 	$('tr').hide('slow');
 // 	console.log(produit);
 // 	produit.forEach(function(index){
 // 		$('#'+index).show('slow');
 // 	})
 // });
-$("#rechercher").on("keyup",function(){
-	var frappe=$("#rechercher").val();
-	var data={};
-	data={'frappe':frappe};
-	console.log(frappe);
-	motClef(data);
-});	
+$("#rechercher").on("keyup", function() {
+    var frappe = $("#rechercher").val();
+    var data = {};
+    data = { 'frappe': frappe };
+    console.log(frappe);
+    motClef(data);
+});
 
-function motClef(data)
-{
-	// requête ajax via le service $http
-	console.log(url);
-	$.ajax({
-	   	url : 'recherche_produit_ajax/',
-	   	type : 'GET',
-	   	data : data,
-	   	dataType : 'json',
-	   	success : function(code_html, statut){
-	   		console.log(url);
-	   		console.log(code_html);
-	  		console.log(code_html[0]['label']);
-	  		console.log(code_html[0]['description']);
-	  		console.log(code_html[0]['image']);
-	  		$("#test").empty();
-	  		if(code_html.length > 1)
-	  		{
-	  			code_html.forEach(function(index){
-		  			console.log(index['label']);
-		  			console.log($("#test"));
-		  			$('<h2>', {
-		  				class: 'col-md-3',
-		  				style: 'display:inline-block; font-size:2em; border-style: outset',
-		  				text: index['label']
-		  			}).appendTo($("#test"));
-		  			$('<p>', {
-		  				class: 'col-md-6',
-		  				style: 'display:inline-block; border-style: inset;',
-		  				text: index['description']
-		  			}).appendTo($("#test"));
-		  			$('<img>', {
-		  				class: 'col-md-3',
-		  				style: 'display:inline-block',
-		  				src: index['image']
-		  			}).appendTo($("#test"));
-		  		})
-		  	}
-		  	else
-		  	{
-		  		$("#test").empty();
-		  		console.log(code_html);
-		  		$('<h2>', {
-	  				class: 'col-md-3',
-	  				style: 'display:inline-block; font-size:2em; border-style: outset',
-	  				text: code_html[0]['label']
-	  			}).appendTo($("#test"));
-	  			$('<p>', {
-	  				class: 'col-md-6',
-	  				style: 'display:inline-block; border-style: inset;',
-	  				text: code_html[0]['description']
-	  			}).appendTo($("#test"));
-	  			$('<img>', {
-	  				class: 'col-md-3',
-	  				style: 'display:inline-block',
-	  				src: code_html[0]['image']
-	  			}).appendTo($("#test"));
-		  	}	
-	   	},
+function motClef(data) {
+    // requête ajax via le service $http
+    console.log(url);
+    $.ajax({
+        url: 'recherche_produit_ajax/',
+        type: 'GET',
+        data: data,
+        dataType: 'json',
+        success: function(code_html, statut) {
+            console.log(url);
+            console.log(code_html);
+            console.log(code_html[0]['label']);
+            console.log(code_html[0]['description']);
+            console.log(code_html[0]['image']);
+            $("#test").empty();
+            if (code_html.length > 1) {
+                code_html.forEach(function(index) {
+                    console.log(index['label']);
+                    console.log($("#test"));
+                    $('<h2>', {
+                        class: 'col-md-3',
+                        style: 'display:inline-block; font-size:2em; border-style: outset',
+                        text: index['label']
+                    }).appendTo($("#test"));
+                    $('<p>', {
+                        class: 'col-md-6',
+                        style: 'display:inline-block; border-style: inset;',
+                        text: index['description']
+                    }).appendTo($("#test"));
+                    $('<img>', {
+                        class: 'col-md-3',
+                        style: 'display:inline-block',
+                        src: index['image']
+                    }).appendTo($("#test"));
+                })
+            } else {
+                $("#test").empty();
+                console.log(code_html);
+                $('<h2>', {
+                    class: 'col-md-3',
+                    style: 'display:inline-block; font-size:2em; border-style: outset',
+                    text: code_html[0]['label']
+                }).appendTo($("#test"));
+                $('<p>', {
+                    class: 'col-md-6',
+                    style: 'display:inline-block; border-style: inset;',
+                    text: code_html[0]['description']
+                }).appendTo($("#test"));
+                $('<img>', {
+                    class: 'col-md-3',
+                    style: 'display:inline-block',
+                    src: code_html[0]['image']
+                }).appendTo($("#test"));
+            }
+        },
 
-	   	error : function(resultat, statut, erreur){
-	     		
-	  	},
+        error: function(resultat, statut, erreur) {
 
-	   	complete : function(resultat, statut){
+        },
 
-	   	}
+        complete: function(resultat, statut) {
 
-	});   		
+        }
+
+    });
 };

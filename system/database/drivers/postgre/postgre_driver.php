@@ -126,7 +126,7 @@ class CI_DB_postgre_driver extends CI_DB {
 		 * array, but they might be set by parse_url() if the configuration was
 		 * provided via string. Example:
 		 *
-		 * postgre://username:password@localhost:5432/database?connect_timeout=5&sslmode=1
+		 * postgre://username:password@aboweb.local:5432/database?connect_timeout=5&sslmode=1
 		 */
 		foreach (array('connect_timeout', 'options', 'sslmode', 'service') as $key)
 		{

@@ -1,4 +1,4 @@
-  var urlServer = "http://localhost/Gustocoffee/";
+  var urlServer = "http://aboweb.local/Gustocoffee/";
 
 
   function panierUpdata() {

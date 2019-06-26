@@ -1,4 +1,4 @@
-// //auto generate date and time value
+//auto generate date and time value
 // function myChangeFunction(input1) {
 //     var input2 = document.getElementById('DateForm');
 //     input2.value = input1.value;
@@ -64,7 +64,7 @@ $(function() {
 });
 $(document).ready(function() {
     $('#timepicker').timepicker({
-        timeFormat: 'H:mm',
+        timeFormat: 'H:00',
         dropdown: true,
         scrollbar: true,
         minTime: '10:00',
@@ -123,17 +123,21 @@ jQuery(document).ready(function() {
 //to call show() function to display the plan image
 function show() {
     var quantity = document.getElementById('quantity').value;
-    if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || quantity == 0) {
-        if ($("#datepicker").val().length == 0) {
-            window.alert("Please select date before checking seat availability.");
-        }
-        if ($("#timepicker").val().length == 0) {
-            window.alert("Please select time before checking seat availability.");
-        }
-        if (quantity == 0) {
-            window.alert("Please select number of seat before checking seat availability.");
-        }
+    if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || quantity == 0)
+    //{
+    // if ($("#datepicker").val().length == 0) {
+    //     window.alert("Please select date before checking seat availability.");
+    // }
+    // if ($("#timepicker").val().length == 0) {
+    //     window.alert("Please select time before checking seat availability.");
+    // }
+    // if (quantity == 0) {
+    //     window.alert("Please select number of seat before checking seat availability.");
+    // }
+    {
+        window.alert("Veuillez remplir des champs avant de commancer.");
         document.getElementById('Plan').style.display = "none";
+
         //document.getElementById('regform').style.display = "none";
     } else {
         document.getElementById('Plan').style.display = "block";
@@ -192,5 +196,5 @@ function show() {
 // });
 
 // function RemoveFirstDirectoryPartOf(srcPath) {
-//     return srcPath.replace("http://localhost:8080/gustocoffee/", '');
+//     return srcPath.replace("http://aboweb.local:8080/gustocoffee/", '');
 // }
