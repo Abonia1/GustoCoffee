@@ -5,6 +5,7 @@
 
 text {
     fill: white;
+    font: 10px;
 }
 
 rect {
@@ -13,10 +14,13 @@ rect {
 
 .selectable {
     fill: #494848;
-    pointer-events: stroke;
 }
 
 .nonselectable {
     fill: #c4c0c0;
     pointer-events: none;
+}
+
+.click {
+    fill: rgb(45, 160, 45);
 }

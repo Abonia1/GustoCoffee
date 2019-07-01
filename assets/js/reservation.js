@@ -182,9 +182,164 @@ $("#checkbutton").click(function() {
 });
 
 $("input[name=quantity]").change(function() {
-    $(document.getElementsByClassName('selectable')).attr('class', 'unselectable').trigger('change');
+    $(document.getElementsByClassName('selectable')).attr('class', 'unselectable');
 
 });
+
+//on chaging color to select it
+function changecolor1() {
+    if ($("#svg_2").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_2')).attr('class', 'click');
+    }
+}
+
+function changecolor2() {
+    if ($('#svg_19').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_19')).attr('class', 'click');
+    }
+}
+
+function changecolor3() {
+    if ($("#svg_21").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_21')).attr('class', 'click');
+    }
+}
+
+function changecolor4() {
+    if ($('#svg_49').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_49')).attr('class', 'click');
+    }
+}
+
+function changecolor5() {
+    if ($("#svg_6").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_6')).attr('class', 'click');
+    }
+}
+
+function changecolor6() {
+    if ($('#svg_17').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_17')).attr('class', 'click');
+    }
+}
+
+function changecolor7() {
+    if ($("#svg_23").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_23')).attr('class', 'click');
+    }
+}
+
+function changecolor8() {
+    if ($('#svg_11').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_11')).attr('class', 'click');
+    }
+}
+
+function changecolor9() {
+    if ($("#svg_15").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_15')).attr('class', 'click');
+    }
+}
+
+function changecolor10() {
+    if ($('#svg_13').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_13')).attr('class', 'click');
+    }
+}
+
+function changecolor11() {
+    if ($("#svg_25").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_25')).attr('class', 'click');
+    }
+}
+
+function changecolor12() {
+    if ($('#svg_37').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_37')).attr('class', 'click');
+    }
+}
+
+function changecolor13() {
+    if ($("#svg_35").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_35')).attr('class', 'click');
+    }
+}
+
+function changecolor14() {
+    if ($('#svg_33').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_33')).attr('class', 'click');
+    }
+}
+
+function changecolor15() {
+    if ($("#svg_27").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_27')).attr('class', 'click');
+    }
+}
+
+function changecolor16() {
+    if ($('#svg_29').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_29')).attr('class', 'click');
+    }
+}
+
+function changecolor17() {
+    if ($("#svg_31").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_31')).attr('class', 'click');
+    }
+}
+
+function changecolor18() {
+    if ($('#svg_45').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_45')).attr('class', 'click');
+    }
+}
+
+function changecolor19() {
+    if ($("#svg_43").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_43')).attr('class', 'click');
+    }
+}
+
+function changecolor20() {
+    if ($('#svg_41').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_41')).attr('class', 'click');
+    }
+}
+
+function changecolor21() {
+    if ($("#svg_39").attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_39')).attr('class', 'click');
+    }
+}
+
+function changecolor22() {
+    if ($('#svg_47').attr('class', 'selectable')) {
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementById('svg_47')).attr('class', 'click');
+    }
+}
 
 
 
