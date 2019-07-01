@@ -96,11 +96,11 @@ jQuery(document).ready(function() {
             // Increment
             $('input[name=' + fieldName + ']').val(currentVal + 1);
         } else {
-            // Otherwise put a 0 there
-            $('input[name=' + fieldName + ']').val(0);
+            // Otherwise put a 1 there
+            $('input[name=' + fieldName + ']').val(1);
         }
     });
-    // This button will decrement the value till 0
+    // This button will decrement the value till 1
     $(".qtyminus").click(function(e) {
         // Stop acting like a button
         e.preventDefault();
@@ -109,20 +109,24 @@ jQuery(document).ready(function() {
         // Get its current value
         var currentVal = parseInt($('input[name=' + fieldName + ']').val());
         // If it isn't undefined or its greater than 0
-        if (!isNaN(currentVal) && currentVal > 0) {
+        if (!isNaN(currentVal) && currentVal > 1) {
             // Decrement one
             $('input[name=' + fieldName + ']').val(currentVal - 1);
         } else {
-            // Otherwise put a 0 there
-            $('input[name=' + fieldName + ']').val(0);
+            // Otherwise put a 1 there
+            $('input[name=' + fieldName + ']').val(1);
         }
     });
 });
 
 
 //to call show() function to display the plan image
-function show() {
+
+$("#checkbutton").click(function() {
+
+
     var quantity = document.getElementById('quantity').value;
+    $(document.getElementsByClassName('selectable')).attr('class', 'unselectable');
     if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || quantity == 0)
     //{
     // if ($("#datepicker").val().length == 0) {
@@ -137,16 +141,50 @@ function show() {
     {
         window.alert("Veuillez remplir des champs avant de commancer.");
         document.getElementById('Plan').style.display = "none";
-
-        //document.getElementById('regform').style.display = "none";
     } else {
-        document.getElementById('Plan').style.display = "block";
-        //document.getElementById('regform').style.display = "block";
-    }
-    //document.getElementById('planImg').style.maxHeight = "200px";
-    //document.getElementById('planImg').background = "IMAGES/plan2.PNG";
+        switch (true) {
+            case (quantity === "1"):
+                {
+                    var items = document.querySelectorAll('#svg_45,#svg_43,#svg_41,#svg_39,#svg_47');
+                    for (var i = 0; i < items.length; i++) {
+                        $(items[i]).attr('class', 'selectable');
+                    }
+                }
 
-}
+                break;
+            case (1 < quantity && quantity < 5):
+                {
+                    var items = document.querySelectorAll('#svg_2,#svg_19,#svg_21,#svg_49,#svg_6,#svg_17,#svg_23,#svg_11,#svg_15,#svg_13');
+                    for (var i = 0; i < items.length; i++) {
+                        $(items[i]).attr('class', 'selectable');
+                    }
+                }
+                break;
+            case (4 < quantity && quantity < 7):
+                {
+                    var items = document.querySelectorAll('#svg_37,#svg_35,#svg_33,#svg_25');
+                    for (var i = 0; i < items.length; i++) {
+                        $(items[i]).attr('class', 'selectable');
+                    }
+                }
+                break;
+            case (6 < quantity && quantity < 13):
+                {
+                    var items = document.querySelectorAll('#svg_27,#svg_29,#svg_31,#svg_25');
+                    for (var i = 0; i < items.length; i++) {
+                        $(items[i]).attr('class', 'selectable');
+                    }
+                }
+                break;
+        }
+        document.getElementById('Plan').style.display = "block";
+    }
+});
+
+$("input[name=quantity]").change(function() {
+    $(document.getElementsByClassName('selectable')).attr('class', 'unselectable').trigger('change');
+
+});
 
 
 

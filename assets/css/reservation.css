@@ -2,3 +2,21 @@
     width: 30em;
     /*what ever width you want*/
 }
+
+text {
+    fill: white;
+}
+
+rect {
+    fill: #c4c0c0;
+}
+
+.selectable {
+    fill: #494848;
+    pointer-events: stroke;
+}
+
+.nonselectable {
+    fill: #c4c0c0;
+    pointer-events: none;
+}
