@@ -1,7 +1,7 @@
 
 		<div class="" id="slider-container-home">
             <div class="tp-banner-container">
-		        <div class="tp-banner" >
+		        <div class="tp-banner">
         			<ul>
         				<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
         					<img src="<?= site_url('assets/images/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
@@ -74,34 +74,34 @@
         </div>
 
         <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
-                <img src="<?= site_url('assets/images/c4.png'); ?>" alt="Écologique">
+            <figure>
+                <img src="<?= site_url('assets/images/picto1.png'); ?>" alt="Écologique">
             </figure>
 
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                <h2>Fresh Air</h2>
+            <div>
+                <h2>Coworking</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus rem atque mollitia nulla, laboriosam dicta. Animi cumque expedita vero modi voluptas doloribus harum, esse fugit suscipit!</p>
             </div>
         </article>
 
         <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
-                <img src="<?= site_url('assets/images/C5.png'); ?>" alt="Respect de l'environnement">
+            <figure>
+                <img src="<?= site_url('assets/images/picto2.png'); ?>" alt="Respect de l'environnement">
             </figure>
 
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                <h2>Collaborate and discover</h2>
+            <div>
+                <h2>Restauration</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus rem atque mollitia nulla, laboriosam dicta. Animi cumque expedita vero modi voluptas doloribus harum, esse fugit suscipit! Alias illo quia voluptatibus.</p>
             </div>
         </article>
 
         <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <figure class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
-                <img src="<?= site_url('assets/images/c4.png'); ?>" alt="Sans danger">
+            <figure>
+                <img src="<?= site_url('assets/images/picto3.png'); ?>" alt="Sans danger">
             </figure>
 
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                <h2>Co-Working</h2>
+            <div>
+                <h2>Services bureautique</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus rem atque mollitia nulla, laboriosam dicta. Animi cumque expedita vero modi voluptas doloribus harum, esse fugit suscipit! Alias illo quia voluptatibus.</p>
             </div>
         </article>

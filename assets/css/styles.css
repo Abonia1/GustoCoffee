@@ -155,7 +155,7 @@ h1 {
     font-weight: 500;
     letter-spacing: -1pt;
     line-height: 4rem;
-    color: #1d3949;
+    color: #33903A;
 }
 
 h2 {
@@ -164,7 +164,7 @@ h2 {
     font-weight: 500;
     letter-spacing: -0.3pt;
     line-height: 2.5rem;
-    color: #1d3949;
+    color: #33903A;
     margin-bottom: 1.8rem;
 }
 
@@ -174,13 +174,13 @@ h3 {
     font-weight: 500;
     letter-spacing: 0pt;
     line-height: 2rem;
-    color: #1d3949;
+    color: #33903A;
     margin-bottom: 1.8rem;
 }
 
 p {
     font-family: 'Lato', 'sans-serif';
-    color: #1d3949;
+    color: black;
     font-size: 1.7rem;
     letter-spacing: 0pt;
     line-height: 2.8rem;
@@ -188,7 +188,7 @@ p {
 
 a {
     font-family: 'Lato', 'sans-serif';
-    color: #1d3949;
+    color: #33903A;
     font-size: 1.7rem;
     letter-spacing: 0pt;
     line-height: 2.8rem;
@@ -287,7 +287,7 @@ footer .copyright p {
 }
 
 footer .copyright p a {
-    color: #1d3949;
+    color: #33903A;
     text-decoration: none;
     font-size: 1.3rem;
     ;
@@ -303,7 +303,7 @@ footer .copyright p a:hover {
 *************************************/
 
 .presentation {
-    color: #1d3949;
+    color: #33903A;
     margin-bottom: 3rem;
 }
 
@@ -334,23 +334,23 @@ footer .copyright p a:hover {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border: 1px solid #2e5972;
-    background: #2e5972;
+    border: 1px solid #3BB44A;
+    background: #3BB44A;
     /* Old browsers */
-    background: -moz-linear-gradient(top, #2e5972 0%, #2a5268 99%);
+    background: -moz-linear-gradient(top, #3BB44A 0%, #33903A 99%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #2e5972 0%, #2a5268 99%);
+    background: -webkit-linear-gradient(top, #3BB44A 0%, #33903A 99%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #2e5972 0%, #2a5268 99%);
+    background: linear-gradient(to bottom, #3BB44A 0%, #33903A 99%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2e5972', endColorstr='#2a5268', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3BB44A', endColorstr='#33903A', GradientType=0);
     /* IE6-9 */
 }
 
 .presentation div a:hover {
     background: #FFF;
-    border: 1px solid #2e5972;
-    color: #2e5972;
+    border: 1px solid #3BB44A;
+    color: #3BB44A;
 }
 
 .photo-presentation {
@@ -506,11 +506,12 @@ footer .copyright p a:hover {
 .priorite {
     margin-top: 40px;
     margin-bottom: 40px;
-    background-color: #1d3949;
+    background-color: #33903A;
     background-image: url('../images/priorite_environnement_bkg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 4rem 0 3rem 0;
+    text-align: center;
 }
 
 .priorite h1 {
@@ -592,7 +593,7 @@ header nav ul li {
 header nav ul li a {
     font-family: 'Montserrat', serif;
     font-size: 2.5rem;
-    color: #1d3949;
+    color: #33903A;
     text-decoration: none;
     display: block;
     text-align: center;
@@ -673,7 +674,7 @@ header #telephone p strong {
 }
 
 #slider-container h1 {
-    background-color: #1d3949;
+    background-color: #33903A;
     color: #fff;
     padding: 20px 30px;
     display: inline-block;
@@ -687,7 +688,7 @@ header #telephone p strong {
 
 #slider-container h2 {
     background-color: #fff;
-    color: #1d3949;
+    color: #33903A;
     padding: 12px 30px;
     display: inline-block;
     font-weight: 300;
@@ -779,15 +780,15 @@ header #telephone p strong {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    background: #2e5972;
-    background: -moz-linear-gradient(top, #2e5972 0%, #2a5268 99%);
-    background: -webkit-linear-gradient(top, #2e5972 0%, #2a5268 99%);
-    background: linear-gradient(to bottom, #2e5972 0%, #2a5268 99%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2e5972', endColorstr='#2a5268', GradientType=0);
+    background: #3BB44A;
+    background: -moz-linear-gradient(top, #3BB44A 0%, #33903A 99%);
+    background: -webkit-linear-gradient(top, #3BB44A 0%, #33903A 99%);
+    background: linear-gradient(to bottom, #3BB44A 0%, #33903A 99%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3BB44A', endColorstr='#33903A', GradientType=0);
 }
 
 #Gustocoffee-slide .plaquette:hover {
-    color: #2a5268;
+    color: #33903A;
     background: #fff;
 }
 
@@ -827,7 +828,7 @@ header #telephone p strong {
 label {
     font-family: 'Lato', 'sans-serif';
     font-size: 2.2rem;
-    color: #1d3949;
+    color: #33903A;
     margin-bottom: 7px;
 }
 
@@ -845,9 +846,9 @@ select {
 }
 
 .contact-button {
-    background-color: #1d3949;
+    background-color: #33903A;
     color: #fff;
-    border: 1px solid #1d3949;
+    border: 1px solid #33903A;
     margin-top: 23px;
     padding: 2rem;
     font-size: 2rem;
@@ -858,8 +859,8 @@ select {
 
 .contact-button:hover {
     background-color: #fff;
-    color: #1d3949;
-    border: 1px solid #1d3949;
+    color: #33903A;
+    border: 1px solid #33903A;
 }
 
 .contact-information address {
@@ -945,12 +946,12 @@ select {
 .pictogramme-container {
     margin-top: 25px;
     background-color: #f1f1f1;
-    border-left: 10px solid #1d3949;
+    border-left: 10px solid #33903A;
     padding: 20px 0 0 0;
 }
 
 .pictogramme-item {
-    color: #1d3949;
+    color: #33903A;
     font-family: 'Lato';
     font-size: 0.8em;
     text-align: center;
@@ -1106,14 +1107,14 @@ select {
     text-align: center;
     text-decoration: none;
     color: #FFF;
-    background-color: #1d3949;
-    border: 1px solid #1d3949;
+    background-color: #33903A;
+    border: 1px solid #33903A;
 }
 
 .fiche a:hover {
-    color: #1d3949;
+    color: #33903A;
     background-color: #fff;
-    border: 1px solid #1d3949;
+    border: 1px solid #33903A;
 }
 
 #add-product {
@@ -1156,7 +1157,7 @@ select {
 }
 
 .mentions-legales strong a {
-    color: #1d3949;
+    color: #33903A;
 }
 
 .mentions-legales .color {
@@ -1231,7 +1232,7 @@ select {
 
 /*
 .list-product:nth-child(odd) {
-	background-color: #1d3949;
+	background-color: #33903A;
     padding:50px 0;
 }
 
@@ -1242,7 +1243,7 @@ select {
 
 
 /*.blue-product {
-    background-color: #1d3949;
+    background-color: #33903A;
     padding:50px 0;
 }*/
 
@@ -1275,24 +1276,24 @@ select {
 }
 
 .grey-product article {
-    border-left: 1px solid #1d3949;
+    border-left: 1px solid #33903A;
     margin-bottom: 3rem;
 }
 
 .grey-product h1 {
-    color: #1d3949;
+    color: #33903A;
     margin-bottom: 3px;
 }
 
 .grey-product h2 {
-    color: #1d3949;
+    color: #33903A;
     font-weight: 300;
     font-size: 2.3rem;
     ;
 }
 
 .grey-product p {
-    color: #1d3949;
+    color: #33903A;
     font-size: 1.9rem;
 }
 
@@ -1303,10 +1304,10 @@ select {
 .blue-product a {
     display: inline-block;
     background-color: #FFF;
-    color: #1d3949;
+    color: #33903A;
     padding: 12px 25px 12px 50px;
     border-radius: 50px;
-    border: 1px solid #1d3949;
+    border: 1px solid #33903A;
     background-image: url('../images/round_button.png');
     background-repeat: no-repeat;
     background-position: 4% 50%;
@@ -1315,18 +1316,18 @@ select {
 }
 
 .blue-product a:hover {
-    background-color: #1d3949;
+    background-color: #33903A;
     border: 1px solid #FFF;
     color: #FFF;
 }
 
 .grey-product a {
     display: inline-block;
-    background-color: #1d3949;
+    background-color: #33903A;
     color: #FFF;
     padding: 12px 25px 12px 50px;
     border-radius: 50px;
-    border: 1px solid #1d3949;
+    border: 1px solid #33903A;
     background-image: url('../images/round_button_white.png');
     background-repeat: no-repeat;
     background-position: 4% 50%;
@@ -1336,8 +1337,8 @@ select {
 
 .grey-product a:hover {
     background-color: #FFF;
-    border: 1px solid #1d3949;
-    color: #1d3949;
+    border: 1px solid #33903A;
+    color: #33903A;
 }
 
 .list-product {
@@ -1420,7 +1421,7 @@ select {
 }
 
 .product .grey-list {
-    color: #1d3949;
+    color: #33903A;
 }
 
 .product .product-img {
@@ -1482,8 +1483,8 @@ table.commande {
 }
 
 .titre .ancre hr {
-    color: #1d3949;
-    border: 1px solid #1d3949;
+    color: #33903A;
+    border: 1px solid #33903A;
     z-index: 0;
     position: relative;
     top: 20px;
@@ -1516,7 +1517,7 @@ table.commande {
 .profil-form legend,
 .profil-table h2 {
     color: #fff;
-    background-color: #1d3949;
+    background-color: #33903A;
     padding: 12px 10px;
     font-size: 2rem;
     font-family: 'Lato', 'sans-serif';
@@ -1530,7 +1531,7 @@ table.commande {
 }
 
 .profil-form fieldset legend {
-    color: #1d3949;
+    color: #33903A;
     background-color: #dadada;
     padding: 12px 10px;
     font-size: 2rem;
