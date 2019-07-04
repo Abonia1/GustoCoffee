@@ -34,7 +34,7 @@ class Auth extends CI_Controller {
 
 	        if( $this->authentification->connexion('client') )
 	        {
-	            redirect(  );
+	            redirect('/reservation');
 	            exit;
 	        }
 	        else

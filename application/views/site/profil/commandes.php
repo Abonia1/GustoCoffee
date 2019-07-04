@@ -39,7 +39,7 @@
                         <?php foreach($commandes AS $commande) : ?>
                             <tr>
                                 <td class="text-left"><?= $commande->reference; ?></td>
-                                <td class="text-left">produits</td>
+                                <td class="text-left">Reservations</td>
                                 <td class="text-left"><?= date('d/m/Y H:i:s', strtotime($commande->date_creation)); ?></td>
                                 <td class="text-center">paiement</td>
                                 <td class="text-center">

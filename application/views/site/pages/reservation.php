@@ -37,6 +37,9 @@
                 Check Availability</button>
             </div>
         </div>
+        <div class="row">
+        <p></p>
+        </div>
         <div class="row" style="display:none;" id="Plan">
             <!-- <div id="Plan" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="display:none;">
             
@@ -168,7 +171,7 @@
           
         </div>
       </div>
-        <?= form_open( 'inscription' ); ?>
+        <?= form_open( 'connexion' ); ?>
         <?= form_submit('envoyer', 'Continue Reservation', array('class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
        <?= form_close(); ?>
        </div>
