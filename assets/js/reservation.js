@@ -192,8 +192,10 @@ $("#checkbutton").click(function() {
 //on chaging color to select it
 function changecolor1() {
     if ($('.selctable')) {
-        //$(document.getElementsByClassName('click')).attr('class', 'selectable');
+        $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_2')).attr('class', 'click');
+        title = document.getElementById("svg_5").textContent;
+        document.getElementById("selectionTitle").innerHTML = "You Have Selected Table " + title;
     }
 }
 
@@ -346,9 +348,11 @@ function changecolor22() {
 
 
 //double click on table number will take to the page redirect
-if ($('.click')) {
+// if ($(".click")) {
+//     title = document.getElementsByClassName("st4 st5").textContent;
+//     document.getElementById("selectionTitle").innerHTML = "You Have Selected Table " + title;
+// }
 
-}
 
 // //Border change on clicking image
 // $(document).ready(function() {
