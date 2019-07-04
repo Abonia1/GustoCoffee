@@ -136,12 +136,12 @@
             </g>
             <g id="table21">
             <title>Table 21</title>
-            <rect id="svg_39" x="110" y="90.5" class="st3 nonselectable" width="33" height="30"  onClick="changecolor21()"/>
+            <rect id="svg_39" x="107" y="90.5" class="st3 nonselectable" width="33" height="30"  onClick="changecolor21()"/>
             <text id="svg_40" transform="matrix(1 0 0 1 114 114.5)" class="st4 st5">21</text>
             </g>
             <g id="table20"> 
             <title>Table 20</title>
-            <rect id="svg_41" x="73" y="81.5" class="st3 nonselectable" width="33" height="30"  onClick="changecolor20()"/>
+            <rect id="svg_41" x="71" y="81.5" class="st3 nonselectable" width="33" height="30"  onClick="changecolor20()"/>
             <text id="svg_42" transform="matrix(1 0 0 1 76 105.5)" class="st4 st5">20</text>
             </g>
             <g id="table19">
