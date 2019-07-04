@@ -4,7 +4,7 @@
     </section>
 
     <section class="col-xs-12 col-sm-6 contact-form">
-    	<?= form_open(); ?>
+    	<?= form_open('connexion'); ?>
             <h2>Déjà client Gustocoffee ?</h2>
 
             <div class="row">
