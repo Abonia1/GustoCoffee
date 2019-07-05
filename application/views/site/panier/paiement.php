@@ -25,7 +25,7 @@
                 <?= form_label('Carte Bancaire', 'cb'); ?>
 
                 <?= form_radio(array('name' => 'paiement', 'id' => 'paiement', 'value' => 'cheque', 'checked' => FALSE)); ?>
-                <?= form_label('Chèque', 'cheque'); ?>
+                <?= form_label('En espèces', 'en espèces'); ?>
 
                 <?= form_radio(array('name' => 'paiement', 'id' => 'paiement', 'value' => 'virement', 'checked' => FALSE)); ?>
                 <?= form_label('Virement', 'virement'); ?>

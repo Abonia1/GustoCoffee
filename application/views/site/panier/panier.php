@@ -15,13 +15,13 @@
         <ul>
             <li><a href="<?= site_url('profil'); ?>">Mes informations</a></li>
             <li><a href="<?= site_url('profil/commandes'); ?>">Mes commandes</a></li>
-            <li><a href="<?= site_url('panier'); ?>">Mon reservation</a></li>
+            <li><a href="<?= site_url('panier'); ?>">Mon Panier reservation</a></li>
             <li><a href="<?= site_url('deconnexion'); ?>">Me déconnecter</a></li>
         </ul>
     </section>
 
     <section class="col-xs-12 col-sm-9 profil-table">
-        <h2>Mon Panier</h2>
+        <h2>Mon Panier Reservation</h2>
 
         <table>
             <thead>
@@ -60,8 +60,8 @@
                                 <input type="number" value="<?= $val['quantite']; ?>" class="update-product" data-id="<?= $val['id']; ?>">
                             </td>
 
-                            <td class="prix">
-                                <?= ($val['prix'] * $val['quantite']); ?>€
+                            <td>
+                                1
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -70,8 +70,8 @@
         </table>
 
         <div class="col-xs-12">
-            <a href="<?= site_url('panier/livraison'); ?>" class="contact-button">Passer la commande</a>
-            <a href="<?= site_url('produits'); ?>" class="contact-button">Continuer mes reservation</a>
+            <a href="<?= site_url('panier/paiement'); ?>" class="contact-button">Passer la commande</a>
+            <a href="<?= site_url('reservation'); ?>" class="contact-button">Continuer mes reservation</a>
         </div>
     </section>
 </div>
