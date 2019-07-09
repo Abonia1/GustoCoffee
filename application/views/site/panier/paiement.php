@@ -66,18 +66,44 @@
             </div>
 
             <div class="col-xs-12 col-sm-8">
-                <?= form_radio(array('name' => 'paiement', 'id' => 'paiement', 'value' => 'cb', 'checked' => TRUE)); ?>
-                <?= form_label('Carte Bancaire', 'cb'); ?>
+                 <!-- Set up a container element for the button -->
+    <div id="paypal-button-container"></div>
 
-                <?= form_radio(array('name' => 'paiement', 'id' => 'paiement', 'value' => 'cheque', 'checked' => FALSE)); ?>
-                <?= form_label('En espèces', 'en espèces'); ?>
+<!-- Include the PayPal JavaScript SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
 
-                <?= form_radio(array('name' => 'paiement', 'id' => 'paiement', 'value' => 'virement', 'checked' => FALSE)); ?>
-                <?= form_label('Virement', 'virement'); ?>
+<script>
+    // Render the PayPal button into #paypal-button-container
+    paypal.Buttons({
+
+        // Set up the transaction
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '0.01'
+                    }
+                }]
+            });
+        },
+
+        // Finalize the transaction
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                // Show a success message to the buyer
+                alert('Transaction completed by ' + details.payer.name.given_name + '!' );
+                window.location.href = "<?= site_url('site/reservationsuccess'); ?>";
+            });
+        }
+
+
+    }).render('#paypal-button-container');
+</script>
             </div>
+
         </fieldset>
 
-        <a href="<?= site_url('panier/confirm'); ?>" class="contact-button">Retour</a> - <input type="submit" value="Valider votre commande" class="contact-button">
+        <a href="<?= site_url('site/reservations'); ?>" class="contact-button">Retour</a> - <input type="submit" style="display:none" value="Valider votre commande" class="contact-button">
         <?= form_close( '' ); ?>
 
 
