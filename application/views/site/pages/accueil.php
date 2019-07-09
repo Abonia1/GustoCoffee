@@ -116,14 +116,15 @@
         </div>
     </div>
 
-    <?php foreach($services_type AS $service_type) : ?>
+    <?php foreach($produits AS $produit) : ?>
         <article class="col-xs-12 col-sm-6 produit">
-            <a href="<?= site_url('/services/'.$service_type->s_type_id); ?>">
+            <a href="<?= site_url('/menu1'); ?>">
                 <div>
-                    <img src="<?= site_url('assets/images/produit/accueil/'.$service_type->s_image); ?>" alt="<?= $service_type->s_nom; ?>" />
+                    <img src="<?= site_url('assets/images/produit/accueil/'.$produit->image); ?>" alt="<?= $produit->nom; ?>" />
 
                     <div class="produit-nom">
-                        <h1><?= $service_type->s_nom; ?></h1>
+                        <h1><?= $produit->nom; ?></h1>
+                        <h2><?= $produit->description_courte; ?></h2>
                     </div>
                 </div>
 

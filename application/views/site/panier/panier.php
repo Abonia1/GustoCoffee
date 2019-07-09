@@ -2,7 +2,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.js"></script>
 <div class="container profil-container">
     <div class="titre col-xs-12">
-        <h1>Mon Reservation</h1>
+        <h1>Reservation</h1>
 
         <div class="ancre">
             <hr>
@@ -15,23 +15,21 @@
         <ul>
             <li><a href="<?= site_url('profil'); ?>">Mes informations</a></li>
             <li><a href="<?= site_url('profil/commandes'); ?>">Mes commandes</a></li>
-            <li><a href="<?= site_url('panier'); ?>">Mon reservation</a></li>
+            <li><a href="<?= site_url('panier'); ?>">Mon Panier reservation</a></li>
             <li><a href="<?= site_url('deconnexion'); ?>">Me déconnecter</a></li>
         </ul>
     </section>
 
     <section class="col-xs-12 col-sm-9 profil-table">
-        <h2>Mon Panier</h2>
+        <h2>Mon Panier Reservation</h2>
 
         <table>
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
                     <th>Date</th>
                     <th>Time</th>
-                    <th>Person</th>
-                    <th>Seat Number</th>
+                    <th>Quantity</th>
+                    <th>Table Number</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -49,19 +47,29 @@
                             </td>
 
                             <td>
-                                <?= $val['nom']; ?>
+                                <?= $val['date']; ?>
                             </td>
 
                             <td>
-                                <?= $val['prix']; ?>€
+                                <?= $val['time']; ?>€
+                            </td>
+                            <td>
+                                <?= $val['quantity']; ?>
+                            </td>
+
+                            <td>
+                                <?= $val['Table Number']; ?>
+                            </td>
+                            <td>
+                                <?= $val['total']*50; ?>€
                             </td>
 
                             <td>
                                 <input type="number" value="<?= $val['quantite']; ?>" class="update-product" data-id="<?= $val['id']; ?>">
                             </td>
 
-                            <td class="prix">
-                                <?= ($val['prix'] * $val['quantite']); ?>€
+                            <td>
+                                1
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -70,8 +78,8 @@
         </table>
 
         <div class="col-xs-12">
-            <a href="<?= site_url('panier/livraison'); ?>" class="contact-button">Passer la commande</a>
-            <a href="<?= site_url('produits'); ?>" class="contact-button">Continuer mes reservation</a>
+            <a href="<?= site_url('panier/paiement'); ?>" class="contact-button">Passer la commande</a>
+            <a href="<?= site_url('reservation'); ?>" class="contact-button">Continuer mes reservation</a>
         </div>
     </section>
 </div>
