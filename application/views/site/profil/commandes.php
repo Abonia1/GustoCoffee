@@ -24,48 +24,27 @@
             <table class="col-xs-12 commande">
                 <thead>
                     <tr>
-                        <th class="text-left">N°</th>
-                        <th class="text-left">Résumé</th>
+                        <th class="text-left">Reservation Reference</th>
                         <th class="text-left">Date</th>
-                        <th class="text-center">Paiement</th>
-                        <th class="text-center">Statut</th>
-                        <th class="text-right">Total</th>
-                        <th class="text-left">Facture</th>
+                        <th class="text-left">Time</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-center">Table Number</th>
+                        <th class="text-right">Status</th>
+                        <th class="text-left">Paiment</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <?php if($commandes != NULL) : ?>
-                        <?php foreach($commandes AS $commande) : ?>
+                    <?php if($reservations != NULL) : ?>
+                        <?php foreach($reservations AS $reservation) : ?>
                             <tr>
-                                <td class="text-left"><?= $commande->reference; ?></td>
-                                <td class="text-left">Reservations</td>
-                                <td class="text-left"><?= date('d/m/Y H:i:s', strtotime($commande->date_creation)); ?></td>
-                                <td class="text-center">paiement</td>
-                                <td class="text-center">
-                                  <?php
-                                	   switch($commande->statut)
-                                	   {
-                                	       case 0:
-                                	           echo '<span class="badge badge-pill badge-danger">Annulée</span>';
-                                	           break;
-
-                                	       case 1:
-                                	           echo '<span class="badge badge-pill badge-info">En cours</span>';
-                                	           break;
-
-                                	       case 2:
-                                	           echo '<span class="badge badge-pill badge-warning">En attente</span>';
-                                	           break;
-
-                                	       case 3:
-                                	           echo '<span class="badge badge-pill badge-success">Terminée</span>';
-                                	           break;
-                                	   }
-                                	?>
-                                </td>
-                                <td class="text-right"><?= $commande->prix_ttc_final; ?>€</td>
-                                <td class="text-left"><?= $commande->bon_livraison; ?></td>
+                                <td class="text-left"><?= $reservation->reservation_id; ?></td>
+                                <td class="text-left"><?= $reservation->date; ?></td>
+                                <td class="text-left"><?= $reservation->time; ?></td>
+                                <td class="text-center"><?= $reservation->quantity; ?></td>
+                                <td class="text-center"><?= $reservation->tbnumber; ?></td>
+                                <td class="text-center"><?= $reservation->status; ?></td>
+                                <td class="text-right"><?= $reservation->quantity*50; ?> €</td>
                             </tr>
                         <?php endforeach; ?>
                     <?php else : ?>

@@ -165,6 +165,13 @@ $config = Array(
 		$this->load->view('site/template/footer');
 	}
 
+	public function reservation(){
+		$this->load->view('site/template/header');
+		$this->load->view('site/pages/reservation');
+		$this->load->view('site/template/footer');	
+	}
+
+
 	// /* Refresh captcha Ajax */
 	// public function refresh() {
     //     $config = array(
@@ -221,12 +228,7 @@ $config = Array(
 		echo $qte * $panier_total[$id]['prix']."€"; //on renvoie le total pour maj le prix affiché
 	}
 
-	public function reservation(){
-		$this->load->view('site/template/header');
-		$this->load->view('site/pages/reservation');
-		$this->load->view('site/template/footer');	
-	}
-
+	
 	public function get_adresse()
 	{
 		$this->load->model('client_model');

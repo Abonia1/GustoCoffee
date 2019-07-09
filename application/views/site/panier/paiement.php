@@ -7,6 +7,51 @@
         </div>
     </div>
 
+    <section class="col-xs-12 col-sm-9 profil-table">
+        <h2>Mon détail de Réservation </h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Heure</th>
+                    <th>Nombre de personnes</th>
+                    <th>Numéro de table</th>
+                    <th>Total</th>
+                    
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php if(isset($date) && isset($time) && isset($quantity)) : ?>
+                    
+                        <tr>
+                            <td>
+                            <?= $date; ?>
+                            </td>
+
+                            <td>
+                            <?= $time; ?>
+                            </td>
+
+                            <td>
+                            <?= $quantity; ?>
+                            </td>
+                            <td>
+                            <?= $tablenumber; ?>
+                            </td>
+                            <td>
+                            <?= $quantity*50; ?>€
+                            </td>
+      
+                        </tr>
+                    
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </section>
+    <br><br>
+
     <section class="col-xs-12 col-sm-9 profil-form">
         <?= form_open( '' , array('autocomplete' => 'off')); ?>
         <legend>Choisir votre type de paiement</legend>
@@ -32,50 +77,12 @@
             </div>
         </fieldset>
 
-        <a href="<?= site_url('panier/livraison'); ?>" class="contact-button">Retour</a> - <input type="submit" value="Valider votre commande" class="contact-button">
+        <a href="<?= site_url('panier/confirm'); ?>" class="contact-button">Retour</a> - <input type="submit" value="Valider votre commande" class="contact-button">
         <?= form_close( '' ); ?>
 
 
     </section>
 
 
-    <section class="col-xs-12 col-sm-3 profil-table">
-        <h2>Ma commande</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Person</th>
-                    <th>Seat Number</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php if(isset($this->session->userdata['panier']) && !empty($this->session->userdata['panier'])) : ?>
-                    <?php foreach($this->session->userdata['panier'] AS $key => $val) : ?>
-                        <tr>
-                            <td>
-                                <?= $val['nom']; ?>
-                            </td>
-
-                            <td>
-                                <?= $val['prix']; ?>€
-                            </td>
-
-                            <td>
-                                <?= $val['quantite']; ?>
-                            </td>
-
-                            <td>
-                                <?= ($val['prix'] * $val['quantite']); ?>€
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </tbody>
-        </table>
-    </section>
 </div>

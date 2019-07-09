@@ -47,3 +47,8 @@ h1 {
 p {
     line-height: 3.5;
 }
+
+#tablenumber {
+    visibility: none;
+    display: none;
+}

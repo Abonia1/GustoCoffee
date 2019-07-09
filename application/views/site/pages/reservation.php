@@ -9,8 +9,15 @@
     <section>
        
 
-
+    
         <div class="row">
+            
+
+            <div class="col-xs-12 col-sm-3">
+                <button  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
+                Voir les disponibilités</button>
+            </div>
+            <?= form_open( 'panier/paiement' ); ?>
             <div class="col-xs-12 col-sm-3">
                 <label>Date *</label>
                 <?= form_input(array('name' => 'Date', 'placeholder' => 'Date de reservation', 'id' => 'datepicker', 'class' => (empty(form_error('Date')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Date'))); ?>
@@ -31,11 +38,6 @@
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyplus' />
 
             </div>
-
-            <div class="col-xs-12 col-sm-3">
-                <button  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
-                Voir les disponibilités</button>
-            </div>
         </div>
 
         <div class="row" style="display:none;" id="Plan">
@@ -50,7 +52,7 @@
 						</header>
             
             <div class="row">
-        <h1 id="selectionTitle" style="text-align: center"></h1>
+        <h1 id="selectionTitle" style="text-align: center" name='tablenumber' ></h1>
         </div>
 
  
@@ -177,8 +179,14 @@
           
         </div>
       </div>
-        <?= form_open( 'panier' ); ?>
-        <?= form_submit('envoyer', 'Continuer la Reservation', array('class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
+
+                
+                <?= form_input(array('name' => 'tablenumber','id'=>"tablenumber")) ?>
+
+        
+        <?= form_submit('envoyer', 'Continuer la Reservation', array('type' => 'submit',
+'value'=> 'Submit',
+'class'=> 'submit','class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
        <?= form_close(); ?>
        </div>
     </section>

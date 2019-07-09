@@ -92,7 +92,8 @@ class Panier extends CI_Controller {
 		$this->load->view('site/template/footer');
 	}
 
-    public function paiement()
+
+	public function paiement()
 	{
 		if( !$this->authentification->est_connecte('client') )
 		{
@@ -101,53 +102,82 @@ class Panier extends CI_Controller {
 		}
 
 		// form_validation run
-		if($this->input->post('paiement') != NULL)
+		else
 		{
-			$this->load->model('commande_model');
-
-			$paiement = array(
-				'type_paiement' => $this->input->post('paiement')
-			);
-
-			$this->session->userdata['commande']['paiement'] = $paiement; //je place mes infos livraison en session
-
 			// on récupère les informations de la commande
 			$data = array(
-				'client' => $this->session->userdata['client']->id,
-				'reference' => "",
-				'prix_ht_final' => 20,
-				'prix_ht_remise' => 20,
-				'prix_ttc_final' => 20,
-				'date_creation' => date('Y-m-d H:i:s'),
-				'date_modification' => date('Y-m-d H:i:s'),
-				'statut' => 2,
-				'valide' => 1,
-				'bon_livraison' => 'facture.pdf'
+				'date' => $this->input->post('Date'),
+				'time' => $this->input->post('Time'),
+				'quantity' => $this->input->post('quantity'),
+				'tablenumber' => $this->input->post('tablenumber'),
+
 			);
+			 //$reservation = $this->reservation_model->ajouter($data); // ajout de la commande on recup l'id
 
-			$commande = $this->commande_model->ajouter($data); // ajout de la commande on recup l'id
+			//$this->commande_model->ajouter_produit_commande($articles); // On ajoute les produits
+			// Show submitted data on view page again.
 
-			$articles = array();
-			foreach ($this->session->userdata['commande']['articles'] as $key => $val) {
-				$articles[] = array(
-					'commande' => $commande,
-					'produit' => $val['id'],
-					'prix_ht' => $val['prix'],
-					'remise' => 0,
-					'quantite' => $val['quantite'],
-					'total_ht' => $val['total']
-				);
-			}
-
-			$this->commande_model->ajouter_produit_commande($articles); // On ajoute les produits
-
-			$this->session->unset_userdata(array('panier', 'commande'));
-			redirect('profil/commandes');
-			exit;
-		}
 
 		$this->load->view('site/template/header');
-		$this->load->view('site/panier/paiement', array());
+		$this->load->view('site/panier/paiement', $data);
 		$this->load->view('site/template/footer');
+		}
 	}
+
+    // public function paiement()
+	// {
+	// 	if( !$this->authentification->est_connecte('client') )
+	// 	{
+	// 		redirect('connexion');
+	// 		exit;
+	// 	}
+
+	// 	// form_validation run
+	// 	if($this->input->post('paiement') != NULL)
+	// 	{
+	// 		$this->load->model('reservation_model');
+
+	// 		$paiement = array(
+	// 			'type_paiement' => $this->input->post('paiement')
+	// 		);
+
+	// 		$this->session->userdata['reservation']['paiement'] = $paiement; //je place mes infos livraison en session
+
+	// 		// on récupère les informations de la commande
+	// 		// $data = array(
+	// 		// 	'c_id' => $this->session->userdata['client']->id,
+	// 		// 	'reservation_id' => "",
+	// 		// 	'date' => date('Y-m-d H:i:s'),
+	// 		// 	'date_modification' => date('Y-m-d H:i:s'),
+	// 		// 	'statut' => 2,
+	// 		// 	'valide' => 1,
+	// 		// 	'bon_livraison' => ''
+	// 		// );
+
+	// 		// $reservation = $this->reservation_model->ajouter($data); // ajout de la commande on recup l'id
+
+	// 		// $articles = array();
+	// 		// foreach ($this->session->userdata['commande']['articles'] as $key => $val) {
+	// 			$data = array(
+	// 				'c_id' => $this->session->userdata['client']->id,
+	// 				'reservation_id' => $val['reservation_id'],
+	// 				'date' => $val['date'],
+	// 				'time' => $val['time'],
+	// 				'quantite' => $val['quantite'],
+	// 				'status' => $val['status'],
+	// 				'tbnumber' => $val['tbnumber'],
+	// 			);
+			
+
+	// 		$this->commande_model->ajouter_produit_commande($articles); // On ajoute les produits
+
+	// 		$this->session->unset_userdata(array('panier', 'commande'));
+	// 		redirect('profil/commandes');
+	// 		exit;
+	// 	}
+
+	// 	$this->load->view('site/template/header');
+	// 	$this->load->view('site/panier/paiement', array($data																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			));
+	// 	$this->load->view('site/template/footer');
+	// }
 }

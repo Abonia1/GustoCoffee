@@ -26,12 +26,10 @@
         <table>
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
                     <th>Date</th>
                     <th>Time</th>
-                    <th>Person</th>
-                    <th>Seat Number</th>
+                    <th>Quantity</th>
+                    <th>Table Number</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -49,11 +47,21 @@
                             </td>
 
                             <td>
-                                <?= $val['nom']; ?>
+                                <?= $val['date']; ?>
                             </td>
 
                             <td>
-                                <?= $val['prix']; ?>€
+                                <?= $val['time']; ?>€
+                            </td>
+                            <td>
+                                <?= $val['quantity']; ?>
+                            </td>
+
+                            <td>
+                                <?= $val['Table Number']; ?>
+                            </td>
+                            <td>
+                                <?= $val['total']*50; ?>€
                             </td>
 
                             <td>

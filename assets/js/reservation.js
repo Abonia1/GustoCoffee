@@ -201,6 +201,8 @@ function changecolor1() {
         $(document.getElementById('svg_2')).attr('class', 'click');
         title = document.getElementById("svg_5").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
+
     }
 }
 
@@ -210,6 +212,7 @@ function changecolor2() {
         $(document.getElementById('svg_19')).attr('class', 'click');
         title = document.getElementById("svg_20").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -219,6 +222,7 @@ function changecolor3() {
         $(document.getElementById('svg_21')).attr('class', 'click');
         title = document.getElementById("svg_22").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -228,6 +232,7 @@ function changecolor4() {
         $(document.getElementById('svg_49')).attr('class', 'click');
         title = document.getElementById("svg_50").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -237,6 +242,7 @@ function changecolor5() {
         $(document.getElementById('svg_6')).attr('class', 'click');
         title = document.getElementById("svg_7").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -246,6 +252,7 @@ function changecolor6() {
         $(document.getElementById('svg_17')).attr('class', 'click');
         title = document.getElementById("svg_18").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -255,6 +262,7 @@ function changecolor7() {
         $(document.getElementById('svg_23')).attr('class', 'click');
         title = document.getElementById("svg_24").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -264,6 +272,7 @@ function changecolor8() {
         $(document.getElementById('svg_11')).attr('class', 'click');
         title = document.getElementById("svg_12").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -273,6 +282,7 @@ function changecolor9() {
         $(document.getElementById('svg_15')).attr('class', 'click');
         title = document.getElementById("svg_16").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -282,6 +292,7 @@ function changecolor10() {
         $(document.getElementById('svg_13')).attr('class', 'click');
         title = document.getElementById("svg_14").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -291,6 +302,7 @@ function changecolor11() {
         $(document.getElementById('svg_25')).attr('class', 'click');
         title = document.getElementById("svg_26").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -300,6 +312,7 @@ function changecolor12() {
         $(document.getElementById('svg_37')).attr('class', 'click');
         title = document.getElementById("svg_38").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -309,6 +322,7 @@ function changecolor13() {
         $(document.getElementById('svg_35')).attr('class', 'click');
         title = document.getElementById("svg_36").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -318,6 +332,7 @@ function changecolor14() {
         $(document.getElementById('svg_33')).attr('class', 'click');
         title = document.getElementById("svg_34").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -327,6 +342,7 @@ function changecolor15() {
         $(document.getElementById('svg_27')).attr('class', 'click');
         title = document.getElementById("svg_28").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -336,6 +352,7 @@ function changecolor16() {
         $(document.getElementById('svg_29')).attr('class', 'click');
         title = document.getElementById("svg_30").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -345,6 +362,7 @@ function changecolor17() {
         $(document.getElementById('svg_31')).attr('class', 'click');
         title = document.getElementById("svg_32").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -354,6 +372,7 @@ function changecolor18() {
         $(document.getElementById('svg_45')).attr('class', 'click');
         title = document.getElementById("svg_46").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -363,6 +382,7 @@ function changecolor19() {
         $(document.getElementById('svg_43')).attr('class', 'click');
         title = document.getElementById("svg_44").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -372,6 +392,7 @@ function changecolor20() {
         $(document.getElementById('svg_41')).attr('class', 'click');
         title = document.getElementById("svg_42").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -381,6 +402,7 @@ function changecolor21() {
         $(document.getElementById('svg_39')).attr('class', 'click');
         title = document.getElementById("svg_40").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -390,6 +412,7 @@ function changecolor22() {
         $(document.getElementById('svg_47')).attr('class', 'click');
         title = document.getElementById("svg_48").textContent;
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
