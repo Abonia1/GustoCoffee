@@ -53,11 +53,11 @@ class Profil extends CI_Controller {
 			exit;
 		}
 		else {
-			$this->load->model('reservation_model');
-			$reservations = $this->reservation_model->reservation_liste($this->session->userdata('client')->id);
+			$this->load->model('commande_model');
+			$commandes = $this->commande_model->commande_liste($this->session->userdata('client')->id);
 
 			$this->load->view('site/template/header');
-			$this->load->view('site/profil/commandes', array('reservations' => $reservations));
+			$this->load->view('site/profil/commandes', array('commandes' => $commandes));
 			$this->load->view('site/template/footer');
 		}
 	}

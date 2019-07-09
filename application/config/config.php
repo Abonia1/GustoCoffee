@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://aboweb.local:8080/GustoCoffee';
-$config['site_url'] = 'http://aboweb.local:8080/GustoCoffee';
+$config['base_url'] = 'http://localhost/GustoCoffee';
+$config['site_url'] = 'http://localhost/GustoCoffee';
 
 /*
 |--------------------------------------------------------------------------
@@ -490,6 +490,8 @@ $config['compress_output'] = FALSE;
 |
 */
 $config['time_reference'] = 'local';
+
+
 
 /*
 |--------------------------------------------------------------------------

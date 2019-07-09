@@ -17,11 +17,11 @@ class Site extends CI_Controller {
 		//$data['text'] = $this->accueil_model->text();
         $data_['imageproduits']=$this->image_model->imageproduits();
 
-		$this->load->model('produit_model');
-		$produits = $this->produit_model->produits_accueil();
+		$this->load->model('services');
+		$services_type = $this->services->services_type_liste();
 
 		$this->load->view('site/template/header');
-		$this->load->view('site/pages/accueil', array('produits' => $produits));
+		$this->load->view('site/pages/accueil', array('services_type' => $services_type));
 		$this->load->view('site/template/footer');
 	}
 
@@ -165,13 +165,6 @@ $config = Array(
 		$this->load->view('site/template/footer');
 	}
 
-	public function reservation(){
-		$this->load->view('site/template/header');
-		$this->load->view('site/pages/reservation');
-		$this->load->view('site/template/footer');	
-	}
-
-
 	// /* Refresh captcha Ajax */
 	// public function refresh() {
     //     $config = array(
@@ -228,7 +221,12 @@ $config = Array(
 		echo $qte * $panier_total[$id]['prix']."€"; //on renvoie le total pour maj le prix affiché
 	}
 
-	
+	public function reservation(){
+		$this->load->view('site/template/header');
+		$this->load->view('site/pages/reservation');
+		$this->load->view('site/template/footer');
+	}
+
 	public function get_adresse()
 	{
 		$this->load->model('client_model');
@@ -269,5 +267,24 @@ $config = Array(
 		{
 			return FALSE;
 		}
+	}
+    public function services()
+    {
+        $this->load->model('services');
+		$services_type = $this->services->services_type_liste();
+        
+		$this->load->view('site/template/header');
+		$this->load->view('site/pages/services', array('services_type' => $services_type));
+		$this->load->view('site/template/footer');	
+	}
+    public function service($id)
+    {
+        $this->load->model('services');
+		$service = $this->services->service_liste($id);
+        $type = $id;
+        
+		$this->load->view('site/template/header');
+		$this->load->view('site/pages/service', array('service' => $service, 'type' => $type));
+		$this->load->view('site/template/footer');	
 	}
 }

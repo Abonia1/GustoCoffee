@@ -15,7 +15,7 @@
         <ul>
             <li><a href="<?= site_url('profil'); ?>">Mes informations</a></li>
             <li><a href="<?= site_url('profil/commandes'); ?>">Mes commandes</a></li>
-            <li><a href="<?= site_url('panier'); ?>">Mon Panier Reservation</a></li>
+            <li><a href="<?= site_url('panier'); ?>">Mon panier</a></li>
             <li><a href="<?= site_url('deconnexion'); ?>">Me déconnecter</a></li>
         </ul>
     </section>

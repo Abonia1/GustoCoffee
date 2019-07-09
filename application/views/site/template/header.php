@@ -59,7 +59,7 @@
 	            <div class="row">
 	                <div class="col-sm-3 col-xs-12">
 	                    <a href="<?= site_url(); ?>">
-							<img src="<?= site_url("assets/images/gusto_coffee.png"); ?>" alt="Logo Gustocoffee">
+							<img src="<?= site_url('/assets/images/gusto_coffee.png')?>" alt="Logo Gustocoffee">
 						</a>
 	                </div>
 
@@ -80,7 +80,7 @@
 								<?php else : ?>
 									<a href="<?= site_url('connexion'); ?>">
 										<img src="<?= site_url('assets/images/profil_icon.png'); ?>">
-										<br>Se connecter
+										<br>Invité
 									</a>
 								<?php endif; ?>
 							</li>
@@ -88,7 +88,7 @@
 							<li id="monPanier">
 								<a href="<?= site_url('reservation'); ?>">
 									<img src="<?= site_url('assets/images/panier_icon.png'); ?>">
-									<br>Reservation
+									<br>Mon Reservation
 								</a>
 							</li>
 
@@ -108,15 +108,6 @@
 						</ul>
 					</div>
 	            </div>
-				<div id="panierBox" class="col-lg-3 col-md-3 col-sm-3 col-xs-4 panier panierEtat">
-					<h2>VOTRE RESERVATION</h2>
-					<div id="panier">
-					</div>
-					<hr>
-					<div class="row">
-						<button type="button" name="button"><a href="<?= site_url('profil/commandes'); ?>">VOIR MON RESERVATION</a></button>
-					</div>
-				</div>
 				<div class="row">
 					<nav class="row">
 		                <ul class="col-xs-12">
@@ -125,7 +116,7 @@
 		                    </li>
 
 		                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-		                        <a href="<?= site_url('/produits'); ?>">Services</a>
+		                        <a href="<?= site_url('/services'); ?>">Services</a>
 		                    </li>
 
 		                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
