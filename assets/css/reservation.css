@@ -25,3 +25,30 @@ rect {
 .click {
     fill: rgb(45, 160, 45);
 }
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-size: 22px;
+    line-height: 3;
+    text-align: center;
+}
+
+.message {
+    color: #797575;
+    text-align: center;
+    font-size: 18px;
+}
+
+h1 {
+    line-height: 0.5;
+}
+
+p {
+    line-height: 3.5;
+}
+
+#tablenumber {
+    visibility: none;
+    display: none;
+}

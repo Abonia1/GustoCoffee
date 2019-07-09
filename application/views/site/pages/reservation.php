@@ -9,32 +9,33 @@
     <section>
        
 
-
+    
         <div class="row">
+      
+            <?= form_open( 'panier/paiement' ); ?>
             <div class="col-xs-12 col-sm-3">
                 <label>Date *</label>
                 <?= form_input(array('name' => 'Date', 'placeholder' => 'Date de reservation', 'id' => 'datepicker', 'class' => (empty(form_error('Date')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Date'))); ?>
             </div>
 
             <div class="col-xs-12 col-sm-3">
-                <label>Time *</label>
+                <label>Heure *</label>
                 <?= form_input(array('name' => 'Time', 'placeholder' => 'Heure de reservation ', 'id' => 'timepicker', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Time'))); ?>
             </div>
 
 
             <div class="col-xs-12 col-sm-3">
-                <label>Number of people</label>
+                <label>Nombre de personnes </label>
                 <input type='button' value='-' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyminus' />
                 <?= form_input(array('name' => 'quantity', 'placeholder' => 'Nombre de persons', 'id' => 'quantity', 'value'=>'1', 'class' => (empty(form_error('quantity')) ? "" : "quantity") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('quantity'))); ?>
                 <input type='button' value='+' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyplus' />
 
-            </div>
-
+            </div>  
             <div class="col-xs-12 col-sm-3">
-                <button  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
-                Check Availability</button>
+                <a  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
+                Voir les disponibilités</a>
             </div>
         </div>
 
@@ -43,9 +44,14 @@
             
 
             </div> -->
-            <h1>Try to select your seat</h1>
+            <header class="row" id="titleHeader">
+							<p class="header">Tables disponibles pour <span id='personheader'></span> person(s) au <span id='dateheader'></span> à <span id='timeheader'></span>.</p><!-- /.text-center pjRbSectionTitle pjRbSectionTitleSmall -->
+
+							<p class="message">Cliquez sur une table disponible pour la réserver</p>
+						</header>
+            
             <div class="row">
-        <h1 id="selectionTitle" style="text-align: center"></h1>
+        <h1 id="selectionTitle" style="text-align: center" name='tablenumber' ></h1>
         </div>
 
  
@@ -172,8 +178,14 @@
           
         </div>
       </div>
-        <?= form_open( 'connexion' ); ?>
-        <?= form_submit('envoyer', 'Continue Reservation', array('class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
+
+                
+                <?= form_input(array('name' => 'tablenumber','id'=>"tablenumber")) ?>
+
+        
+        <?= form_submit('envoyer', 'Continuer la Reservation', array('type' => 'submit',
+'value'=> 'Submit',
+'class'=> 'submit','class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
        <?= form_close(); ?>
        </div>
     </section>

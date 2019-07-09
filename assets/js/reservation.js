@@ -127,6 +127,11 @@ $("#checkbutton").click(function() {
     $(document.getElementsByClassName('selectable')).attr('class', 'nonselectable')
     $(document.getElementsByClassName('click')).attr('class', 'nonselectable')
     var quantity = document.getElementById('quantity').value;
+    document.getElementById('personheader').innerHTML = quantity
+    dateheader = document.getElementById('datepicker').value;
+    document.getElementById('dateheader').innerHTML = dateheader
+    timeheader = document.getElementById('timepicker').value;
+    document.getElementById('timeheader').innerHTML = timeheader
 
     if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || quantity == 0)
     //{
@@ -195,7 +200,9 @@ function changecolor1() {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_2')).attr('class', 'click');
         title = document.getElementById("svg_5").textContent;
-        document.getElementById("selectionTitle").innerHTML = "You Have Selected Table " + title;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
+
     }
 }
 
@@ -203,6 +210,9 @@ function changecolor2() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_19')).attr('class', 'click');
+        title = document.getElementById("svg_20").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -210,6 +220,9 @@ function changecolor3() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_21')).attr('class', 'click');
+        title = document.getElementById("svg_22").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -217,6 +230,9 @@ function changecolor4() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_49')).attr('class', 'click');
+        title = document.getElementById("svg_50").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -224,6 +240,9 @@ function changecolor5() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_6')).attr('class', 'click');
+        title = document.getElementById("svg_7").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -231,6 +250,9 @@ function changecolor6() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_17')).attr('class', 'click');
+        title = document.getElementById("svg_18").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -238,6 +260,9 @@ function changecolor7() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_23')).attr('class', 'click');
+        title = document.getElementById("svg_24").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -245,6 +270,9 @@ function changecolor8() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_11')).attr('class', 'click');
+        title = document.getElementById("svg_12").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -252,6 +280,9 @@ function changecolor9() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_15')).attr('class', 'click');
+        title = document.getElementById("svg_16").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -259,6 +290,9 @@ function changecolor10() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_13')).attr('class', 'click');
+        title = document.getElementById("svg_14").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -266,6 +300,9 @@ function changecolor11() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_25')).attr('class', 'click');
+        title = document.getElementById("svg_26").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -273,6 +310,9 @@ function changecolor12() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_37')).attr('class', 'click');
+        title = document.getElementById("svg_38").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -280,6 +320,9 @@ function changecolor13() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_35')).attr('class', 'click');
+        title = document.getElementById("svg_36").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -287,6 +330,9 @@ function changecolor14() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_33')).attr('class', 'click');
+        title = document.getElementById("svg_34").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -294,6 +340,9 @@ function changecolor15() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_27')).attr('class', 'click');
+        title = document.getElementById("svg_28").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -301,6 +350,9 @@ function changecolor16() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_29')).attr('class', 'click');
+        title = document.getElementById("svg_30").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -308,6 +360,9 @@ function changecolor17() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_31')).attr('class', 'click');
+        title = document.getElementById("svg_32").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -315,6 +370,9 @@ function changecolor18() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_45')).attr('class', 'click');
+        title = document.getElementById("svg_46").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -322,6 +380,9 @@ function changecolor19() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_43')).attr('class', 'click');
+        title = document.getElementById("svg_44").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -329,6 +390,9 @@ function changecolor20() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_41')).attr('class', 'click');
+        title = document.getElementById("svg_42").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -336,6 +400,9 @@ function changecolor21() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_39')).attr('class', 'click');
+        title = document.getElementById("svg_40").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
 
@@ -343,14 +410,19 @@ function changecolor22() {
     if ($('.selctable')) {
         $(document.getElementsByClassName('click')).attr('class', 'selectable');
         $(document.getElementById('svg_47')).attr('class', 'click');
+        title = document.getElementById("svg_48").textContent;
+        document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
+        document.getElementById("tablenumber").value = title;
     }
 }
+
+
 
 
 //double click on table number will take to the page redirect
 // if ($(".click")) {
 //     title = document.getElementsByClassName("st4 st5").textContent;
-//     document.getElementById("selectionTitle").innerHTML = "You Have Selected Table " + title;
+//     document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
 // }
 
 

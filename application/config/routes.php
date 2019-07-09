@@ -71,7 +71,11 @@ $route['panier/get-adresse'] = 'site/get_adresse';
 $route['produit/(:any)'] = 'site/produit/$1';
 $route['profil/afficher-panier'] = 'site/afficher_panier';
 
+
+$route['reservationsuccess'] = 'site/reservationsuccess';
+
 $route['contact'] = 'site/contact';
+$route['paiement'] = 'site/paiement';
 $route['contactresult'] = 'site/contactresult';
 $route['mentions-legales'] = 'site/mentions_legales';
 $route['reservation'] = 'site/reservation';
