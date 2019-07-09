@@ -24,19 +24,19 @@
         				</li>
 
 
-						<li id="Gustocoffee-slide-2" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
+						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
         					<img src="<?= site_url('assets/images/slide/slide_gustocoffee2.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
         				</li>
 
-						<li id="Gustocoffee-slide-3" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
+						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
         					<img src="<?= site_url('assets/images/slide/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
         				</li>
 
-						<li id="Gustocoffee-slide-4" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
+						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
         					<img src="<?= site_url('assets/images/slide/slide_gustocoffee2.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
         				</li>
 
-						<li id="Gustocoffee-slide-5" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
+						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
         					<img src="<?= site_url('assets/images/slide/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
         				</li>
                     </ul>
