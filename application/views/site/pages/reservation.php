@@ -11,12 +11,7 @@
 
     
         <div class="row">
-            
-
-            <div class="col-xs-12 col-sm-3">
-                <button  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
-                Voir les disponibilités</button>
-            </div>
+      
             <?= form_open( 'panier/paiement' ); ?>
             <div class="col-xs-12 col-sm-3">
                 <label>Date *</label>
@@ -38,6 +33,10 @@
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyplus' />
 
             </div>  
+            <div class="col-xs-12 col-sm-3">
+                <a  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
+                Voir les disponibilités</a>
+            </div>
         </div>
 
         <div class="row" style="display:none;" id="Plan">

@@ -5,7 +5,7 @@ class Panier extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-		$this->output->enable_profiler(TRUE);
+		$this->output->enable_profiler(FALSE);
     }
 
     public function index()
@@ -81,27 +81,29 @@ class Panier extends CI_Controller {
 
 			// $articles = array();
 			// foreach ($this->session->userdata['commande']['articles'] as $key => $val) {
-				$data = array(
-					'c_id' => $this->session->userdata['client']->id,
-					'reservation_id' => $val['reservation_id'],
-					'date' => $val['Date'],
-					'time' => $val['Dime'],
-					'quantite' => $val['quantity'],
-					'status' => $val['status'],
-					'tbnumber' => $val['tbnumber'],
-				);
-			
+// form_validation run
+	// on récupère les informations de la commande
+	 // On ajoute les produits
 
-				$reservation = $this->reservation_model->ajouter($data);  // On ajoute les produits
-
-			$this->session->unset_userdata(array('panier', 'reservation'));
-			redirect('profil/commandes');
-			exit;
 		}
+		else{
+		$nom = $this->session->userdata['client']->nom;
+		$data = array(
+			'c_id' => $this->session->userdata['client']->id,
+			'date' => $this->input->post('Date'),
+			'time' => $this->input->post('Time'),
+			'quantity' => $this->input->post('quantity'),
+			'tbnumber' => $this->input->post('tablenumber'),
+			'payment' => $this->input->post('total')
+	
+		);
+		$this->load->model('reservation_model');
+		$reservation = $this->reservation_model->ajouter($data); 
 
 		$this->load->view('site/template/header');
-		$this->load->view('site/panier/reservationsuccess', $data);
+		$this->load->view('site/panier/reservationsuccess',$data);
 		$this->load->view('site/template/footer');
+	}
 	}
 }
 

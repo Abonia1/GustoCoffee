@@ -1,33 +1,33 @@
   var urlServer = "http://aboweb.local/Gustocoffee/";
 
 
-  function panierUpdata() {
-      $.ajax({
-          url: "afficher-panier",
-          type: "GET",
-          success: function(code_html) {
-              var result = JSON.parse(code_html);
-              console.log(result);
-              if (result && result.lenght > 0) {
-                  for (article in result) {
-                      console.log(article);
-                      console.log("fin");
-                      // console.log(result[article]);
-                      //$( "<p>Test</p>" ).appendTo( ".inner" );
-                      $('<div id="' + article + '" class="row"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><p>' + result[article].nom + '</p></div></div>').appendTo('#panier');
-                      $('<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><img src="' + urlServer + 'assets/images/produit/' + result[article].image + '" width="100%"></div>').appendTo('#' + article);
-                      $('<p>' + result[article].description + '<p>').appendTo('#' + article + ' div:eq(0)');
-                      $('<p>Quantité: ' + result[article].quantite + '<p>').appendTo('#' + article + ' div:eq(0)');
-                  }
-              } else {
-                  $('#panier').html("<p>Aucun produit ajouté</p>");
-              }
-          },
-          error: function() {
-              $('#panier').html("<p>Aucun produit ajouté</p>");
-          }
-      });
-  }
+  //   function panierUpdata() {
+  //       $.ajax({
+  //           url: "reservation",
+  //           type: "GET",
+  //           success: function(code_html) {
+  //               var result = JSON.parse(code_html);
+  //               console.log(result);
+  //               if (result && result.lenght > 0) {
+  //                   for (article in result) {
+  //                       console.log(article);
+  //                       console.log("fin");
+  //                       // console.log(result[article]);
+  //                       //$( "<p>Test</p>" ).appendTo( ".inner" );
+  //                       $('<div id="' + article + '" class="row"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><p>' + result[article].nom + '</p></div></div>').appendTo('#panier');
+  //                       $('<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><img src="' + urlServer + 'assets/images/produit/' + result[article].image + '" width="100%"></div>').appendTo('#' + article);
+  //                       $('<p>' + result[article].description + '<p>').appendTo('#' + article + ' div:eq(0)');
+  //                       $('<p>Quantité: ' + result[article].quantite + '<p>').appendTo('#' + article + ' div:eq(0)');
+  //                   }
+  //               } else {
+  //                   $('#panier').html("<p>Aucun reservation ajouté</p>");
+  //               }
+  //           },
+  //           error: function() {
+  //               $('#panier').html("<p>Aucun reservation ajouté</p>");
+  //           }
+  //       });
+  //   }
 
   $(document).ready(function() {
       $('#monPanier').on('mouseenter', function() {

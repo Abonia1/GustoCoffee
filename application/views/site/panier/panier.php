@@ -2,7 +2,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.1/jquery.timepicker.min.js"></script>
 <div class="container profil-container">
     <div class="titre col-xs-12">
-        <h1>Mon Reservation</h1>
+        <h1>Reservation</h1>
 
         <div class="ancre">
             <hr>

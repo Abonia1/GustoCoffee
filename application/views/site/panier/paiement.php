@@ -23,37 +23,39 @@
             </thead>
 
             <tbody>
+            <?= form_open( 'panier/reservationsuccess' , array('autocomplete' => 'off')); ?>
                 <?php if(isset($date) && isset($time) && isset($quantity)) : ?>
+                
                     
                         <tr>
                             <td>
-                            <?= $date; ?>
+                            <?= form_input(array('name' => 'Date','id'=>"tablenumber",'value' =>$date )) ?><?= $date; ?>
                             </td>
 
                             <td>
-                            <?= $time; ?>
+                            <?= form_input(array('name' => 'Time','id'=>"tablenumber",'value' =>$time )) ?><?= $time; ?>
                             </td>
 
                             <td>
-                            <?= $quantity; ?>
+                            <?= form_input(array('name' => 'quantity','id'=>"tablenumber",'value' => $quantity)) ?><?= $quantity; ?>
                             </td>
                             <td>
-                            <?= $tablenumber; ?>
+                            <?= form_input(array('name' => 'tablenumber','id'=>"tablenumber",'value' =>$tablenumber )) ?><?= $tablenumber; ?>
                             </td>
                             <td>
-                            <?= $quantity*50; ?>€
+                            <?= form_input(array('name' => 'total','id'=>"tablenumber",'value' => $quantity*50)) ?><?= $quantity*50; ?>€
                             </td>
       
                         </tr>
-                    
-                <?php endif; ?>
+                        <?php endif; ?>
+                
             </tbody>
         </table>
     </section>
     <br><br>
 
     <section class="col-xs-12 col-sm-9 profil-form">
-        <?= form_open( '' , array('autocomplete' => 'off')); ?>
+        
         <legend>Choisir votre type de paiement</legend>
 
         <?= validation_errors('<div class="row"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="alert alert-danger">', '</div></div></div>'); ?>
@@ -103,7 +105,7 @@
 
         </fieldset>
 
-        <a href="<?= site_url('site/reservations'); ?>" class="contact-button">Retour</a> - <input type="submit" style="display:none" value="Valider votre commande" class="contact-button">
+        <a href="<?= site_url('site/reservations'); ?>" class="contact-button">Retour</a> - <input type="submit"  value="Valider votre commande" class="contact-button">
         <?= form_close( '' ); ?>
 
 
@@ -112,3 +114,4 @@
 
 
 </div>
+
