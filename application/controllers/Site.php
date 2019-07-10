@@ -169,6 +169,17 @@ $config = Array(
 		$this->load->view('site/template/header');
 		$this->load->view('site/pages/reservation');
 		$this->load->view('site/template/footer');	
+
+		 
+	}
+
+	public function compare($dateheader,$timeheader,$quantity){
+		$this->load->model('reservation_model');
+
+		//$reservation = $this->reservation_model->compare($data);
+		$query = $this->db->query(
+            "SELECT tbnumber FROM reservation WHERE date = '{$dateheader}' AND time = '{$timeheader}' AND  quantity= '{$quantity}'");
+        
 	}
 
 

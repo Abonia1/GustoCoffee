@@ -2,8 +2,10 @@
     <section>
         <h1>Reservez votre place en avance</h1>
 
-        <p>Attention vous devez inscrire dans notre site avant de finaliser votre Reservation
-        </p>
+        <p>* Attention vous devez inscrire dans notre site avant de finaliser votre Reservation
+  
+        et si vous souhaitez réserver des places pour plus de 14 personnes, contactez-nous à partir <a href="contact">d'ici</a>
+        </p><br>
     </section>
 
     <section>
@@ -13,6 +15,7 @@
         <div class="row">
       
             <?= form_open( 'panier/paiement' ); ?>
+            
             <div class="col-xs-12 col-sm-3">
                 <label>Date *</label>
                 <?= form_input(array('name' => 'Date', 'placeholder' => 'Date de reservation', 'id' => 'datepicker', 'class' => (empty(form_error('Date')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Date'))); ?>
@@ -26,17 +29,18 @@
 
             <div class="col-xs-12 col-sm-3">
                 <label>Nombre de personnes </label>
-                <input type='button' value='-' field='quantity'
-                    class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyminus' />
-                <?= form_input(array('name' => 'quantity', 'placeholder' => 'Nombre de persons', 'id' => 'quantity', 'value'=>'1', 'class' => (empty(form_error('quantity')) ? "" : "quantity") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('quantity'))); ?>
-                <input type='button' value='+' field='quantity'
+                <input type='button' value='&#94' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyplus' />
-
+                <?= form_input(array('name' => 'quantity', 'placeholder' => 'Nombre de persons', 'id' => 'quantity', 'value'=>'1', 'class' => (empty(form_error('quantity')) ? "" : "quantity") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('quantity'))); ?>
+                <input type='button' value='&#8964' field='quantity'
+                    class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyminus' />
             </div>  
+            <p id="tablenumbercollect" style="display:block"></p>
             <div class="col-xs-12 col-sm-3">
-                <a  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
+                <a  id="checkbutton" onclick="<?php echo base_url()?>site/compare()" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
                 Voir les disponibilités</a>
             </div>
+            
         </div>
 
         <div class="row" style="display:none;" id="Plan">

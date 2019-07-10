@@ -46,9 +46,14 @@ h1 {
 
 p {
     line-height: 3.5;
+    font-size: 14px;
 }
 
 #tablenumber {
     visibility: none;
     display: none;
+}
+
+#quantity {
+    text-align: center;
 }

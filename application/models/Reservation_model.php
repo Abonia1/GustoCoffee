@@ -119,6 +119,13 @@ class Reservation_model extends CI_Model {
         return $this->db->insert_id();
     }
 
+
+    public function compare($date,$time,$person) {
+        //$today = date('Y-m-d');  
+        $query = $this->db->query(
+            "SELECT tbnumber FROM reservation WHERE date = '{$date}' AND time = '{$time}' AND  quantity= '{$person}'");
+        return $query;
+    }
     // -----------------------------------------------------------------------
 
     /**
