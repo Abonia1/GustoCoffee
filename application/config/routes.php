@@ -75,6 +75,7 @@ $route['profil/afficher-panier'] = 'site/afficher_panier';
 $route['reservationsuccess'] = 'site/reservationsuccess';
 
 $route['contact'] = 'site/contact';
+$route['compare'] = 'site/compare';
 $route['paiement'] = 'site/paiement';
 $route['contactresult'] = 'site/contactresult';
 $route['mentions-legales'] = 'site/mentions_legales';

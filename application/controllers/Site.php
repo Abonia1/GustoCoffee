@@ -173,14 +173,63 @@ $config = Array(
 		 
 	}
 
-	public function compare($dateheader,$timeheader,$quantity){
-		$this->load->model('reservation_model');
+	public function compare(){
+		if ($this->input->method(TRUE) == 'POST') {
+			$quantity = (int) $this->input->post('quantity');
+			$date = (string) $this->input->post('dateheader');
+			$time = (string) $this->input->post('timeheader');
 
-		//$reservation = $this->reservation_model->compare($data);
-		$query = $this->db->query(
-            "SELECT tbnumber FROM reservation WHERE date = '{$dateheader}' AND time = '{$timeheader}' AND  quantity= '{$quantity}'");
-        
+			$this->load->model('reservation_model');
+			//$reservation = $this->reservation_model->comparetest($id);
+			$reservation = $this->reservation_model->compare($quantity,$date,$time);
+			echo ($reservation);
+		// 	if (!empty($id)) {
+		// 		echo json_encode(array(
+		// 			"is_error" => false,
+		// 			"message" => $id
+		// 		));
+		// 		return;
+		// 	} else {
+		// 		echo json_encode(array(
+		// 			"is_error" => true,
+		// 			"message" => $id
+		// 		));
+		// 		return;
+		// 	}
+		// } else {
+		// 	echo json_encode(array(
+		// 		"is_error" => true,
+		// 		"message" => "Invalid request"
+		// 	));
+		// 	return;
+		// }
+		// // $dateheader=$_GET['dateheader'];
+		// // $timeheader = $_GET['timeheader'];
+		// // $quantity = $_GET['quantity'];
+		// //$this->load->model('reservation_model');
+		// $dateheader=$this->input->post('dateheader');
+		// //$timeheader = $this->input->post('timeheader');
+		// //$quantity = $this->input->post('quantity');
+		// //$reservation = $this->reservation_model->compare($dateheader,$timeheader,$quantity);
+		//return $reservation;
+		//$tablenumber=$reservation -> tbnumber;
+		//return $tablenumber;
+		}
 	}
+		// if($reservation){
+		// 	$notification = "Success";
+		// 	}
+		//    else{
+		//    $notification = "Failed";
+		//    }
+		  
+		// 	echo json_encode(array('notify'=>$notification,'reservation'=>$reservation));
+		
+		// //$reservation = $this->reservation_model->compare($data);
+		// // $query = $this->db->query(
+        // //     "SELECT tbnumber FROM reservation WHERE date = '{$dateheader}' AND time = '{$timeheader}' AND  quantity= '{$quantity}'");
+        // // return $query;
+
 
 
 	// /* Refresh captcha Ajax */

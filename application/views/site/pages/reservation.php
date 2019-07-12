@@ -35,14 +35,14 @@
                 <input type='button' value='&#8964' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyminus' />
             </div>  
-            <p id="tablenumbercollect" style="display:block"></p>
+            
             <div class="col-xs-12 col-sm-3">
-                <a  id="checkbutton" onclick="<?php echo base_url()?>site/compare()" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
+                <a  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
                 Voir les disponibilités</a>
             </div>
             
         </div>
-
+        <p id="tablenumbercollect" ></p>
         <div class="row" style="display:none;" id="Plan">
             <!-- <div id="Plan" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="display:none;">
             

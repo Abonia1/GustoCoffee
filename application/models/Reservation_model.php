@@ -120,12 +120,70 @@ class Reservation_model extends CI_Model {
     }
 
 
-    public function compare($date,$time,$person) {
+    public function compare($quantity,$date,$time) {
+
+        $this->db->select('tbnumber');
+        $this->db->from('reservation');
+        $this->db->where(array('quantity'=>$quantity, 'date'=>$date,'time'=>$time));
+        //$recordSet = $this->db->get();
+        //$data=$recordSet->result() ;
+    
+        $groups = $this->db->get()->result_array();
+        foreach ($groups as $row) {
+            $value[] = $row;
+    
+        }
+       header('Content-Type: application/json');//add the json header if you want to remove the js stringify function 
+       echo json_encode($value);
+
         //$today = date('Y-m-d');  
-        $query = $this->db->query(
-            "SELECT tbnumber FROM reservation WHERE date = '{$date}' AND time = '{$time}' AND  quantity= '{$person}'");
-        return $query;
+        // $query = $this->db->query(
+        //     "SELECT tbnumber FROM reservation WHERE date = '{$date}' AND time = '{$time}' AND  quantity= '{$quantity}'");
+        // return $query;
+    //     if($txt_uname=='') 
+    //     return false;
+    // $this->db->select('*');
+    // $this->db->from('countries');
+    // $this->db->where(array('country_name'=>$txt_uname));
+    // $recordSet = $this->db->get();
+    // $data=$recordSet->result() ;
+    // if(count($data)>0)
+    // {
+    //     return true;
+    // }else
+    // {
+    //     return false;
+    // }
     }
+    public function comparetest($quantity){
+               
+    $this->db->select('tbnumber');
+    $this->db->from('reservation');
+    $this->db->where(array('quantity'=>$quantity));
+    //$recordSet = $this->db->get();
+    //$data=$recordSet->result() ;
+
+    $groups = $this->db->get()->result_array();
+    foreach ($groups as $row) {
+        $value[] = $row;
+
+    }
+   header('Content-Type: application/json');//add the json header if you want to remove the js stringify function 
+   echo json_encode($value);
+    }
+    //return $data;
+    //$result = $recordSet->row();
+    //return $data; 
+    // if(count($data)>0)
+    // {
+    //     return true;
+    // }else
+    // {
+    //     return false;
+    // }
+    
+
+
     // -----------------------------------------------------------------------
 
     /**

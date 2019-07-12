@@ -130,9 +130,9 @@ $("#checkbutton").click(function() {
     //document.getElementById('selectionTitle').style.display = "none";
     var quantity = document.getElementById('quantity').value;
     document.getElementById('personheader').innerHTML = quantity;
-    dateheader = document.getElementById('datepicker').value;
+    var dateheader = document.getElementById('datepicker').value;
     document.getElementById('dateheader').innerHTML = dateheader;
-    timeheader = document.getElementById('timepicker').value;
+    var timeheader = document.getElementById('timepicker').value;
     document.getElementById('timeheader').innerHTML = timeheader;
 
     if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || quantity == 0)
@@ -197,11 +197,134 @@ $("#checkbutton").click(function() {
                 }
                 break;
         }
+
         $(document.getElementById("selectionTitle")).css("display", "none");
+        //ajax to check date
+        //var data = 'dateheader=' + dateheader & 'name=' + name;
+        //var dateheader = document.getElementById('datepicker').value;
+        var dateheader = $('input[name="Date"]').val();
+        var timeheader = $('input[name="Time"]').val();
+        //var dateheader = JSON.stringify({ dateheader: dateheader });
+        var quantity = $('input[name="quantity"]').val();
+        console.log(dateheader);
+        //var dataToSend = JSON.stringify({'dateheader':dateheader});
+        tablenumbers = new Array();
+        $.ajax({
+            type: "POST",
+            //url: 'compare',
+            url: "compare",
+            //cache: false,
+            //contentType: "application/json; charset=utf-8",
+            //dataType: "json",
+            data: { quantity: quantity, 'dateheader': dateheader, 'timeheader': timeheader },
+            //data: JSON.stringify({ 'dateheader': dateheader, 'timeheader': timeheader, 'quantity': quantity }),
+            // //data: { 'dateheader': dateheader, 'timeheader': timeheader, 'quantity': quantity },
+            success: function(response) {
+                response = JSON.stringify(response);
+                $.each(JSON.parse(response), function(i, v) {
+                    console.log(v.tbnumber);
+                    switch (v.tbnumber) {
+                        case "1":
+                            $(document.getElementById('svg_2')).attr('class', 'nonselectable');
+                            break;
+                        case "2":
+                            $(document.getElementById('svg_19')).attr('class', 'nonselectable');
+                            break;
+                        case "3":
+                            $(document.getElementById('svg_21')).attr('class', 'nonselectable');
+                            break;
+                        case "4":
+                            $(document.getElementById('svg_49')).attr('class', 'nonselectable');
+                            break;
+                        case "5":
+                            $(document.getElementById('svg_6')).attr('class', 'nonselectable');
+                            break;
+                        case "6":
+                            $(document.getElementById('svg_17')).attr('class', 'nonselectable');
+                            break;
+                        case "7":
+                            $(document.getElementById('svg_23')).attr('class', 'nonselectable');
+                            break;
+                        case "8":
+                            $(document.getElementById('svg_11')).attr('class', 'nonselectable');
+                            break;
+                        case "9":
+                            $(document.getElementById('svg_15')).attr('class', 'nonselectable');
+                            break;
+                        case "10":
+                            $(document.getElementById('svg_13')).attr('class', 'nonselectable');
+                            break;
+                        case "11":
+                            $(document.getElementById('svg_25')).attr('class', 'nonselectable');
+                            break;
+                        case "12":
+                            $(document.getElementById('svg_37')).attr('class', 'nonselectable');
+                            break;
+                        case "13":
+                            $(document.getElementById('svg_35')).attr('class', 'nonselectable');
+                            break;
+                        case "14":
+                            $(document.getElementById('svg_33')).attr('class', 'nonselectable');
+                            break;
+                        case "15":
+                            $(document.getElementById('svg_27')).attr('class', 'nonselectable');
+                            break;
+                        case "16":
+                            $(document.getElementById('svg_29')).attr('class', 'nonselectable');
+                            break;
+                        case "17":
+                            $(document.getElementById('svg_31')).attr('class', 'nonselectable');
+                            break;
+                        case "18":
+                            $(document.getElementById('svg_45')).attr('class', 'nonselectable');
+                            break;
+                        case "19":
+                            $(document.getElementById('svg_43')).attr('class', 'nonselectable');
+                            break;
+                        case "20":
+                            $(document.getElementById('svg_41')).attr('class', 'nonselectable');
+                            break;
+                        case "21":
+                            $(document.getElementById('svg_39')).attr('class', 'nonselectable');
+                            break;
+                        case "22":
+                            $(document.getElementById('svg_47')).attr('class', 'nonselectable');
+                            break;
+                        case "":
+                            break;
+                    };
+                });
+                // if (data.notify == "Success") {
+                //     console.log(data);
+                //tablenumbers = data;
+                //document.getElementById('tablenumbercollect').innerHTML = data;
+                ///var json = JSON.parse(JSON.stringify(data));
+                //console.log(data);
+                // } else {
+                //     console.log("There is no reservation with this data");
+                // }
+                // if (data.reservation != "") {
+                //     document.getElementById('tablenumbercollect').innerHTML = data.reservation
+                // }
+                //console.log(msg);
 
 
-        //document.getElementById('selectionTitle').style.display = "block";
+            },
+            //data: '&dateheader=' + dateheader + '&timeheader=' + timeheader + '&quantity=' + quantity,
+            // success: function(data) {
+            //     if (data.notify == "Success") {
+            //         console.log(data.notify);
+            //     } else {
+            //         console.log(data.notify);
+            //     }
+            // },
+            error: function() {
+                //alert("Invalide!");
+            }
+
+        });
     }
+
 });
 
 // $("input[name=quantity]").change(function() {
