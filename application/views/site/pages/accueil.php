@@ -4,17 +4,17 @@
 		        <div class="tp-banner">
         			<ul>
         				<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
+        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee4.png'); ?>" alt="Gustocoffee" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
 
-        					<div class="caption fade" data-x="0" data-y="70" data-speed="1000" data-start="2000" data-easing="easeOutBack">
+        					<div class="caption fade" data-x="40" data-y="140" data-speed="1000" data-start="2000" data-easing="easeOutBack">
                                 <span class="titre">Decouvrir nos Services !</span>
         					</div>
 
-                            <div class="caption lfb" data-x="800" data-y="40" data-speed="1000" data-start="1000" data-easing="easeOutBack">
+                            <div class="caption lfb" data-x="800" data-y="20" data-speed="1000" data-start="1000" data-easing="easeOutBack">
                                 <span class="marque">Gustocoffee</span>
         					</div>
 
-                            <div class="caption lfr" data-x="790" data-y="75" data-speed="1000" data-start="3000" data-easing="easeOutBack">
+                            <div class="caption lfr" data-x="800" data-y="50" data-speed="1000" data-start="3000" data-easing="easeOutBack">
                                 <span class="formule">Welcome You!</span>
         					</div>
 
@@ -25,20 +25,28 @@
 
 
 						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee2.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
+        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee2.png'); ?>" alt="Gustocoffee" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
+                        </li>
+
+						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
+        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee3.jpg'); ?>" alt="Gustocoffee" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
+                            
+                            <div class="caption lfb" data-x="40" data-y="50" data-speed="1000" data-start="1000" data-easing="easeOutBack">
+                                <span class="marque2">Réservez à l'avance et recevez nos dernières offres</span>
+        					</div><br>
+
+                            <div class="caption lfr" data-x="380" data-y="90" data-speed="1000" data-start="3000" data-easing="easeOutBack">
+                                <a class="buttonslide" href="<?= site_url('reservation'); ?>">Reservation</a>
+        					</div>
+                        </li>
+
+						<!-- <li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
+        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee2.png'); ?>" alt="Gustocoffee" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
         				</li>
 
 						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
-        				</li>
-
-						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee2.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
-        				</li>
-
-						<li id="Gustocoffee-slide" data-transition="slidehorizontal" data-masterspeed="300" data-delay="7000">
-        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee4.png'); ?>" alt="Gustocoffee Cap sur la propreté !" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
-        				</li>
+        					<img src="<?= site_url('assets/images/slide/slide_gustocoffee4.png'); ?>" alt="Gustocoffee" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgfitend="100" data-bgposition="right bottom">
+        				</li> -->
                     </ul>
                 </div>
             </div>
