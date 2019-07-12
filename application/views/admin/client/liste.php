@@ -68,8 +68,8 @@
                                         <a class="dropdown-item" href="<?= site_url('admin/client/detail/'.$val->id); ?>"><i class="icon-magnifier-add"></i> Détails</a>
                                         <a class="dropdown-item" href="<?= site_url('admin/client/modifier/'.$val->id); ?>"><i class="icon-pencil"></i> Modifier</a>
                                         <!-- <a class="dropdown-item" onclick="return confirm('Voulez-vous vraiment supprimer ce client ?');" href="<?= site_url('admin/client/supprimer/'.$val->id); ?>"><i class="icon-trash"></i> Supprimer</a> -->
-                                        <a class="dropdown-item" href="<?= site_url('admin/commande/ajouter/'.$val->id); ?>"><i class="icon-pencil"></i> Ajouter une commande</a>
-                                        <a class="dropdown-item" href="<?= site_url('admin/commande/liste/'.$val->id); ?>"><i class="icon-trash"></i> Voir les commandes</a>
+                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/ajouter/'.$val->id); ?>"><i class="icon-pencil"></i> Ajouter une commande</a>
+                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/liste/'.$val->id); ?>"><i class="icon-trash"></i> Voir les commandes</a>
                                     </div>
 								</div>
                             </td>

@@ -82,9 +82,9 @@
 
                 	                        			<div class="dropdown-menu dropdown-menu-right">
                 	                        				<a class="dropdown-item" href="<?= site_url('web/document/bon-livraison/'.$val->bon_livraison); ?>"><i class="icon-doc"></i> Bon livraison</a>
-        	                                        <a class="dropdown-item" href="<?= site_url('admin/commande/modifier/'.$val->id); ?>"><i class="icon-pencil"></i> Modifier</a>
-        	                                        <a class="dropdown-item" href="<?= site_url('admin/commande/supprimer/'.$val->id); ?>"><i class="icon-trash"></i> Supprimer</a>
-        	                                        <a class="dropdown-item" href="<?= site_url('admin/commande/detail/'.$val->id); ?>"><i class="icon-magnifier-add"></i> Détail</a>
+        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/modifier/'.$val->id); ?>"><i class="icon-pencil"></i> Modifier</a>
+        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/supprimer/'.$val->id); ?>"><i class="icon-trash"></i> Supprimer</a>
+        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/detail/'.$val->id); ?>"><i class="icon-magnifier-add"></i> Détail</a>
         	                                    </div>
                 									</div>
                 	                            </td>
@@ -111,7 +111,7 @@
                 			Date création : <?= date('d/m/Y H:i:s', strtotime($client->date_creation)); ?><br>
                 			Date modification : <?= date('d/m/Y H:i:s', strtotime($client->date_modification)); ?><br><br>
 
-                			<a href="<?= site_url('admin/client/modifier/'.$client->id); ?>" class="btn btn-outline-primary">Modifier</a> <a href="<?= site_url('admin/commande/ajouter/'.$client->id); ?>" class="btn btn-outline-primary">Ajouter commande</a>
+                			<a href="<?= site_url('admin/client/modifier/'.$client->id); ?>" class="btn btn-outline-primary">Modifier</a> <a href="<?= site_url('admin/reservation/ajouter/'.$client->id); ?>" class="btn btn-outline-primary">Ajouter commande</a>
             			</p>
 
                 		<h5>Coordonnées</h5>

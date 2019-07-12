@@ -63,11 +63,11 @@ class Reservation_model extends CI_Model {
      */
     public function reservation($id)
     {
-        $this->db->select('reservation.*, c1.prenom AS prenom, c1.nom AS nom, reservation.id AS reservation, c1.adresse, a1.adresse, a1.code_postal, a1.ville, a1.pays');
+        $this->db->select('reservation.*, c1.prenom AS prenom, c1.nom AS nom, reservation_id AS reservation, c1.adresse, a1.adresse, a1.code_postal, a1.ville, a1.pays');
         $this->db->from('reservation');
         $this->db->join('client AS c1', 'c1.id = reservation.c_id', 'left');
         $this->db->join('adresse AS a1', 'a1.id = c1.adresse', 'left');
-        $this->db->where( array('reservation.id' => $id) );
+        $this->db->where( array('reservation_id' => $id) );
         $query = $this->db->get();
 
         if( $query->num_rows() == 1 )

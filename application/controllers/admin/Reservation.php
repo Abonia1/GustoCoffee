@@ -1,19 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Commande extends CI_Controller {
+class Reservation extends CI_Controller {
 
     public function __construct()
     {
         parent::__construct();
         $this->load->library('order');
-        $this->load->model('commande_model');
+        $this->load->model('reservation_model');
         $this->output->enable_profiler(FALSE);
     }
 
 
     /*
-     * Liste des commandes
+     * Liste des reservations
      */
     public function liste($id=NULL)
     {
@@ -25,21 +25,21 @@ class Commande extends CI_Controller {
 
         if($id != NULL)
         {
-            $commandes = $this->commande_model->commande_liste($id);
+            $reservations = $this->reservation_model->reservation_liste($id);
         }
         else
         {
-          $commandes = $this->commande_model->commandes();
+          $reservations = $this->reservation_model->reservations();
         }
 
 
-        $content = $this->load->view('admin/reservation/liste', array('commandes' => $commandes), TRUE);
+        $content = $this->load->view('admin/reservation/liste', array('reservations' => $reservations), TRUE);
         $this->load->view('admin/template/template', array('content' => $content));
     }
 
 
     /*
-     * Ajouter une commande
+     * Ajouter une reservation
      */
     public function ajouter($id=0)
     {
@@ -66,13 +66,13 @@ class Commande extends CI_Controller {
         $this->load->helper('form');
 
         $content = $this->load->view('admin/reservation/ajouter', array('data'=>$data), TRUE);
-        $this->load->view('admin/template/template', array( 'content' => $content, 'js_files' => array('jquery-ui.min.js', 'commande.js') ));
+        $this->load->view('admin/template/template', array( 'content' => $content, 'js_files' => array('jquery-ui.min.js', 'reservation.js') ));
 
     }
 
 
     /*
-     * Modifier une commande
+     * Modifier une reservation
      */
     public function modifier($id)
     {
@@ -90,11 +90,11 @@ class Commande extends CI_Controller {
 
         $this->load->helper('form');
 
-        $commande = $this->commande_model->commande($id);
-        $produits = $this->commande_model->commande_produit($id);
+        $reservation = $this->reservation_model->reservation($id);
+        //$produits = $this->reservation_model->reservation_produit($id);
 
-        $content = $this->load->view('admin/reservation/modifier', array('commande' => $commande, 'produits' => $produits), TRUE);
-        $this->load->view('admin/template/template', array( 'content' => $content, 'js_files' => array('jquery-ui.min.js', 'commande_modifier.js') ));
+        $content = $this->load->view('admin/reservation/modifier', array('reservation' => $reservation), TRUE);
+        $this->load->view('admin/template/template', array( 'content' => $content, 'js_files' => array('jquery-ui.min.js', 'reservation_modifier.js') ));
     }
 
 
@@ -156,7 +156,7 @@ class Commande extends CI_Controller {
 
 
     /*
-     * Détail commande
+     * Détail reservation
      */
     public function detail($id)
     {
@@ -166,17 +166,17 @@ class Commande extends CI_Controller {
             exit;
         }
 
-        $commande = $this->commande_model->commande($id);
-        $produits = $this->commande_model->commande_produit($id);
+        $reservation = $this->reservation_model->reservation($id);
+        //$produits = $this->reservation_model->reservation_produit($id);
 
-        $content = $this->load->view('admin/reservation/detail', array('commande' => $commande, 'produits' => $produits), TRUE);
+        $content = $this->load->view('admin/reservation/detail', array('reservation' => $reservation), TRUE);
         $this->load->view('admin/template/template', array('content' => $content));
     }
 
 
 
     /*
-     * Supprimer une commande
+     * Supprimer une reservation
      */
     public function supprimer($id)
     {

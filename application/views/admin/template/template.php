@@ -81,10 +81,10 @@
                             <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket-loaded"></i> Reservation</a>
                             <ul class="nav-dropdown-items">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?= site_url('admin/commande/liste'); ?>"><i class="icon-list"></i> Liste</a>
+                                    <a class="nav-link" href="<?= site_url('admin/reservation/liste'); ?>"><i class="icon-list"></i> Liste</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?= site_url('admin/commande/ajouter'); ?>"><i class="icon-plus"></i> Ajouter</a>
+                                    <a class="nav-link" href="<?= site_url('admin/reservation/ajouter'); ?>"><i class="icon-plus"></i> Ajouter</a>
                                 </li>
                             </ul>
                         </li>

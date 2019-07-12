@@ -2,16 +2,16 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <strong>Modifier une commande</strong>
+                <strong>Modifier une reservation</strong>
                 les champs marqués d'une * sont obligatoires
             </div>
 
             <div class="card-body">
-            	<?= form_open_multipart( 'admin/commande/modifier/'.$commande->id ); ?>
+            	<?= form_open_multipart( 'admin/reservation/modifier/'.$reservation->reservation_id ); ?>
 
     				<?= validation_errors('<div class="col-md-12"><div class="alert alert-danger">', '</div></div>'); ?>
 
-    				<h3>Informations commande</h3>
+    				<h3>Informations reservation</h3>
     				<hr>
 
 
@@ -19,17 +19,57 @@
     					<div class="form-group col-md-7">
     						<?= form_label('Client *', 'client', array('class' => 'form-control-label')); ?>
                             <div class="">
-                            	<?= form_input(array('name' => 'client', 'placeholder' => 'Client', 'id' => 'client', 'class' => 'form-control', 'value' => set_value('client', $commande->prenom.' '.$commande->nom))); ?>
-                                <?= form_input(array('type' => 'hidden', 'name' => 'id_client', 'id' => 'id_client', 'value' => set_value('id_client', $commande->client))); ?>
+                            	<?= form_input(array('name' => 'client', 'placeholder' => 'Client', 'id' => 'client', 'class' => 'form-control', 'value' => set_value('client', $reservation->prenom.' '.$reservation->nom))); ?>
+                                <?= form_input(array('type' => 'hidden', 'name' => 'id_client', 'id' => 'id_client', 'value' => set_value('id_client', $reservation->c_id))); ?>
                                 <?= form_error('client', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
                         </div>
 
                         <div class="form-group col-md-5">
-    						<?= form_label('Référence *', 'reference', array('class' => 'form-control-label')); ?>
+    						<?= form_label('Reservation Id *', 'Reservation Id', array('class' => 'form-control-label')); ?>
                             <div class="">
-                            	<?= form_input(array('name' => 'reference', 'placeholder' => 'Référence', 'id' => 'reference', 'class' => 'form-control', 'value' => set_value('reference', $commande->reference))); ?>
+                            	<?= form_input(array('name' => 'Reservation Id', 'placeholder' => 'Reservation Id', 'id' => 'reference', 'class' => 'form-control', 'value' => set_value('reference', $reservation->reservation_id))); ?>
                                 <?= form_error('reference', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                            </div>
+                        </div>
+					</div>
+					<div class="row">
+    					<div class="form-group col-md-7">
+    						<?= form_label('Date *', 'date', array('class' => 'form-control-label')); ?>
+                            <div class="">
+                            	<?= form_input(array('name' => 'Date', 'placeholder' => 'Date', 'id' => 'date', 'class' => 'form-control', 'value' => set_value('date', $reservation->date))); ?>
+                                <?= form_error('date', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-5">
+    						<?= form_label('Heure *', 'Time', array('class' => 'form-control-label')); ?>
+                            <div class="">
+                            	<?= form_input(array('name' => 'Time', 'placeholder' => 'Heure', 'id' => 'time', 'class' => 'form-control', 'value' => set_value('quantity', $reservation->time))); ?>
+                                <?= form_error('time', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                            </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-4">
+    						<?= form_label('Quantité *', 'Quantity', array('class' => 'form-control-label')); ?>
+                            <div class="">
+                            	<?= form_input(array('name' => 'quantity', 'placeholder' => 'Quantité', 'id' => 'reference', 'class' => 'form-control', 'value' => set_value('quantity', $reservation->quantity))); ?>
+                                <?= form_error('quantity', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                            </div>
+						</div>
+						<div class="form-group col-md-4">
+    						<?= form_label('Numéro de Table *', 'tbnumber', array('class' => 'form-control-label')); ?>
+                            <div class="">
+                            	<?= form_input(array('name' => 'tbnumber', 'placeholder' => 'Numéro de Table', 'id' => 'tbnumber', 'class' => 'form-control', 'value' => set_value('Numéro de Table', $reservation->tbnumber))); ?>
+                                <?= form_error('tbnumber', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                            </div>
+						</div>
+						<div class="form-group col-md-4">
+    						<?= form_label('Paiment *', 'payment', array('class' => 'form-control-label')); ?>
+                            <div class="">
+                            	<?= form_input(array('name' => 'payment', 'placeholder' => 'Paiement', 'id' => 'payment', 'class' => 'form-control', 'value' => set_value('Paiment', $reservation->payment))); ?>
+                                <?= form_error('payment', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
                         </div>
                     </div>
@@ -39,26 +79,26 @@
                     	<div class="form-group col-md-6">
                     		<?= form_label('Statut *', 'statut', array('class' => 'form-control-label')); ?>
                             <div class="">
-                            	<?= form_dropdown('statut', array('0' => 'Annulée', '1' => 'En cours', '2' => 'En attente', '3' => 'Terminée'), set_value('statut', $commande->statut), array('id' =>'statut', 'class' =>'form-control')); ?>
+                            	<?= form_dropdown('statut', array('0' => 'Annulée', '1' => 'Valide'), set_value('statut', $reservation->status), array('id' =>'statut', 'class' =>'form-control')); ?>
                                 <?= form_error('statut', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
                     	</div>
 
                     	<div class="form-group col-md-6">
-                    		<?= form_label('Valide *', 'valide', array('class' => 'form-control-label')); ?>
+                    		<?= form_label('Statut Client *', 'valide', array('class' => 'form-control-label')); ?>
                             <div class="">
-                            	<?= form_dropdown('valide', array('0' => 'Invalide', '1' => 'Valide'), set_value('valide', $commande->valide), array('id' =>'valide', 'class' =>'form-control')); ?>
+                            	<?= form_dropdown('valide', array('0' => 'Out', '1' => 'In'), set_value('valide', $reservation->c_status), array('id' =>'valide', 'class' =>'form-control')); ?>
                                 <?= form_error('valide', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
                     	</div>
                     </div>
 
                     <br>
-                    <h3>Informations produits <button type="button" id="addProduct" class="btn btn-primary pull-right">Ajouter un produit</button></h3>
-    				<hr>
+                    <!-- <h3>Informations reservation <button type="button" id="addProduct" class="btn btn-primary pull-right">Enregistrer</button></h3>
+    				<hr> -->
 
 
-                    <div id="p_scents">
+                    <!-- <div id="p_scents">
                     	<?php $i = 1; ?>
                     	<?php foreach($produits AS $key => $val) : ?>
                     		<div class="row p_scents_container productRow">
@@ -114,7 +154,7 @@
 
                             <?php $i++; ?>
                         <?php endforeach; ?>
-                    </div>
+                    </div> 
 
 
 
@@ -123,12 +163,12 @@
                     	<table class="table">
                     		<tr>
         						<td class="text-right">Total HT :</td>
-        						<td class="text-right"><span id="prix_ht_final"><?= $commande->prix_ht_final; ?></span> €</td>
+        						<td class="text-right"><span id="prix_ht_final"><?= $reservation->prix_ht_final; ?></span> €</td>
         					</tr>
 
         					<tr>
         						<td class="text-right">Total HT après remise :</td>
-        						<td class="text-right"><span id="prix_ht_remise"><?= $commande->prix_ht_remise; ?></span> €</td>
+        						<td class="text-right"><span id="prix_ht_remise"><?= $reservation->prix_ht_remise; ?></span> €</td>
         					</tr>
 
         					<tr>
@@ -138,10 +178,10 @@
 
         					<tr>
         						<td class="text-right">Total TTC :</td>
-        						<td class="text-right"><span id="prix_ttc_final"><?= $commande->prix_ttc_final; ?></span> €</td>
+        						<td class="text-right"><span id="prix_ttc_final"><?= $reservation->prix_ttc_final; ?></span> €</td>
         					</tr>
                     	</table>
-                    </div>
+                    </div>-->
 
 
 
@@ -149,9 +189,9 @@
 			</div>
 
 			<div class="card-footer">
-				<?= form_input(array('type' => 'hidden', 'name' => 'prix_ht_final', 'id' => 'prix_ht_final_cmd', 'value' => set_value('prix_ht_final', $commande->prix_ht_final))); ?>
-				<?= form_input(array('type' => 'hidden', 'name' => 'prix_ht_remise', 'id' => 'prix_ht_remise_cmd', 'value' => set_value('prix_ht_remise, $commande->prix_ht_remise'))); ?>
-				<?= form_input(array('type' => 'hidden', 'name' => 'prix_ttc_final', 'id' => 'prix_ttc_final_cmd', 'value' => set_value('prix_ttc_final', $commande->prix_ttc_final))); ?>
+				<!-- <?= form_input(array('type' => 'hidden', 'name' => 'prix_ht_final', 'id' => 'prix_ht_final_cmd', 'value' => set_value('prix_ht_final', $reservation->prix_ht_final))); ?>
+				<?= form_input(array('type' => 'hidden', 'name' => 'prix_ht_remise', 'id' => 'prix_ht_remise_cmd', 'value' => set_value('prix_ht_remise, $reservation->prix_ht_remise'))); ?>
+				<?= form_input(array('type' => 'hidden', 'name' => 'prix_ttc_final', 'id' => 'prix_ttc_final_cmd', 'value' => set_value('prix_ttc_final', $reservation->prix_ttc_final))); ?> -->
 
 				<?= form_submit('submitBtn', 'Enregistrer', array('class' => 'btn btn-sm btn-primary pull-right')); ?>
 			</div>

@@ -7,7 +7,7 @@
             </div>
 
             <div class="card-body">
-            	<?= form_open_multipart( 'admin/commande/ajouter' ); ?>
+            	<?= form_open_multipart( 'admin/reservation/ajouter' ); ?>
 
     				<?= validation_errors('<div class="col-md-12"><div class="alert alert-danger">', '</div></div>'); ?>
 
