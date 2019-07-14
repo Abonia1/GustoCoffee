@@ -54,6 +54,7 @@ class Reservation extends CI_Controller {
             redirect('/admin/reservation/liste');
             exit;
         }
+        //$id = $this->input->post('id_client');
         if($id !=0)
         {
           $this->load->model('client_model');
