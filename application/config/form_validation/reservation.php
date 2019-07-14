@@ -15,10 +15,10 @@ $config['ajouter'] = array(
     array(
         'field' => 'Time',
         'label' => 'Time',
-        'rules' => 'required|trim|is_unique[reservation.time]',
+        'rules' => 'required|trim',
         'errors'	=>	array(
-            'required' => 'Le champ <strong>{field}</strong> est obligatoire',
-            'is_unique' => 'Le champ <strong>{field}</strong> doit être unique'
+            'required' => 'Le champ <strong>{field}</strong> est obligatoire'
+            
         )
     ),
    
@@ -27,15 +27,15 @@ $config['ajouter'] = array(
         'label' => 'Quantity',
         'rules' => 'required|trim',
         'errors'	=>	array(
-            'required' => 'Le champ <strong>{field}</strong> est obligatoire',
-            'is_unique' => 'Le champ <strong>{field}</strong> doit être unique'
+            'required' => 'Le champ <strong>{field}</strong> est obligatoire'
         )
     )
     
 );
 
 // Modifier---------------------------------------------------
-$config['ajouter'] = array(
+$config['modifier'] = array(
+
     array(
 	   'field' => 'Date',
 	   'label' => 'Date',
@@ -48,10 +48,9 @@ $config['ajouter'] = array(
     array(
         'field' => 'Time',
         'label' => 'Time',
-        'rules' => 'required|trim|is_unique[reservation.time]',
+        'rules' => 'required|trim',
         'errors'	=>	array(
-            'required' => 'Le champ <strong>{field}</strong> est obligatoire',
-            'is_unique' => 'Le champ <strong>{field}</strong> doit être unique'
+            'required' => 'Le champ <strong>{field}</strong> est obligatoire'
         )
     ),
    
@@ -60,9 +59,8 @@ $config['ajouter'] = array(
         'label' => 'Quantity',
         'rules' => 'required|trim',
         'errors'	=>	array(
-            'required' => 'Le champ <strong>{field}</strong> est obligatoire',
-            'is_unique' => 'Le champ <strong>{field}</strong> doit être unique'
-        )
+            'required' => 'Le champ <strong>{field}</strong> est obligatoire'
+       )
     )
     
 );

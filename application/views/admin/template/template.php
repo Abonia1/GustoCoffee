@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>GustoCoffee - Administration</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="<?= site_url("assets/images/gusto_coffee.ico"); ?>" />
 
 		<!-- Icons -->
         <link href="<?= site_url('web/css/admin/font-awesome.min.css'); ?>" rel="stylesheet">

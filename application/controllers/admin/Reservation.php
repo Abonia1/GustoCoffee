@@ -6,7 +6,7 @@ class Reservation extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->library('order');
+        $this->load->library('reservationorder');
         $this->load->model('reservation_model');
         $this->output->enable_profiler(FALSE);
     }
@@ -49,7 +49,7 @@ class Reservation extends CI_Controller {
             exit;
         }
 
-        if( $this->order->ajouter() )
+        if( $this->reservationorder->ajouter() )
         {
             redirect('/admin/reservation/liste');
             exit;
@@ -82,7 +82,7 @@ class Reservation extends CI_Controller {
             exit;
         }
 
-        if( $this->order->modifier($id) )
+        if( $this->reservationorder->modifier($id) )
         {
             redirect('/admin/reservation/liste');
             exit;
@@ -186,7 +186,7 @@ class Reservation extends CI_Controller {
             exit;
         }
 
-        if( $this->order->supprimer($id) )
+        if( $this->reservationorder->supprimer($id) )
         {
             redirect('/admin/reservation/liste');
             exit;

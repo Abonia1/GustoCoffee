@@ -24,14 +24,14 @@
                                 <?= form_error('client', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
                         </div>
-
+<!-- 
                         <div class="form-group col-md-5">
-    						<?= form_label('Reservation Id *', 'Reservation Id', array('class' => 'form-control-label')); ?>
+    						<?= form_label('Reservation Id *', 'Reference Id', array('class' => 'form-control-label')); ?>
                             <div class="">
-                            	<?= form_input(array('name' => 'Reservation Id', 'placeholder' => 'Reservation Id', 'id' => 'reference', 'class' => 'form-control', 'value' => set_value('reference', $reservation->reservation_id))); ?>
-                                <?= form_error('reference', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                            	<?= form_input(array('name' => 'Reference Id', 'placeholder' => 'Reservation Id', 'id' => 'referenceid', 'class' => 'form-control', 'value' => set_value('reference id', $reservation->c_id))); ?>
+                                <?= form_error('reference id', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
-                        </div>
+                        </div> -->
 					</div>
 					<div class="row">
     					<div class="form-group col-md-7">
@@ -45,7 +45,7 @@
                         <div class="form-group col-md-5">
     						<?= form_label('Heure *', 'Time', array('class' => 'form-control-label')); ?>
                             <div class="">
-                            	<?= form_input(array('name' => 'Time', 'placeholder' => 'Heure', 'id' => 'time', 'class' => 'form-control', 'value' => set_value('quantity', $reservation->time))); ?>
+                            	<?= form_input(array('name' => 'Time', 'placeholder' => 'Heure', 'id' => 'time', 'class' => 'form-control', 'value' => set_value('time', $reservation->time))); ?>
                                 <?= form_error('time', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
 						</div>

@@ -33,7 +33,7 @@ class Commande extends CI_Controller {
         }
 
 
-        $content = $this->load->view('admin/reservation/liste', array('commandes' => $commandes), TRUE);
+        $content = $this->load->view('admin/commande/liste', array('commandes' => $commandes), TRUE);
         $this->load->view('admin/template/template', array('content' => $content));
     }
 
@@ -51,7 +51,7 @@ class Commande extends CI_Controller {
 
         if( $this->order->ajouter() )
         {
-            redirect('/admin/reservation/liste');
+            redirect('/admin/commande/liste');
             exit;
         }
         if($id !=0)
@@ -65,7 +65,7 @@ class Commande extends CI_Controller {
 
         $this->load->helper('form');
 
-        $content = $this->load->view('admin/reservation/ajouter', array('data'=>$data), TRUE);
+        $content = $this->load->view('admin/commande/ajouter', array('data'=>$data), TRUE);
         $this->load->view('admin/template/template', array( 'content' => $content, 'js_files' => array('jquery-ui.min.js', 'commande.js') ));
 
     }
@@ -84,7 +84,7 @@ class Commande extends CI_Controller {
 
         if( $this->order->modifier($id) )
         {
-            redirect('/admin/reservation/liste');
+            redirect('/admin/commande/liste');
             exit;
         }
 
@@ -93,7 +93,7 @@ class Commande extends CI_Controller {
         $commande = $this->commande_model->commande($id);
         $produits = $this->commande_model->commande_produit($id);
 
-        $content = $this->load->view('admin/reservation/modifier', array('commande' => $commande, 'produits' => $produits), TRUE);
+        $content = $this->load->view('admin/commande/modifier', array('commande' => $commande, 'produits' => $produits), TRUE);
         $this->load->view('admin/template/template', array( 'content' => $content, 'js_files' => array('jquery-ui.min.js', 'commande_modifier.js') ));
     }
 
@@ -169,7 +169,7 @@ class Commande extends CI_Controller {
         $commande = $this->commande_model->commande($id);
         $produits = $this->commande_model->commande_produit($id);
 
-        $content = $this->load->view('admin/reservation/detail', array('commande' => $commande, 'produits' => $produits), TRUE);
+        $content = $this->load->view('admin/commande/detail', array('commande' => $commande, 'produits' => $produits), TRUE);
         $this->load->view('admin/template/template', array('content' => $content));
     }
 
@@ -188,7 +188,7 @@ class Commande extends CI_Controller {
 
         if( $this->order->supprimer($id) )
         {
-            redirect('/admin/reservation/liste');
+            redirect('/admin/commande/liste');
             exit;
         }
     }
