@@ -25,8 +25,8 @@
                     <tr>
                     	<th class="text-center">ID</th>
                         <th class="text-left">Produit</th>
-                        <th class="text-left">Référence</th>
-                        <th class="text-right">Prix HT</th>
+                        <th class="text-left">Description Courte</th>
+                        <th class="text-right">Description Longue</th>
                         <th class="text-center">Image</th>
                         <th class="text-center">Actions</th>
                     </tr>
@@ -38,13 +38,13 @@
 
                             <td class="text-left align-middle"><strong><?= ucfirst($val->nom); ?></strong></td>
 
-                            <td class="text-left align-middle"><?= $val->reference; ?></td>
+                            <td class="text-left align-middle"><?= $val->description_courte; ?></td>
 
-                            <td class="text-right align-middle"><?= $val->prix_ht; ?>€</td>
+                            <td class="text-right align-middle"><?= $val->description_longue; ?></td>
 
                             <td class="text-center align-middle">
-                            	<?php if($val->bidon != NULL) : ?>
-                            		<img src="<?= site_url('assets/images/produit/'.$val->bidon); ?>" width="100" height="100" class="rounded" />
+                            	<?php if($val->image != NULL) : ?>
+                            		<img src="<?= site_url('assets/images/produit/accueil/'.$val->image); ?>" width="100" height="100" class="rounded" />
                         		<?php endif; ?>
                             </td>
 
