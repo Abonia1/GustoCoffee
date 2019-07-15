@@ -24,41 +24,66 @@
 
 
     				<div class="row">
-               <div class="form-group col-md-6 <?php if(form_error('product_code')) { echo 'has-error'; } ?>">
-                <?= form_label('Code de Produit *', 'product_code', array('class' => 'form-control-label')); ?>
+               <div class="form-group col-md-6 <?php if(form_error('product')) { echo 'has-error'; } ?>">
+                <?= form_label('Nom de Produit *', 'product', array('class' => 'form-control-label')); ?>
                 <div class="">
-                  <?= form_input(array('name' => 'product_code', 'placeholder' => 'Code de Produit', 'id' => 'product_code', 'class' => 'form-control', 'value' => set_value('product_code', $stock->product_code))); ?>
-                  <?= form_error('product_name', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                  <?= form_input(array('name' => 'product', 'placeholder' => 'Nom de Produit', 'id' => 'product_code', 'class' => 'form-control', 'value' => set_value('product', $stock->product))); ?>
+                  <?= form_error('product', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                 </div>
               </div>
-              
-                <div class="form-group col-md-6 <?php if(form_error('product_name')) { echo 'has-error'; } ?>">
-                <?= form_label('Nom *', 'product_name', array('class' => 'form-control-label')); ?>
+
+              <div class="form-group col-md-6 <?php if(form_error('procuct_id')) { echo 'has-error'; } ?>">
+                <?= form_label('Reference de Produit', 'procuct_id', array('class' => 'form-control-label')); ?>
                 <div class="">
-                  <?= form_input(array('name' => 'product_name', 'placeholder' => 'Nom', 'id' => 'product_name', 'class' => 'form-control', 'value' => set_value('product_name', $stock->product_name))); ?>
-                  <?= form_error('product_name', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                  <?= form_input(array('name' => 'product_id',  'readonly' => true,'placeholder' => 'Reference de Produit', 'id' => 'procuct_id', 'class' => 'form-control', 'value' => set_value('procuct_id', $stock->id))); ?>
+                  <?= form_error('product_id', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                 </div>
               </div>
-              
-              
-            </div>
+              </div>
 
-            <div class="row">
-
+              <div class="row">
+              <div class="form-group col-md-6">
+                    		<?= form_label('Type de Menu *', 'statut', array('class' => 'form-control-label')); ?>
+                            <div class="">
+                            	<?= form_dropdown('menu', array('1' => 'Nouriture', '2' => 'Sandwich','3' => 'Glace', '4' => 'Gâteau','5' => 'Shot', '6' => 'Boisson Chaude','7' => 'Boisson Glacée', '8' => 'Boisson'), set_value('menu', $stock->menu_type), array('id' =>'menu', 'class' =>'form-control')); ?>
+                                <?= form_error('menu', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                            </div>
+                      </div>
+                      
                <div class="form-group col-md-6 <?php if(form_error('quantity')) { echo 'has-error'; } ?>">
-                <?= form_label('Quantity *', 'quantity', array('class' => 'form-control-label')); ?>
+                <?= form_label('Prix *', 'price', array('class' => 'form-control-label')); ?>
                 <div class="">
-                  <?= form_input(array('name' => 'quantity', 'placeholder' => 'Quantity', 'id' => 'quantity', 'class' => 'form-control', 'value' => set_value('quantity', $stock->quantity))); ?>
-                  <?= form_error('quantity', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                  <?= form_input(array('name' => 'price', 'placeholder' => 'Prix', 'id' => 'price', 'class' => 'form-control', 'value' => set_value('price', $stock->price))); ?>
+                  <?= form_error('price', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                 </div>
               </div>
-              <div class="form-group col-md-6 <?php if(form_error('trans_date')) { echo 'has-error'; } ?>">
-                <?= form_label('TransDate *', 'trans_date', array('class' => 'form-control-label')); ?>
-                <div class="">
-                  <?= form_input(array('name' => 'trans_date', 'placeholder' => 'TransDate', 'id' => 'trans_date', 'class' => 'form-control', 'value' => set_value('trans_date', $stock->trans_date))); ?>
-                  <?= form_error('trans_date', '<small><span class="help-block text-danger">', '</span></small>'); ?>
-                </div>
+
+
+
+              <div class="card">
+              <div class="card-header">
+								<strong>Joindre une image de Produit</strong>
+							</div>
+
+							<div class="card-body">
+								<div class="form-group col-md-12">
+									<?= form_label('Image de Produit * <small>(JPG, PNG, 1024px, 2Mo maximum)</small>', 'image', array('class' => 'form-control-label')); ?>
+									<div class="">
+										<?= form_upload(array('name' => 'image', 'id' => 'image')); ?>
+										<p>
+											<small><span class="help-block text-danger">
+											<?php if( null !== ( $this->session->flashdata('error_image') ) ) : ?>
+											<?= $this->session->flashdata('error_image'); ?>
+											<?php endif; ?>
+											</span></small>
+										</p>
+									</div>
+								</div>
+								<label>Image actuel</label>
+								<img width="50" height="50" src="<?= site_url('assets/images/produit/'.$stock->image); ?>">
               </div>
+</div>
+
 
 
               

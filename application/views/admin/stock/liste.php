@@ -16,11 +16,11 @@
                 <thead>
                     <tr>
                         <th class="text-center">ID</th>
-                    	<th class="text-center">Code de Produit</th>
-                        <th class="text-left">Nom</th>
+                    	<th class="text-center">Produit</th>
+                        <th class="text-center">Type de Menu</th>
 												
-                        <th class="text-center">Quantity</th>
-                        <th class="text-center">TransDate</th>
+                        <th class="text-center">Prix</th>
+                        <th class="text-center">Image</th>
                         <th class="text-center">Action</th>
                     </tr>
                 </thead>
@@ -28,12 +28,49 @@
                 	<?php foreach($stocks AS $key => $val) : ?>
                         <tr>
                              <td class="text-center align-middle"><?= $val->id; ?></td>
-                            <td class="text-center align-middle"><?= $val->product_code; ?></td>
+                            <td class="text-center align-middle"><?= $val->product; ?></td>
+                            <td class="text-center">
+                            <?php
+                                		               switch($val->menu_type)
+                                    	   	           {
+                                                           case 1:
+                                                	           echo '<span class="badge badge-pill badge-danger">Nouriture</span>';
+                                                	           break;
 
-                            <td class="text-left align-middle"><strong><?= $val->product_name; ?></strong></td>
-                            <td class="text-center align-middle"><?= $val->quantity; ?></td>
+                                                	       case 2:
+                                                	           echo '<span class="badge badge-pill badge-info">Sandwich</span>';
+                                                	           break;
 
-                            <td class="text-center align-middle"><strong><?= $val->trans_date; ?></strong></td>
+                                                	       case 3:
+                                                	           echo '<span class="badge badge-pill badge-warning">Glace</span>';
+                                                	           break;
+
+                                                	       case 4:
+                                                	           echo '<span class="badge badge-pill badge-success">Gâteau</span>';
+                                                               break;
+
+                                                            case 5:
+                                                	           echo '<span class="badge badge-pill badge-danger">Shot</span>';
+                                                	           break;
+
+                                                	       case 6:
+                                                	           echo '<span class="badge badge-pill badge-info">Boisson Chaude</span>';
+                                                	           break;
+
+                                                	       case 7:
+                                                	           echo '<span class="badge badge-pill badge-warning">Boisson Glacée</span>';
+                                                	           break;
+
+                                                	       case 8:
+                                                	           echo '<span class="badge badge-pill badge-success">Boisson</span>';
+                                                	           break;
+                                            	       }
+                                                   ?>
+                                                   </td>
+                            <!-- <td class="text-left align-middle"><strong><?= $val->menu_type; ?></strong></td> -->
+                            <td class="text-center align-middle"><?= $val->price; ?></td>
+
+                            <td class="text-center align-middle"><strong><?= $val->image; ?></strong></td>
 
 
 														

@@ -12,15 +12,15 @@ $config['ajouter'] = array(
          )
      ),
      
-     array(
-         'field' => 'reference',
-         'label' => 'Référence',
-         'rules' => 'required|trim|is_unique[commande.reference]',
-         'errors'	=>	array(
-             'required' => 'Le champ <strong>{field}</strong> est obligatoire',
-             'is_unique' => 'Le champ <strong>{field}</strong> doit être unique'
-         )
-         ),
+    //  array(
+    //      'field' => 'reference',
+    //      'label' => 'Référence',
+    //      'rules' => 'required|trim|is_unique[reservation.c_id]',
+    //      'errors'	=>	array(
+    //          'required' => 'Le champ <strong>{field}</strong> est obligatoire',
+    //          'is_unique' => 'Le champ <strong>{field}</strong> doit être unique'
+    //      )
+    //      ),
     array(
 	   'field' => 'Date',
 	   'label' => 'Date',

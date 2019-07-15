@@ -17,20 +17,20 @@
 
     				<div class="row">
                         <div class="form-group col-md-4">
-                            <?= form_label('Code de Produit *', 'product_code', array('class' => 'form-control-label')); ?>
+                            <?= form_label('Nom de Produit *', 'product', array('class' => 'form-control-label')); ?>
                     <div class="input-prepend input-group">
-                        <?= form_input(array('name' => 'product_code', 'placeholder' => 'Code de Produit', 'id' => 'product_code', 'class' => (empty(form_error('product_code')) ? "" : "is-invalid") . " form-control", 'value' => set_value('product_code'))); ?>
+                        <?= form_input(array('name' => 'product', 'placeholder' => 'Nom de Produit', 'id' => 'product', 'class' => (empty(form_error('product')) ? "" : "is-invalid") . " form-control", 'value' => set_value('product'))); ?>
                       
                     </div>
-                    <?= form_error('product_code', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                    <?= form_error('product', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                   </div>
                     
 
-    					<div class="form-group col-md-4">
-                                <?= form_label('Nom *', 'nom', array('class' => 'form-control-label')); ?>
-                        <?= form_input(array('name' => 'nom', 'placeholder' => 'Nom', 'id' => 'nom', 'class' => (empty(form_error('nom')) ? "" : "is-invalid") . " form-control", 'value' => set_value('nom'))); ?>
-                      <?= form_error('nom', '<small><span class="help-block text-danger">', '</span></small>'); ?>
-                    </div>
+    					<!-- <div class="form-group col-md-4">
+                                <?= form_label('Reference de Produit *', 'product_id', array('class' => 'form-control-label')); ?>
+                        <?= form_input(array('name' => 'product_id', 'placeholder' => 'Reference de Produit', 'id' => 'product_id', 'class' => (empty(form_error('product_id')) ? "" : "is-invalid") . " form-control", 'value' => set_value('product_id'))); ?>
+                      <?= form_error('product_id', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                    </div> -->
                 </div>
 
 
@@ -41,19 +41,45 @@
 
 
                        <div class="form-group col-md-4">
-                            <?= form_label('Quantity *', 'quantity', array('class' => 'form-control-label')); ?>
+                            <?= form_label('Type de Menu *', 'menu', array('class' => 'form-control-label')); ?>
                     <div class="input-prepend input-group">
-                        <?= form_input(array('name' => 'quantity', 'placeholder' => 'Quantity', 'id' => 'quantity', 'class' => (empty(form_error('quantity')) ? "" : "is-invalid") . " form-control", 'value' => set_value('quantity'))); ?>
-                      
+                        <!-- <?= form_input(array('name' => 'menu', 'placeholder' => 'Type de Menu', 'id' => 'menu', 'class' => (empty(form_error('menu')) ? "" : "is-invalid") . " form-control", 'value' => set_value('menu'))); ?> -->
+                            <?= form_dropdown('menu', array('1' => 'Nouriture', '2' => 'Sandwich','3' => 'Glace', '4' => 'Gâteau','5' => 'Shot', '6' => 'Boisson Chaude','7' => 'Boisson Glacée', '8' => 'Boisson'), set_value('menu'), array('id' =>'menu', 'class' =>'form-control')); ?>
+
                     </div>
                     <?= form_error('quantity', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                   </div>
                   <div class="form-group col-md-4">
-                                <?= form_label('TransDate *', 'trans_date', array('class' => 'form-control-label')); ?>
-                        <?= form_input(array('name' => 'trans_date', 'placeholder' => 'TransDate', 'id' => 'nom', 'class' => (empty(form_error('trans_date')) ? "" : "is-invalid") . " form-control", 'value' => set_value('trans_date'))); ?>
-                      <?= form_error('trans_date', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                                <?= form_label('Prix *', 'price', array('class' => 'form-control-label')); ?>
+                        <?= form_input(array('name' => 'price', 'placeholder' => 'Prix', 'id' => 'price', 'class' => (empty(form_error('trans_date')) ? "" : "is-invalid") . " form-control", 'value' => set_value('price'))); ?>
+                      <?= form_error('price', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="card">
+                    <div class="card-header">
+                    <strong>Joindre une image de Produit</strong>
+                    <!-- <img width="50" height="50" src="<?= site_url('assets/images/produit/'); ?>"> -->
+	            </div>
+                
+	            <div class="card-body">
+	            	<div class="form-group col-md-12">
+									<?= form_label('Image * <small>(JPG, PNG, 1024px, 2Mo maximum)</small>', 'Image', array('class' => 'form-control-label')); ?>
+	              	<div class="">
+	                  <?= form_upload(array('name' => 'image', 'id' => 'image')); ?>
+	                  <p>
+											<small><span class="help-block text-danger">
+	                    <?php if( null !== ( $this->session->flashdata('error_image') ) ) : ?>
+	                    <?= $this->session->flashdata('error_image'); ?>
+	                    <?php endif; ?>
+	                    </span></small>
+	                  </p>
+	              	</div>
+	              </div>
                 </div>
+</div>
+</div>
+
                     <br>
 
             <div class="">
