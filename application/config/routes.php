@@ -70,6 +70,8 @@ $route['produit/update-panier'] = 'site/update_panier';
 $route['panier/get-adresse'] = 'site/get_adresse';
 $route['produit/(:any)'] = 'site/produit/$1';
 $route['profil/afficher-panier'] = 'site/afficher_panier';
+$route['services'] = 'site/services';
+$route['services/(:any)'] = 'site/service/$1';
 
 
 $route['reservationsuccess'] = 'site/reservationsuccess';

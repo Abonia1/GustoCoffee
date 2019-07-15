@@ -1,0 +1,19 @@
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.service {
+    margin-bottom: 15px;
+}
+.rightdiv1a {
+    background: #33903A;
+    border: 3px solid #33903A;
+}
+.rightdiv1b {
+    background: #33903A;
+    padding: 20px 0px;
+}
+.rightdiv1b p {
+    color: white !important;
+    min-height: 44px;
+}

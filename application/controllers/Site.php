@@ -330,4 +330,23 @@ $config = Array(
 			return FALSE;
 		}
 	}
+    public function services()
+    {
+        $this->load->model('services');
+		$services_type = $this->services->services_type_liste();
+        
+		$this->load->view('site/template/header');
+		$this->load->view('site/pages/services', array('services_type' => $services_type));
+		$this->load->view('site/template/footer');	
+	}
+    public function service($id)
+    {
+        $this->load->model('services');
+		$service = $this->services->service_liste($id);
+        $type = $id;
+        
+		$this->load->view('site/template/header');
+		$this->load->view('site/pages/service', array('service' => $service, 'type' => $type));
+		$this->load->view('site/template/footer');	
+	}
 }
