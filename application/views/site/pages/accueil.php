@@ -121,12 +121,14 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
         <div class="produit-titre">
             <h1>Découvrez nos Services</h1>
+            <p style="text-align: center;"><a href="<?= site_url('/services/'); ?>">Retrouvez tous nos services ici</a></p>
         </div>
     </div>
-
+    <?php $i = 0; ?>
     <?php foreach($produits AS $produit) : ?>
         <article class="col-xs-12 col-sm-6 produit">
-            <a href="<?= site_url('/menu1'); ?>">
+        <?php $i = $i + 1;?>
+            <a href="<?= site_url('/services/'.$i); ?>">
                 <div>
                     <img src="<?= site_url('assets/images/produit/accueil/'.$produit->image); ?>" alt="<?= $produit->nom; ?>" />
 
