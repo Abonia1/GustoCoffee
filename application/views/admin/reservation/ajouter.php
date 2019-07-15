@@ -69,7 +69,7 @@
                             <div class="quantite_produit form-group col-md-2 <?php if(form_error('quantite')) { echo 'has-error'; } ?>">
         						<?= form_label('Quantité *', 'quantity', array('class' => 'form-control-label')); ?>
                                 <div class="">
-                                	<?= form_input(array('name' => 'quantity', 'type' => 'number', 'class' => 'form-control quantite', 'value' => set_value('quantity[]'))); ?>
+                                	<?= form_input(array('name' => 'quantity', 'placeholder' => 'Quantité','type' => 'number', 'class' => 'form-control quantite', 'value' => set_value('quantity[]'))); ?>
                                     <?= form_error('quantity', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                              <div class="prix_ht form-group col-md-4 <?php if(form_error('payment')) { echo 'has-error'; } ?>">
-        						<?= form_label('Paiement *', 'Payment', array('class' => 'form-control-label')); ?>
+        						<?= form_label('Paiement', 'Payment', array('class' => 'form-control-label')); ?>
                                 <div class="input-prepend input-group">
                                     <?= form_input(array('name' => 'payment','placeholder' => 'Paiement', 'class' => 'form-control productName', 'value' => set_value('payment[0]'))); ?>
                                 	<!-- <?= form_input(array('name' => 'Payment', 'class' => 'form-control productName', 'value' => set_value('Payment[0]'))); ?> -->

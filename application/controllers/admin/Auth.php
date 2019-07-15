@@ -74,10 +74,10 @@ class Auth extends CI_Controller {
 	        exit;    
 	    } 
 	    
-	    $this->load->model( array('client_model', 'commande_model') );
+	    $this->load->model( array('client_model', 'reservation_model') );
 	    
 	    $clients = $this->client_model->nombre_client();
-	    $commandes = $this->commande_model->nombre_commande();
+	    $commandes = $this->reservation_model->nombre_reservation();
 	    
 	    $content = $this->load->view('admin/tableau_de_bord/tableau_de_bord', array('clients' => $clients, 'commandes' => $commandes), TRUE);
 	    $this->load->view('admin/template/template', array('content' => $content));

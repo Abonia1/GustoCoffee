@@ -9,7 +9,7 @@
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
-            <i class="fa fa-users"></i> Liste des Stock
+            <i class="fa fa-users"></i> Liste des Service
         </div>
         <div class="card-body table-responsive">
             <table class="table table-striped">
@@ -69,8 +69,12 @@
                                                    </td>
                             <!-- <td class="text-left align-middle"><strong><?= $val->menu_type; ?></strong></td> -->
                             <td class="text-center align-middle"><?= $val->price; ?></td>
-
-                            <td class="text-center align-middle"><strong><?= $val->image; ?></strong></td>
+                            <td class="text-center align-middle">
+                            	<?php if($val->image != NULL) : ?>
+                            		<img src="<?= site_url('assets/images/produit/'.$val->image); ?>" width="100" height="100" class="rounded" />
+                        		<?php endif; ?>
+                            </td>
+                            <!-- <td class="text-center align-middle"><strong><?= $val->image; ?></strong></td> -->
 
 
 														

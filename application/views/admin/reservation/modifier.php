@@ -66,7 +66,7 @@
                             </div>
 						</div>
 						<div class="form-group col-md-4">
-    						<?= form_label('Paiment *', 'payment', array('class' => 'form-control-label')); ?>
+    						<?= form_label('Paiement ', 'payment', array('class' => 'form-control-label')); ?>
                             <div class="">
                             	<?= form_input(array('name' => 'payment', 'placeholder' => 'Paiement', 'id' => 'payment', 'class' => 'form-control', 'value' => set_value('Paiment', $reservation->payment))); ?>
                                 <?= form_error('payment', '<small><span class="help-block text-danger">', '</span></small>'); ?>

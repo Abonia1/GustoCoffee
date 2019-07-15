@@ -32,7 +32,7 @@ $config['ajouter'] = array(
     
     array(
         'field' => 'Time',
-        'label' => 'Time',
+        'label' => 'Heure',
         'rules' => 'required|trim',
         'errors'	=>	array(
             'required' => 'Le champ <strong>{field}</strong> est obligatoire'
@@ -42,7 +42,7 @@ $config['ajouter'] = array(
    
     array(
         'field' => 'quantity',
-        'label' => 'Quantity',
+        'label' => 'Quantité',
         'rules' => 'required|trim',
         'errors'	=>	array(
             'required' => 'Le champ <strong>{field}</strong> est obligatoire'
@@ -50,7 +50,7 @@ $config['ajouter'] = array(
         ),
     array(
             'field' => 'tbnumber',
-            'label' => 'tbnumber',
+            'label' => 'Numéro de Table',
             'rules' => 'required|trim',
             'errors'	=>	array(
                 'required' => 'Le champ <strong>{field}</strong> est obligatoire'
@@ -73,7 +73,7 @@ $config['modifier'] = array(
     
     array(
         'field' => 'Time',
-        'label' => 'Time',
+        'label' => 'Heure',
         'rules' => 'required|trim',
         'errors'	=>	array(
             'required' => 'Le champ <strong>{field}</strong> est obligatoire'
@@ -82,7 +82,7 @@ $config['modifier'] = array(
    
     array(
         'field' => 'quantity',
-        'label' => 'Quantity',
+        'label' => 'Quantité',
         'rules' => 'required|trim',
         'errors'	=>	array(
             'required' => 'Le champ <strong>{field}</strong> est obligatoire'

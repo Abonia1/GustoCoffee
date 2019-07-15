@@ -119,7 +119,7 @@
 
 
                          <li class="nav-item nav-dropdown">
-                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-folder-alt"></i> Stock</a>
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-folder-alt"></i> Services</a>
                             <ul class="nav-dropdown-items">
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?= site_url('admin/stock/liste'); ?>"><i class="icon-list"></i> Liste</a>
@@ -159,7 +159,7 @@
                 <li class="breadcrumb-item">Home</li>
                 <li class="breadcrumb-item"><a href="#">Admin</a>
                 </li>
-                <li class="breadcrumb-item active">Dashboard</li>
+                <!-- <li class="breadcrumb-item active">Dashboard</li>
 
                 <!-- Breadcrumb Menu-->
                 <li class="breadcrumb-menu d-md-down-none">
@@ -168,7 +168,7 @@
                         <a class="btn" href="./"><i class="icon-graph"></i> &nbsp;Dashboard</a>
                         <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
                     </div>
-                </li>
+                </li> -->
             </ol>
 
 

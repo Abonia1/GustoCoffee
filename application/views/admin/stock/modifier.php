@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <strong>Modifier une stock</strong>
+                <strong>Modifier une Service</strong>
                 les champs marqués d'une * sont obligatoires
             </div>
 
@@ -19,7 +19,7 @@
             	</div>
             <?php endif; ?>
 
-    				<h3>Informations stock</h3>
+    				<h3>Informations service</h3>
     				<hr>
 
 
@@ -59,7 +59,7 @@
               </div>
 
 
-
+              <div class="form-group col-md-6">
               <div class="card">
               <div class="card-header">
 								<strong>Joindre une image de Produit</strong>
@@ -82,6 +82,7 @@
 								<label>Image actuel</label>
 								<img width="50" height="50" src="<?= site_url('assets/images/produit/'.$stock->image); ?>">
               </div>
+</div>
 </div>
 
 

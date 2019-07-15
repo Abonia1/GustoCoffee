@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <strong>Ajouter une Stock</strong>
+                <strong>Ajouter une Service</strong>
                 les champs marqués d'une * sont obligatoires
             </div>
 
@@ -11,7 +11,7 @@
 
     				<?= validation_errors('<div class="col-md-12"><div class="alert alert-danger">', '</div></div>'); ?>
 
-    				<h3>Informations stock</h3>
+    				<h3>Informations service</h3>
     				<hr>
 
 
@@ -56,6 +56,7 @@
                     </div>
                     </div>
                     <div class="row">
+                    <div class="form-group col-md-6">
                     <div class="card">
                     <div class="card-header">
                     <strong>Joindre une image de Produit</strong>
@@ -77,6 +78,7 @@
 	              	</div>
 	              </div>
                 </div>
+</div>
 </div>
 </div>
 
