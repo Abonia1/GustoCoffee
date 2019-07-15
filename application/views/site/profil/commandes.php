@@ -24,13 +24,14 @@
             <table class="col-xs-12 commande">
                 <thead>
                     <tr>
-                        <th class="text-left">Reservation Reference</th>
+                        <th class="text-left">Reference de Reservation</th>
                         <th class="text-left">Date</th>
-                        <th class="text-left">Time</th>
-                        <th class="text-center">Quantity</th>
-                        <th class="text-center">Table Number</th>
-                        <th class="text-right">Status</th>
-                        <th class="text-left">Paiment</th>
+                        <th class="text-left">Heure</th>
+                        <th class="text-center">Quantité</th>
+                        <th class="text-center">Table</th>
+                        <th class="text-right">Statut</th>
+                        <th class="text-right">Statut de Client</th>
+                        <th class="text-left">Paiement</th>
                     </tr>
                 </thead>
 
@@ -43,7 +44,40 @@
                                 <td class="text-left"><?= $reservation->time; ?></td>
                                 <td class="text-center"><?= $reservation->quantity; ?></td>
                                 <td class="text-center"><?= $reservation->tbnumber; ?></td>
-                                <td class="text-center"><?= $reservation->status; ?></td>
+                                <!-- <td class="text-center"><?= $reservation->status; ?></td> -->
+                                <td class="text-center">
+                                        			<?php
+                                		               switch($reservation->status)
+                                    	   	           {
+														case '0':
+														echo '<span class="badge badge-pill badge-danger">Annulée</span>';
+														break;
+			 
+													case '1':
+														echo '<span class="badge badge-pill badge-success">Confirmed</span>';
+														break;
+                                            	       }
+                                            	   ?>
+                                </td>
+                                <td class="text-center">
+												<?php
+                            	   switch($reservation->c_status)
+                            	   {
+							   			case 0:
+                            	           echo '<span class="badge badge-pill badge-warning">Out</span>';
+                            	           break;
+
+                            	       case 1:
+                            	           echo '<span class="badge badge-pill badge-success">In</span>';
+										   break;
+										
+										case 2:
+										echo '<span class="badge badge-pill badge-danger">Terminée</span>';
+										break;
+									 }
+								?>
+                	                            </td>
+                                <!-- <td class="text-center"><?= $reservation->c_status; ?></td> -->
                                 <td class="text-right"><?= $reservation->quantity*50; ?> €</td>
                             </tr>
                         <?php endforeach; ?>
