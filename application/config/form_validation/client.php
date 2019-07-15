@@ -7,15 +7,15 @@ $config['admin'] = array(
 
     //Ajouter-------------------------------------------------------------------------------------
     'ajouter_rules' => array(
-        array(
-            'field' => 'civilite',
-            'label' => 'Civilité',
-            'rules' => 'required|in_list[Mr, Mme, Mlle]|trim',
-            'errors'	=>	array(
-                'required' => 'Le champ <strong>{field}</strong> est obligatoire',
-                'in_list' => 'Le champ <strong>{field}</strong> doit être Mr, Mme ou Mlle'
-            )
-        ),
+        // array(
+        //     'field' => 'civilite',
+        //     'label' => 'Civilité',
+        //     'rules' => 'required|in_list[Mr, Mme, Mlle]|trim',
+        //     'errors'	=>	array(
+        //         'required' => 'Le champ <strong>{field}</strong> est obligatoire',
+        //         'in_list' => 'Le champ <strong>{field}</strong> doit être Mr, Mme ou Mlle'
+        //     )
+        // ),
 
         array(
             'field' => 'nom',
@@ -132,14 +132,14 @@ $config['admin'] = array(
 
     //Ajouter----------------------------------------------------------------------------------
     'modifier_rules'=> array(
-        array(
-            'field' => 'civilite',
-            'label' => 'Civilité',
-            'rules' => 'in_list[Mr, Mme, Mlle]|trim',
-            'errors'    =>  array(
-                'in_list' => 'Le champ <strong>{field}</strong> doit être Mr, Mme ou Mlle'
-            )
-        ),
+        // array(
+        //     'field' => 'civilite',
+        //     'label' => 'Civilité',
+        //     'rules' => 'in_list[Mr, Mme, Mlle]|trim',
+        //     'errors'    =>  array(
+        //         'in_list' => 'Le champ <strong>{field}</strong> doit être Mr, Mme ou Mlle'
+        //     )
+        // ),
 
         array(
             'field' => 'nom',
@@ -407,14 +407,14 @@ $config['client'] = array(
             )
         ),
 
-        array(
-            'field' => 'civilite',
-            'label' => 'Civilité',
-            'rules' => 'in_list[Mr, Mme, Mlle]|trim',
-            'errors'    =>  array(
-                'in_list' => 'Le champ <strong>{field}</strong> doit être Mr, Mme ou Mlle'
-            )
-        ),
+        // array(
+        //     'field' => 'civilite',
+        //     'label' => 'Civilité',
+        //     'rules' => 'in_list[Mr, Mme, Mlle]|trim',
+        //     'errors'    =>  array(
+        //         'in_list' => 'Le champ <strong>{field}</strong> doit être Mr, Mme ou Mlle'
+        //     )
+        // ),
 
         array(
             'field' => 'nom',

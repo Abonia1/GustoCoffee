@@ -28,10 +28,11 @@
                     			<thead>
                         			<tr>
                                 <th class="text-center">Date</th>
-                        				<th class="text-center">Référence</th>
-        		                    <th class="text-right">Montant</th>
+										<th class="text-center">Heure</th>
+										<th class="text-center">Numéro de Table</th>
+        		                    <th class="text-right">Paiement</th>
                             		<th class="text-center">Statut</th>
-                            		<th class="text-center">Valide</th>
+                            		<th class="text-center">Statut Client</th>
                             		<th class="text-center">Action</th>
         		                  </tr>
         		                </thead>
@@ -40,38 +41,43 @@
         		                	<?php if(is_array($commandes)) : ?>
             		                	<?php foreach($commandes AS $key => $val) : ?>
             	                        	<tr>
-                                            <td class="text-center"><?= date('d/m/Y H:i:s', strtotime($val->date_creation)); ?></td>
-                		                        <td class="text-center"><?= $val->reference; ?></td>
-                		                        <td class="text-right"><?= $val->prix_ttc_final; ?> €</td>
+                                            <td class="text-center"><?= $val->date; ?></td>
+                		                        <td class="text-center"><?= $val->time; ?></td>
+												<td class="text-right"><?= $val->tbnumber; ?> </td>
+												<td class="text-right"><?= $val->payment; ?> €</td>
+
                 		                        <td class="text-center">
                                         			<?php
-                                		               switch($val->statut)
+                                		               switch($val->status)
                                     	   	           {
-                                                	       case 0:
-                                                	           echo '<span class="badge badge-pill badge-danger">Annulée</span>';
-                                                	           break;
-
-                                                	       case 1:
-                                                	           echo '<span class="badge badge-pill badge-info">En cours</span>';
-                                                	           break;
-
-                                                	       case 2:
-                                                	           echo '<span class="badge badge-pill badge-warning">En attente</span>';
-                                                	           break;
-
-                                                	       case 3:
-                                                	           echo '<span class="badge badge-pill badge-success">Terminée</span>';
-                                                	           break;
+														case '0':
+														echo '<span class="badge badge-pill badge-danger">Annulée</span>';
+														break;
+			 
+													case '1':
+														echo '<span class="badge badge-pill badge-success">Confirmed</span>';
+														break;
                                             	       }
                                             	   ?>
                                        			</td>
 
                 	                            <td class="text-center">
-                	                            	<?php if($val->valide != 0) : ?>
-                	                            		<span class="badge badge-pill badge-success">Validée</span>
-                	                        		<?php else : ?>
-                	                        			<span class="badge badge-pill badge-danger">Non validée</span>
-                	                    			<?php endif; ?>
+												<?php
+                            	   switch($val->c_status)
+                            	   {
+							   			case 0:
+                            	           echo '<span class="badge badge-pill badge-warning">Out</span>';
+                            	           break;
+
+                            	       case 1:
+                            	           echo '<span class="badge badge-pill badge-success">In</span>';
+										   break;
+										
+										case 2:
+										echo '<span class="badge badge-pill badge-danger">Terminée</span>';
+										break;
+									 }
+								?>
                 	                            </td>
 
                 	                            <td class="text-center">
@@ -81,10 +87,10 @@
                 	                        			</button>
 
                 	                        			<div class="dropdown-menu dropdown-menu-right">
-                	                        				<a class="dropdown-item" href="<?= site_url('web/document/bon-livraison/'.$val->bon_livraison); ?>"><i class="icon-doc"></i> Bon livraison</a>
-        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/modifier/'.$val->id); ?>"><i class="icon-pencil"></i> Modifier</a>
-        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/supprimer/'.$val->id); ?>"><i class="icon-trash"></i> Supprimer</a>
-        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/detail/'.$val->id); ?>"><i class="icon-magnifier-add"></i> Détail</a>
+                	                        				<!-- <a class="dropdown-item" href="<?= site_url('web/document/bon-livraison/'.$val->bon_livraison); ?>"><i class="icon-doc"></i> Bon livraison</a> -->
+        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/modifier/'.$val->reservation_id); ?>"><i class="icon-pencil"></i> Modifier</a>
+        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/supprimer/'.$val->reservation_id); ?>"><i class="icon-trash"></i> Supprimer</a>
+        	                                        <a class="dropdown-item" href="<?= site_url('admin/reservation/detail/'.$val->reservation_id); ?>"><i class="icon-magnifier-add"></i> Détail</a>
         	                                    </div>
                 									</div>
                 	                            </td>

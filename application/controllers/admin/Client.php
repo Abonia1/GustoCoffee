@@ -125,24 +125,24 @@ class Client extends CI_Controller {
 		$annuleUser = 0;
 		$dettesUser = 0;
 
-		$this->load->model('commande_model');
-	    $commandes = $this->commande_model->commandes_client($id);
+		$this->load->model('reservation_model');
+	    $commandes = $this->reservation_model->reservations_client($id);
 
 	    if(is_array($commandes)) {
     	    foreach( $commandes AS $commande ) {
-    	        switch( $commande->statut )
+    	        switch( $commande->status )
     	        {
     	            case 0:
-    	                $annuleUser += intval($commande->prix_ttc_final);
+    	                $annuleUser += intval($commande->payment);
     	                break;
 
     	            case 1:
     	            case 2:
-    	                $dettesUser += intval($commande->prix_ttc_final);
+    	                $dettesUser += intval($commande->payment);
     	                break;
 
     	            case 3:
-    	                $totalUser += intval($commande->prix_ttc_final);
+    	                $totalUser += intval($commande->payment);
     	                break;
     	        }
     	        /*
@@ -164,7 +164,7 @@ class Client extends CI_Controller {
 	    /*$totalSociete=0;
 		$annuleSociete=0;
 		$dettesSociete=0;
-	    $commandesSociete = $this->commande_model->commandes_societe($id);
+	    $commandesSociete = $this->reservation_model->commandes_societe($id);
 	    foreach ($commandesSociete as $commandeSociete) {
 	    	if($commandeSociete->statut == 3)
 	    	{
