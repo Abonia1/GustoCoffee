@@ -45,19 +45,15 @@
 			  <div class="form-group col-md-6 <?php if(form_error('desc')) { echo 'has-error'; } ?>">
                 <?= form_label('Description Courte *', 'desc', array('class' => 'form-control-label')); ?>
                 <div class="">
-                  <?= form_input(array('name' => 'desc', 'placeholder' => 'Description Longue', 'id' => 'desc', 'class' => 'form-control', 'value' => set_value('desc', $produit->description_courte))); ?>
+                  <?= form_input(array('name' => 'desc', 'placeholder' => 'Description Courte', 'id' => 'desc', 'class' => 'form-control', 'value' => set_value('desc', $produit->description_courte))); ?>
                   <?= form_error('desc', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                 </div>
-              </div>
-                      
-
-
-
-
-              <div class="card">
-              <div class="card-header">
+			  </div>
+			  <div class="form-group col-md-6">
+                <div class="card">
+              				<div class="card-header">
 								<strong>Joindre une image de Produit</strong>
-							</div>
+			              	</div>
 
 							<div class="card-body">
 								<div class="form-group col-md-12">
@@ -74,35 +70,29 @@
 									</div>
 								</div>
 								<label>Image actuel</label>
-								<img width="50" height="50" src="<?= site_url('assets/images/produit/'.$produit->image); ?>">
-              </div>
+								<img width="50" height="50" src="<?= site_url('assets/images/produit/accueil/'.$produit->image); ?>">
+              				</div>
+				</div>
 </div>
 
-<div class="form-group col-md-6 <?php if(form_error('desL')) { echo 'has-error'; } ?>">
+<div class="form-group col-md-6 <?php if(form_error('desl')) { echo 'has-error'; } ?>">
                 <?= form_label('Description Longue *', 'desl', array('class' => 'form-control-label')); ?>
                 <div class="">
                   <?= form_textarea(array('name' => 'desl', 'placeholder' => 'Description Longue', 'id' => 'desl', 'class' => 'form-control', 'value' => set_value('desl', $produit->description_longue))); ?>
                   <?= form_error('desl', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                 </div>
               </div>
-
-              
-
-            </div>
-
-            <div class="row">
-
-            
-
-            </div>
 			</div>
+</div>
 
 			<div class="card-footer">
                 <?= form_input(array('type' => 'hidden', 'name' => 'id', 'value' => $produit->id)); ?>
 				<?= form_submit('submitBtn', 'Enregistrer', array('class' => 'btn btn-sm btn-primary pull-right')); ?>
 			</div>
+			
 
 			<?= form_close(); ?>
+
 		</div>
 	</div>
 </div>

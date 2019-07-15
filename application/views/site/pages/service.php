@@ -2,7 +2,7 @@
 				
 <div class="container">
         <?php if($type == 1) {?>
-        <h1>Découvrez nos patisserie et sandwish</h1>
+        <h1>Découvrez nos patisserie et sandwich</h1>
         <?php } ?>
         <?php if($type == 2) {?>
         <h1>Rafraichissez vous avec des boissons bien fraîches</h1>

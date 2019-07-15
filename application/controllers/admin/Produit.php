@@ -43,7 +43,7 @@ class Produit extends CI_Controller {
         }
 
 
-        $content = $this->load->view('admin/produit/ajouter', array('priorites' => $priorites, 'utilisations' => $utilisations), TRUE);
+        $content = $this->load->view('admin/produit/ajouter', array(), TRUE);
         $this->load->view('admin/template/template', array('content' => $content, 'js_files' => array('produit.js')));
     }
 
