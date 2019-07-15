@@ -15,7 +15,7 @@ class Site extends CI_Controller {
 		 $this->load->model('accueil_model');
         $this->load->model('image_model');
 		//$data['text'] = $this->accueil_model->text();
-        $data_['imageproduits']=$this->image_model->imageproduits();
+        //$data_['imageproduits']=$this->image_model->imageproduits();
 
 		$this->load->model('produit_model');
 		$produits = $this->produit_model->produits_accueil();

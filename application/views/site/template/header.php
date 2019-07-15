@@ -125,7 +125,7 @@
 		                    </li>
 
 		                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-		                        <a href="<?= site_url('/produits'); ?>">Services</a>
+		                        <a href="<?= site_url('/services'); ?>">Services</a>
 		                    </li>
 
 		                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
