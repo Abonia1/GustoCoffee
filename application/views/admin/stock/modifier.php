@@ -43,7 +43,7 @@
 
               <div class="row">
               <div class="form-group col-md-6">
-                    		<?= form_label('Type de Menu *', 'statut', array('class' => 'form-control-label')); ?>
+                    		<?= form_label('Type de Service *', 'statut', array('class' => 'form-control-label')); ?>
                             <div class="">
                             	<?= form_dropdown('menu', array('1' => 'Nouriture', '2' => 'Sandwich','3' => 'Glace', '4' => 'Gâteau','5' => 'Shot', '6' => 'Boisson Chaude','7' => 'Boisson Glacée', '8' => 'Boisson'), set_value('menu', $stock->menu_type), array('id' =>'menu', 'class' =>'form-control')); ?>
                                 <?= form_error('menu', '<small><span class="help-block text-danger">', '</span></small>'); ?>

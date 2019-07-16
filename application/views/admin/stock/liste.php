@@ -17,7 +17,7 @@
                     <tr>
                         <th class="text-center">ID</th>
                     	<th class="text-center">Produit</th>
-                        <th class="text-center">Type de Menu</th>
+                        <th class="text-center">Type de Service</th>
 												
                         <th class="text-center">Prix</th>
                         <th class="text-center">Image</th>

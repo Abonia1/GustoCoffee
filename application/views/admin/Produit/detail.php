@@ -4,7 +4,7 @@
             <div class="card-header">
                 <i class="fa fa-eyedropper">
                 </i>
-                <strong>Détail produit</strong>
+                <strong>Détail produit d'accueil</strong>
             </div>
             <div class="col-md-12">
                 <table class="table table-striped">

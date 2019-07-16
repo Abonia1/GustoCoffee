@@ -17,7 +17,7 @@
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
-            <i class="fa fa-eyedropper"></i> Liste des produits
+            <i class="fa fa-eyedropper"></i> Liste des produits d'accueil
         </div>
         <div class="card-body table-responsive">
             <table class="table table-striped">

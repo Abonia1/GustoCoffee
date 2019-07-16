@@ -18,7 +18,7 @@
     	<div class="card">
             <div class="card-body">
                 <div class="h1 text-muted text-right mb-4">
-                    <i class="icon-basket-loaded"></i>
+                    <i class="icon-calendar"></i>
                 </div>
                 <div class="h4 mb-0"><?= $commandes->nombre; ?></div>
                 <small class="text-muted text-uppercase font-weight-bold">Reservation effectuées</small>

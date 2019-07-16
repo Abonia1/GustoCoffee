@@ -41,9 +41,9 @@
 
 
                        <div class="form-group col-md-4">
-                            <?= form_label('Type de Menu *', 'menu', array('class' => 'form-control-label')); ?>
+                            <?= form_label('Type de Service *', 'menu', array('class' => 'form-control-label')); ?>
                     <div class="input-prepend input-group">
-                        <!-- <?= form_input(array('name' => 'menu', 'placeholder' => 'Type de Menu', 'id' => 'menu', 'class' => (empty(form_error('menu')) ? "" : "is-invalid") . " form-control", 'value' => set_value('menu'))); ?> -->
+                        <!-- <?= form_input(array('name' => 'menu', 'placeholder' => 'Type de Service', 'id' => 'menu', 'class' => (empty(form_error('menu')) ? "" : "is-invalid") . " form-control", 'value' => set_value('menu'))); ?> -->
                             <?= form_dropdown('menu', array('1' => 'Nouriture', '2' => 'Sandwich','3' => 'Glace', '4' => 'Gâteau','5' => 'Shot', '6' => 'Boisson Chaude','7' => 'Boisson Glacée', '8' => 'Boisson'), set_value('menu'), array('id' =>'menu', 'class' =>'form-control')); ?>
 
                     </div>
