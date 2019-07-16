@@ -48,7 +48,9 @@ p {
     line-height: 3.5;
     font-size: 14px;
 }
-
+.personnes input {
+    width: 33%;
+}
 #tablenumber {
     visibility: none;
     display: none;

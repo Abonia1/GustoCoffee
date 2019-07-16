@@ -25,19 +25,26 @@
                 <label>Heure *</label>
                 <?= form_input(array('name' => 'Time', 'placeholder' => 'Heure de reservation ', 'id' => 'timepicker', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Time'))); ?>
             </div>
-
-
+            
             <div class="col-xs-12 col-sm-3">
-                <label>Nombre de personnes </label>
-                <input type='button' value='&#94' field='quantity'
+                <label>Durée *</label>
+                <?= form_input(array('name' => 'Duree', 'placeholder' => 'Durée de reservation ', 'id' => 'durationpicker', 'onclick' => 'dureereservation();', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Duree'))); ?>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-3 personnes">
+                <div>
+                    <label>Nombre de personnes </label>    
+                </div>
+                <input type='button' value='+' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyplus' />
-                <?= form_input(array('name' => 'quantity', 'placeholder' => 'Nombre de persons', 'id' => 'quantity', 'value'=>'1', 'class' => (empty(form_error('quantity')) ? "" : "quantity") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('quantity'))); ?>
-                <input type='button' value='&#8964' field='quantity'
+                <?= form_input(array('name' => 'quantity', 'placeholder' => '0', 'id' => 'quantity', 'value'=>'1', 'class' => (empty(form_error('quantity')) ? "" : "quantity") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('quantity'))); ?>
+                <input type='button' value='-' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyminus' />
             </div>  
             
-            <div class="col-xs-12 col-sm-3">
-                <a  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button'>
+            <div class="col-xs-12 col-sm-12">
+                <a  id="checkbutton" class = 'col-xs-12 col-sm-12 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4 contact-button'>
                 Voir les disponibilités</a>
             </div>
             
@@ -49,7 +56,7 @@
 
             </div> -->
             <header class="row" id="titleHeader">
-							<p class="header">Tables disponibles pour <span id='personheader'></span> person(s) au <span id='dateheader'></span> à <span id='timeheader'></span>.</p><!-- /.text-center pjRbSectionTitle pjRbSectionTitleSmall -->
+							<p class="header">Tables disponibles pour <span id='personheader'></span> personne(s) le <span id='dateheader'></span> à <span id='timeheader'></span> pour une durée de <span id="dureeheader"></span>.</p><!-- /.text-center pjRbSectionTitle pjRbSectionTitleSmall -->
 
 							<p class="message">Cliquez sur une table disponible pour la réserver</p>
 						</header>

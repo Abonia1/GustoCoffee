@@ -60,26 +60,43 @@ $(function() {
         minDate: '0',
         beforeShowDay: function(date) { return [date.getDay() == 5 || date.getDay() == 4 || date.getDay() == 3 || date.getDay() == 2 || date.getDay() == 1, ""] }
 
+        });
     });
-});
-$(document).ready(function() {
-    $('#timepicker').timepicker({
-        timeFormat: 'H:00',
-        dropdown: true,
-        scrollbar: true,
-        minTime: '10:00',
-        maxTime: '18:00',
+    $(document).ready(function() {
+        $('#timepicker').timepicker({
+            timeFormat: 'H:00',
+            dropdown: true,
+            scrollbar: true,
+            minTime: '10:00',
+            maxTime: '18:00',
+        });
+        // $('#numberImg').click(function() {
+        //     var $this = $(this);
+        //     if ($this.hasClass('active')) {
+        //         $this.removeClass('active');
+        //     } else {
+        //         $('.active').removeClass('active');
+        //         $this.addClass('active');
+        //     }
+        // });
     });
-    // $('#numberImg').click(function() {
-    //     var $this = $(this);
-    //     if ($this.hasClass('active')) {
-    //         $this.removeClass('active');
-    //     } else {
-    //         $('.active').removeClass('active');
-    //         $this.addClass('active');
-    //     }
-    // });
-});
+    function dureereservation() {
+        $(document).ready(function() {
+            var timeheader = document.getElementById('timepicker').value;
+            var t1 = timeheader.split(':');
+            var durationheader = 19 - t1[0];
+            var dureeheader = durationheader + ':00';
+            console.log(dureeheader);
+            $('#durationpicker').timepicker({
+                timeFormat: 'H:00',
+                dropdown: true,
+                scrollbar: true,
+                minTime: '1:00',
+                maxTime: dureeheader,
+            });
+        });
+    }
+    
 
 //Incrementer and decrementer 
 jQuery(document).ready(function() {
@@ -134,8 +151,10 @@ $("#checkbutton").click(function() {
     document.getElementById('dateheader').innerHTML = dateheader;
     var timeheader = document.getElementById('timepicker').value;
     document.getElementById('timeheader').innerHTML = timeheader;
+    var dureeheader = document.getElementById('durationpicker').value;
+    document.getElementById('dureeheader').innerHTML = dureeheader;
 
-    if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || quantity == 0)
+    if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || $("#durationpicker").val().length == 0 || quantity == 0)
     //{
     // if ($("#datepicker").val().length == 0) {
     //     window.alert("Please select date before checking seat availability.");
@@ -147,7 +166,7 @@ $("#checkbutton").click(function() {
     //     window.alert("Please select number of seat before checking seat availability.");
     // }
     {
-        window.alert("Veuillez remplir des champs avant de commancer.");
+        window.alert("Veuillez remplir des champs avant de commencer.");
         document.getElementById('Plan').style.display = "none";
     } else {
         $(document.getElementById("selectionTitle")).css("display", "none");
@@ -204,6 +223,7 @@ $("#checkbutton").click(function() {
         //var dateheader = document.getElementById('datepicker').value;
         var dateheader = $('input[name="Date"]').val();
         var timeheader = $('input[name="Time"]').val();
+        var dureeheader = $('input[name="Duree"]').val();
         //var dateheader = JSON.stringify({ dateheader: dateheader });
         var quantity = $('input[name="quantity"]').val();
         console.log(dateheader);
