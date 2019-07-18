@@ -57,46 +57,47 @@ $(function() {
     $("#datepicker").datepicker({
         dateFormat: "dd-mm-yy",
         yearRange: "2019:2020",
-        minDate: '0',
+        minDate: '1',
         beforeShowDay: function(date) { return [date.getDay() == 5 || date.getDay() == 4 || date.getDay() == 3 || date.getDay() == 2 || date.getDay() == 1, ""] }
 
-        });
     });
+});
+$(document).ready(function() {
+    $('#timepicker').timepicker({
+        timeFormat: 'H:00',
+        dropdown: true,
+        scrollbar: true,
+        minTime: '07:00',
+        maxTime: '18:00',
+    });
+    // $('#numberImg').click(function() {
+    //     var $this = $(this);
+    //     if ($this.hasClass('active')) {
+    //         $this.removeClass('active');
+    //     } else {
+    //         $('.active').removeClass('active');
+    //         $this.addClass('active');
+    //     }
+    // });
+});
+
+function dureereservation() {
     $(document).ready(function() {
-        $('#timepicker').timepicker({
+        var timeheader = document.getElementById('timepicker').value;
+        var t1 = timeheader.split(':');
+        var durationheader = 19 - t1[0];
+        var dureeheader = durationheader + ':00';
+        console.log(dureeheader);
+        $('#durationpicker').timepicker({
             timeFormat: 'H:00',
             dropdown: true,
             scrollbar: true,
-            minTime: '10:00',
-            maxTime: '18:00',
+            minTime: '1:00',
+            maxTime: dureeheader,
         });
-        // $('#numberImg').click(function() {
-        //     var $this = $(this);
-        //     if ($this.hasClass('active')) {
-        //         $this.removeClass('active');
-        //     } else {
-        //         $('.active').removeClass('active');
-        //         $this.addClass('active');
-        //     }
-        // });
     });
-    function dureereservation() {
-        $(document).ready(function() {
-            var timeheader = document.getElementById('timepicker').value;
-            var t1 = timeheader.split(':');
-            var durationheader = 19 - t1[0];
-            var dureeheader = durationheader + ':00';
-            console.log(dureeheader);
-            $('#durationpicker').timepicker({
-                timeFormat: 'H:00',
-                dropdown: true,
-                scrollbar: true,
-                minTime: '1:00',
-                maxTime: dureeheader,
-            });
-        });
-    }
-    
+}
+
 
 //Incrementer and decrementer 
 jQuery(document).ready(function() {
@@ -110,8 +111,10 @@ jQuery(document).ready(function() {
         var currentVal = parseInt($('input[name=' + fieldName + ']').val());
         // If is not undefined
         if (!isNaN(currentVal)) {
-            // Increment
-            $('input[name=' + fieldName + ']').val(currentVal + 1);
+            if (currentVal < 13) {
+                // Increment
+                $('input[name=' + fieldName + ']').val(currentVal + 1);
+            }
         } else {
             // Otherwise put a 1 there
             $('input[name=' + fieldName + ']').val(1);
@@ -201,9 +204,18 @@ $("#checkbutton").click(function() {
                     }
                 }
                 break;
-            case (6 < quantity && quantity <= 13):
+            case (6 < quantity && quantity <= 10):
                 {
                     var items = document.querySelectorAll('#svg_27,#svg_29,#svg_31,#svg_25');
+                    for (var i = 0; i < items.length; i++) {
+                        $(items[i]).attr('class', 'selectable');
+                        document.getElementById('Plan').style.display = "block";
+                    }
+                }
+                break;
+            case (10 < quantity && quantity <= 13):
+                {
+                    var items = document.querySelectorAll('#svg_25');
                     for (var i = 0; i < items.length; i++) {
                         $(items[i]).attr('class', 'selectable');
                         document.getElementById('Plan').style.display = "block";

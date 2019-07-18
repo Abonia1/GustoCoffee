@@ -4,7 +4,7 @@
 
         <p>* Attention vous devez inscrire dans notre site avant de finaliser votre Reservation
   
-        et si vous souhaitez réserver des places pour plus de 14 personnes, contactez-nous à partir <a href="contact">d'ici</a>
+        et si vous souhaitez réserver des places pour plus de 13 personnes, contactez-nous à partir <a href="contact">d'ici</a>
         </p><br>
     </section>
 
@@ -18,27 +18,27 @@
             
             <div class="col-xs-12 col-sm-3">
                 <label>Date *</label>
-                <?= form_input(array('name' => 'Date', 'placeholder' => 'Date de reservation', 'id' => 'datepicker', 'class' => (empty(form_error('Date')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Date'))); ?>
+                <?= form_input(array('name' => 'Date', 'placeholder' => 'Date de reservation','onkeydown'=>"return false", 'id' => 'datepicker', 'class' => (empty(form_error('Date')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Date'))); ?>
             </div>
 
             <div class="col-xs-12 col-sm-3">
                 <label>Heure *</label>
-                <?= form_input(array('name' => 'Time', 'placeholder' => 'Heure de reservation ', 'id' => 'timepicker', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Time'))); ?>
+                <?= form_input(array('name' => 'Time', 'placeholder' => 'Heure de reservation ', 'onkeydown'=>"return false",'id' => 'timepicker', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Time'))); ?>
             </div>
             
             <div class="col-xs-12 col-sm-3">
                 <label>Durée *</label>
-                <?= form_input(array('name' => 'Duree', 'placeholder' => 'Durée de reservation ', 'id' => 'durationpicker', 'onclick' => 'dureereservation();', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Duree'))); ?>
+                <?= form_input(array('name' => 'Duree', 'placeholder' => 'Durée de reservation ','onkeydown'=>"return false", 'id' => 'durationpicker', 'onclick' => 'dureereservation();', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Duree'))); ?>
             </div>
 
 
             <div class="col-xs-12 col-sm-3 personnes">
                 <div>
-                    <label>Nombre de personnes </label>    
+                    <label>Nombre de personnes *</label>    
                 </div>
                 <input type='button' value='+' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyplus' />
-                <?= form_input(array('name' => 'quantity', 'placeholder' => '0', 'id' => 'quantity', 'value'=>'1', 'class' => (empty(form_error('quantity')) ? "" : "quantity") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('quantity'))); ?>
+                <?= form_input(array('name' => 'quantity', 'placeholder' => '0', 'onkeydown'=>"return false",'id' => 'quantity', 'value'=>'0', 'class' => (empty(form_error('quantity')) ? "" : "quantity") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('quantity'))); ?>
                 <input type='button' value='-' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyminus' />
             </div>  
