@@ -197,7 +197,7 @@ $("#checkbutton").click(function() {
                 break;
             case (4 < quantity && quantity < 7):
                 {
-                    var items = document.querySelectorAll('#svg_37,#svg_35,#svg_33,#svg_25');
+                    var items = document.querySelectorAll('#svg_37,#svg_35,#svg_33');
                     for (var i = 0; i < items.length; i++) {
                         $(items[i]).attr('class', 'selectable');
                         document.getElementById('Plan').style.display = "block";
@@ -206,7 +206,7 @@ $("#checkbutton").click(function() {
                 break;
             case (6 < quantity && quantity <= 10):
                 {
-                    var items = document.querySelectorAll('#svg_27,#svg_29,#svg_31,#svg_25');
+                    var items = document.querySelectorAll('#svg_27,#svg_29,#svg_31');
                     for (var i = 0; i < items.length; i++) {
                         $(items[i]).attr('class', 'selectable');
                         document.getElementById('Plan').style.display = "block";
