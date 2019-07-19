@@ -81,22 +81,25 @@ $(document).ready(function() {
     // });
 });
 
-function dureereservation() {
-    $(document).ready(function() {
-        var timeheader = document.getElementById('timepicker').value;
-        var t1 = timeheader.split(':');
-        var durationheader = 19 - t1[0];
-        var dureeheader = durationheader + ':00';
-        console.log(dureeheader);
-        $('#durationpicker').timepicker({
-            timeFormat: 'H:00',
-            dropdown: true,
-            scrollbar: true,
-            minTime: '1:00',
-            maxTime: dureeheader,
+    jQuery(document).ready(function() {
+        $( "#durationpicker" ).focusin(function() {
+            var $el = $("#durationpicker");
+            var timeheader = document.getElementById('timepicker').value;
+            var t1 = timeheader.split(':');
+            var durationheader = 19 - t1[0];
+            $el.empty();
+            var i = 0;
+            while(i < durationheader) {
+                i = i + 1;
+                $el.append($("<option></option>").attr("value", i).text(i+"h"));
+            }
         });
     });
-}
+    function changeheure() {
+        $('#durationpicker').timepicker('destroy');
+        var $el = $("#durationpicker");
+        $el.empty();
+    }
 
 
 //Incrementer and decrementer 
@@ -197,23 +200,14 @@ $("#checkbutton").click(function() {
                 break;
             case (4 < quantity && quantity < 7):
                 {
-                    var items = document.querySelectorAll('#svg_37,#svg_35,#svg_33');
+                    var items = document.querySelectorAll('#svg_37,#svg_35,#svg_33,#svg_27,#svg_29,#svg_31');
                     for (var i = 0; i < items.length; i++) {
                         $(items[i]).attr('class', 'selectable');
                         document.getElementById('Plan').style.display = "block";
                     }
                 }
                 break;
-            case (6 < quantity && quantity <= 10):
-                {
-                    var items = document.querySelectorAll('#svg_27,#svg_29,#svg_31');
-                    for (var i = 0; i < items.length; i++) {
-                        $(items[i]).attr('class', 'selectable');
-                        document.getElementById('Plan').style.display = "block";
-                    }
-                }
-                break;
-            case (10 < quantity && quantity <= 13):
+            case (6 < quantity && quantity <= 13):
                 {
                     var items = document.querySelectorAll('#svg_25');
                     for (var i = 0; i < items.length; i++) {
