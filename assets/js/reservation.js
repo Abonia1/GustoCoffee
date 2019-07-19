@@ -82,7 +82,6 @@ $(document).ready(function() {
     // });
 });
 
-<<<<<<< HEAD
     jQuery(document).ready(function() {
         $( "#durationpicker" ).focusin(function() {
             var $el = $("#durationpicker");
@@ -114,22 +113,19 @@ $(document).ready(function() {
     });
     function changeheure() {
         $('#durationpicker').timepicker('destroy');
-=======
-jQuery(document).ready(function() {
-    $("#durationpicker").focusin(function() {
->>>>>>> master
-        var $el = $("#durationpicker");
-        var timeheader = document.getElementById('timepicker').value;
-        var t1 = timeheader.split(':');
-        var durationheader = 19 - t1[0];
-        $el.empty();
-        var i = 0;
-        while (i < durationheader) {
-            i = i + 1;
-            $el.append($("<option></option>").attr("value", i).text(i + "h"));
-        }
-    });
-});
+        $("#durationpicker").focusin(function() {
+            var $el = $("#durationpicker");
+            var timeheader = document.getElementById('timepicker').value;
+            var t1 = timeheader.split(':');
+            var durationheader = 19 - t1[0];
+            $el.empty();
+            var i = 0;
+            while (i < durationheader) {
+                i = i + 1;
+                $el.append($("<option></option>").attr("value", i).text(i + "h"));
+            }
+        });
+    };
 
 function changeheure() {
     $('#durationpicker').timepicker('destroy');
@@ -203,7 +199,7 @@ $("#checkbutton").click(function() {
     var dureeheader = document.getElementById('durationpicker').value;
     document.getElementById('dureeheader').innerHTML = dureeheader;
     
-    if((timeheader == '7:00' || timeheader == '16:00') && dureeheader >= 3) {
+    if((timeheader == '07:00' || timeheader == '16:00') && dureeheader >= 3) {
         $(".message").append( "<p class='reduction'>Une réduction d'une heure vous est offerte pour la reservation d'une durée de 3h a compter de 7h et 16h, heures creuses</p>" );
     }
     else {
