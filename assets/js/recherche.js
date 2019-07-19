@@ -185,7 +185,7 @@ function motClef(data) {
         },
 
         error: function(resultat, statut, erreur) {
-            console.log("error");
+            // console.log("error");
         },
 
         complete: function(resultat, statut) {

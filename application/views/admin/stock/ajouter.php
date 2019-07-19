@@ -44,7 +44,7 @@
                             <?= form_label('Type de Service *', 'menu', array('class' => 'form-control-label')); ?>
                     <div class="input-prepend input-group">
                         <!-- <?= form_input(array('name' => 'menu', 'placeholder' => 'Type de Service', 'id' => 'menu', 'class' => (empty(form_error('menu')) ? "" : "is-invalid") . " form-control", 'value' => set_value('menu'))); ?> -->
-                            <?= form_dropdown('menu', array('1' => 'Nouriture', '2' => 'Sandwich','3' => 'Glace', '4' => 'Gâteau','5' => 'Shot', '6' => 'Boisson Chaude','7' => 'Boisson Glacée', '8' => 'Boisson'), set_value('menu'), array('id' =>'menu', 'class' =>'form-control')); ?>
+                            <?= form_dropdown('menu', array('1' => 'Nouriture', '2' => 'Boisson','3' => 'Menus', '4' => 'Bureautique'), set_value('menu'), array('id' =>'menu', 'class' =>'form-control')); ?>
 
                     </div>
                     <?= form_error('quantity', '<small><span class="help-block text-danger">', '</span></small>'); ?>
@@ -60,7 +60,7 @@
                     <div class="card">
                     <div class="card-header">
                     <strong>Joindre une image de Produit</strong>
-                    <!-- <img width="50" height="50" src="<?= site_url('assets/images/produit/'); ?>"> -->
+                    <!-- <img width="50" height="50" src="<?= site_url('assets/images/services/services/'); ?>"> -->
 	            </div>
                 
 	            <div class="card-body">
