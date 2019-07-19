@@ -57,8 +57,8 @@
     <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 contact-information">
         <address>
             <h2>Gustocoffee</h2>
-            <p>1 Rue de Paris<br>
-            75220 - Paris</p>
+            <p>1 rue de Condorcet<br>
+            75010 - Paris</p>
 
             <p>Téléphone : 01 23 45 67 89<br>
             Mail: contact@Gustocoffee.fr</p>

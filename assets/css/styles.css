@@ -141,6 +141,36 @@ table {
     border-spacing: 0;
 }
 
+.wrapper input[type="text"] {
+    position: relative;
+}
+
+.wrapper input {
+    font-family: 'FontAwesome';
+}
+
+
+/* This is for the placeholder */
+
+.input-group-addon {
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.25;
+    color: #3e515b;
+    text-align: center;
+    background-color: #f0f3f5;
+    border: 1px solid #c2cfd6;
+    align-items: center;
+    color: #1d3848;
+    font-size: 2rem;
+    border: 1px solid #e1e1e1;
+    background-color: #f8f8f8;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: 13px;
+    border-radius: 2px;
+}
+
 
 /* Fin Reset */
 

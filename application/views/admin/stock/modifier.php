@@ -7,7 +7,7 @@
             </div>
 
             <div class="card-body">
-            <?= form_open_multipart( 'admin/stock/modifier/'.$stock->id); ?>
+            <?= form_open_multipart( 'admin/stock/modifier/'.$stock->service_id); ?>
 
     				<?= validation_errors('<div class="col-md-12"><div class="alert alert-danger">', '</div></div>'); ?>
 
@@ -27,7 +27,7 @@
                <div class="form-group col-md-6 <?php if(form_error('product')) { echo 'has-error'; } ?>">
                 <?= form_label('Nom de Produit *', 'product', array('class' => 'form-control-label')); ?>
                 <div class="">
-                  <?= form_input(array('name' => 'product', 'placeholder' => 'Nom de Produit', 'id' => 'product_code', 'class' => 'form-control', 'value' => set_value('product', $stock->product))); ?>
+                  <?= form_input(array('name' => 'product', 'placeholder' => 'Nom de Produit', 'id' => 'product_code', 'class' => 'form-control', 'value' => set_value('product', $stock->service_nom))); ?>
                   <?= form_error('product', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                 </div>
               </div>
@@ -35,7 +35,7 @@
               <div class="form-group col-md-6 <?php if(form_error('procuct_id')) { echo 'has-error'; } ?>">
                 <?= form_label('Reference de Produit', 'procuct_id', array('class' => 'form-control-label')); ?>
                 <div class="">
-                  <?= form_input(array('name' => 'product_id',  'readonly' => true,'placeholder' => 'Reference de Produit', 'id' => 'procuct_id', 'class' => 'form-control', 'value' => set_value('procuct_id', $stock->id))); ?>
+                  <?= form_input(array('name' => 'product_id',  'readonly' => true,'placeholder' => 'Reference de Produit', 'id' => 'procuct_id', 'class' => 'form-control', 'value' => set_value('procuct_id', $stock->service_id))); ?>
                   <?= form_error('product_id', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                 </div>
               </div>
@@ -45,7 +45,7 @@
               <div class="form-group col-md-6">
                     		<?= form_label('Type de Service *', 'statut', array('class' => 'form-control-label')); ?>
                             <div class="">
-                            	<?= form_dropdown('menu', array('1' => 'Nouriture', '2' => 'Sandwich','3' => 'Glace', '4' => 'Gâteau','5' => 'Shot', '6' => 'Boisson Chaude','7' => 'Boisson Glacée', '8' => 'Boisson'), set_value('menu', $stock->menu_type), array('id' =>'menu', 'class' =>'form-control')); ?>
+                            	<?= form_dropdown('menu', array('1' => 'Nouriture', '2' => 'Boisson','3' => 'Menus', '4' => 'Bureautique'), set_value('menu', $stock->service_type_id), array('id' =>'menu', 'class' =>'form-control')); ?>
                                 <?= form_error('menu', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
                       </div>
@@ -53,7 +53,7 @@
                <div class="form-group col-md-6 <?php if(form_error('quantity')) { echo 'has-error'; } ?>">
                 <?= form_label('Prix *', 'price', array('class' => 'form-control-label')); ?>
                 <div class="">
-                  <?= form_input(array('name' => 'price', 'placeholder' => 'Prix', 'id' => 'price', 'class' => 'form-control', 'value' => set_value('price', $stock->price))); ?>
+                  <?= form_input(array('name' => 'price', 'placeholder' => 'Prix', 'id' => 'price', 'class' => 'form-control', 'value' => set_value('price', $stock->service_prix))); ?>
                   <?= form_error('price', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                 </div>
               </div>
@@ -80,7 +80,7 @@
 									</div>
 								</div>
 								<label>Image actuel</label>
-								<img width="50" height="50" src="<?= site_url('assets/images/produit/'.$stock->image); ?>">
+								<img width="50" height="50" src="<?= site_url('assets/images/services/services/'.$stock->service_image); ?>">
               </div>
 </div>
 </div>
@@ -99,7 +99,7 @@
 			</div>
 
 			<div class="card-footer">
-                <?= form_input(array('type' => 'hidden', 'name' => 'id', 'value' => $stock->id)); ?>
+                <?= form_input(array('type' => 'hidden', 'name' => 'id', 'value' => $stock->service_id)); ?>
 				<?= form_submit('submitBtn', 'Enregistrer', array('class' => 'btn btn-sm btn-primary pull-right')); ?>
 			</div>
 

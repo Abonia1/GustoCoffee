@@ -99,33 +99,30 @@ class Reservation extends CI_Controller {
     }
 
 
-    /*
-     * Recherche produit autocomplétion Ajax
-     */
-    public function recherche_produit_ajax()
-    {
-        if($this->input->get('term') != NULL) {
-            $this->load->model('produit_model');
-            $produits = $this->produit_model->rechercher_produit($this->input->get('term'));
+    // /*
+    //  * Recherche produit autocomplétion Ajax
+    //  */
+    // public function recherche_produit_ajax()
+    // {
+    //     if($this->input->get('recherche') != NULL) {
+    //         $this->load->model('produit_model');
+    //         $produits = $this->produit_model->rechercher_produit($this->input->get('recherche'));
 
-            $data = array();
+    //         $data = array();
 
-            if(is_array($produits) && !empty($produits)) {
-                foreach($produits AS $key => $produit) {
-                    $data[$key]["label"] = $produit->nom;
-                    $data[$key]["value"] = $produit->nom;
-                    $data[$key]["prix"] = $produit->prix_ht;
-                    $data[$key]["tva"] = $produit->tva;
-                    $data[$key]["remise"] = $produit->remise;
-                    $data[$key]["id"] = $produit->id;
-                }
-            } else {
-                $data['label'] = "Aucun reservation n'a été trouvé";
-            }
+    //         if(is_array($produits) && !empty($produits)) {
+    //             foreach($produits AS $key => $produit) {
+    //                 $data[$key]["label"] = $produit->nom;
+    //                 $data[$key]["value"] = $produit->nom;
+ 
+    //             }
+    //         } else {
+    //             $data['label'] = "Aucun service n'a été trouvé";
+    //         }
 
-            echo json_encode( $data );
-        }
-    }
+    //         echo json_encode( $data );
+    //     }
+    // }
 
 
     /*

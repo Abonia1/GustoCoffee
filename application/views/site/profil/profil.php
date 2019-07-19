@@ -159,7 +159,7 @@
            les offres les plus adaptées, de suivi de qualité de nos services et de prospection commerciale.
            Conformément à la Loi Informatique et Libertés du 06/01/1978, vous disposez d'un droit d'accès, de rectification et de suppression des
            données vous concernant et d'opposition à leur traitement.
-           Si vous souhaitez l'exercer, vous pouvez écrire à Gustocoffee - 1 Rue de Paris, 75220 Paris, en indiquant vos nom, prénom, adresse,
+           Si vous souhaitez l'exercer, vous pouvez écrire à Gustocoffee - 1 rue de Condorcet, 75010 Paris, en indiquant vos nom, prénom, adresse,
            email afin d'accélérer la prise en compte de votre demande.
        </p>
     </section>

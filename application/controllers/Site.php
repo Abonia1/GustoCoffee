@@ -141,7 +141,7 @@ $config = Array(
 			),
 			'informations_legales' => array(
 				'societe' => 'Gusto Coffee',
-				'adresse' => '1 Rue de Paris',
+				'adresse' => '1 rue de Condorcet',
 				'code_postal' => '75000',
 				'ville' => 'Paris',
 				'telephone' => '01 34 56 78 09',
@@ -151,8 +151,8 @@ $config = Array(
 			'proprietaire' => array(
 				'societe' => 'Gustocoffee',
 				'responsable' => 'M. Jackson',
-				'adresse' => '1 Rue de Paris',
-				'code_postal' => '75220',
+				'adresse' => '1 rue de Condorcet',
+				'code_postal' => '75010',
 				'ville' => 'PARIS',
 				'pays' => 'FRANCE',
 				'telephone' => '01 34 56 78 09',
@@ -164,6 +164,43 @@ $config = Array(
 		$this->load->view('site/pages/mentions-legales', array('data' => $data));
 		$this->load->view('site/template/footer');
 	}
+	/*
+     * Recherche produit autocomplétion Ajax
+     */
+    public function recherche_produit_ajax()
+    {
+        if($this->input->get('recherche') != NULL) {
+			$test=$this->input->get('recherche');
+            $this->load->model('produit_model');
+            $produits = $this->produit_model->rechercher_produit($this->input->get('recherche'));
+
+            $data = array();
+
+            if(is_array($produits) && !empty($produits)) {
+                foreach($produits AS $key => $produit) {
+                    $data[$key]["label"] = $produit->nom;
+                    $data[$key]["value"] = $produit->nom;
+ 
+                }
+            } else {
+                $data['label'] = "Aucun service n'a été trouvé";
+            }
+
+            echo json_encode( $data );
+        }
+	}
+	public function serviceresult(){
+		$this->load->model('services');
+		$code = $_REQUEST['recherche'] ?? NULL;
+		$service = $this->services->rechercher_service($code);
+		//$service = $this->services->service_liste();
+        
+        
+		$this->load->view('site/template/header');
+		$this->load->view('site/pages/serviceresult', array('service' => $service));
+		$this->load->view('site/template/footer');	
+	}
+	
 
 	public function reservation(){
 		$this->load->view('site/template/header');
@@ -172,6 +209,7 @@ $config = Array(
 
 		 
 	}
+
 
 	public function compare(){
 		if ($this->input->method(TRUE) == 'POST') {

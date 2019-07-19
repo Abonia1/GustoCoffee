@@ -10,11 +10,16 @@
     	<link rel="stylesheet" href="<?= site_url('assets/css/bootstrap-grid.css'); ?>" media="all">
     	<link rel="stylesheet" href="<?= site_url('assets/css/styles.css'); ?>" media="all">
 		<link rel="stylesheet" href="<?= site_url('assets/css/jquery.toast.css'); ?>" media="all">
+				<!-- Icons -->
+				<link href="<?= site_url('web/css/admin/font-awesome.min.css'); ?>" rel="stylesheet">
+		
 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>   -->
         <script type="text/javascript" src="<?= site_url('assets/js/jquery.themepunch.plugins.min.js'); ?>"></script>
 		<script type="text/javascript" src="<?= site_url('assets/js/jquery.themepunch.revolution.min.js'); ?>"></script>
 		<script type="text/javascript" src="<?= site_url('assets/js/jquery.toast.js'); ?>"></script>
+		
 		
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 		
@@ -57,9 +62,17 @@
 	                </div>
 
 					<div class="col-sm-3 col-xs-12">
-					   <?= form_open(); ?>
-					       <?= form_input(array('name' => 'recherche', 'placeholder' => 'Rechercher un service', 'id' => 'recherche')); ?>
-					   <?= form_close(); ?>
+					<!-- <?= $attributes = array('id' => 'my_form');?> -->
+					   <?= form_open_multipart("serviceresult",array('id' => 'my_form')); ?>
+					   <div class="input-group mb-4 wrapper">	
+
+						   <?= form_input(array('name' => 'recherche', 'placeholder' => '&#xF002; Rechercher un service', 'id' => 'recherche')); ?>
+						   <a onclick="document.getElementById('my_form').submit();" class="icon-block">  
+						   <!-- <span class="input-group-addon"><i aria-hidden="true" class="fa fa-search"></i>
+							</span> -->
+							</a>
+							<?= form_close(); ?>
+					   </div>
 				   </div>
 
 					<div class="col-xs-12 col-sm-6 menu-profil text-right">
@@ -142,10 +155,12 @@
 
 			        <address class="row">
 			            <p><strong>Gustocoffee</strong></p>
-			            <p>1 Rue de Paris</p>
+			            <p>1 rue de Condorcet</p>
 			            <p>75520 Paris</p>
 			            <p>01 50 51 52 00</p>
 			            <p>contact@Gustocoffee.fr</p>
 			        </address>
 			    </article>
 			</section>
+
+			<script type="text/javascript" src="<?= site_url('assets/js/recherche.js'); ?>"></script>

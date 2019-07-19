@@ -71,6 +71,7 @@ $route['panier/get-adresse'] = 'site/get_adresse';
 $route['produit/(:any)'] = 'site/produit/$1';
 $route['profil/afficher-panier'] = 'site/afficher_panier';
 $route['services'] = 'site/services';
+$route['serviceresult'] = 'site/serviceresult';
 $route['services/(:any)'] = 'site/service/$1';
 
 

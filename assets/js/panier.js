@@ -15,7 +15,7 @@
   //                       // console.log(result[article]);
   //                       //$( "<p>Test</p>" ).appendTo( ".inner" );
   //                       $('<div id="' + article + '" class="row"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><p>' + result[article].nom + '</p></div></div>').appendTo('#panier');
-  //                       $('<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><img src="' + urlServer + 'assets/images/produit/' + result[article].image + '" width="100%"></div>').appendTo('#' + article);
+  //                       $('<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><img src="' + urlServer + 'assets/images/services/services' + result[article].image + '" width="100%"></div>').appendTo('#' + article);
   //                       $('<p>' + result[article].description + '<p>').appendTo('#' + article + ' div:eq(0)');
   //                       $('<p>Quantité: ' + result[article].quantite + '<p>').appendTo('#' + article + ' div:eq(0)');
   //                   }

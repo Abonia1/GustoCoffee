@@ -64,8 +64,9 @@ $(function() {
 });
 $(document).ready(function() {
     $('#timepicker').timepicker({
-        timeFormat: 'H:00',
-        dropdown: true,
+        timeFormat: 'HH:00',
+        'scrollDefault': 'now',
+        //dropdown: true,
         scrollbar: true,
         minTime: '07:00',
         maxTime: '18:00',
@@ -81,6 +82,7 @@ $(document).ready(function() {
     // });
 });
 
+<<<<<<< HEAD
     jQuery(document).ready(function() {
         $( "#durationpicker" ).focusin(function() {
             var $el = $("#durationpicker");
@@ -112,15 +114,40 @@ $(document).ready(function() {
     });
     function changeheure() {
         $('#durationpicker').timepicker('destroy');
+=======
+jQuery(document).ready(function() {
+    $("#durationpicker").focusin(function() {
+>>>>>>> master
         var $el = $("#durationpicker");
+        var timeheader = document.getElementById('timepicker').value;
+        var t1 = timeheader.split(':');
+        var durationheader = 19 - t1[0];
         $el.empty();
-    }
+        var i = 0;
+        while (i < durationheader) {
+            i = i + 1;
+            $el.append($("<option></option>").attr("value", i).text(i + "h"));
+        }
+    });
+});
+
+function changeheure() {
+    $('#durationpicker').timepicker('destroy');
+    var $el = $("#durationpicker");
+    $el.empty();
+}
+
+$('#datepicker,#timepicker,#durationpicker').bind('input', function() {
+    document.getElementById('Plan').style.display = "none";
+    // get the current value of the input field.
+});
 
 
 //Incrementer and decrementer 
 jQuery(document).ready(function() {
     // This button will increment the value
     $('.qtyplus').click(function(e) {
+        document.getElementById('Plan').style.display = "none";
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
@@ -140,6 +167,7 @@ jQuery(document).ready(function() {
     });
     // This button will decrement the value till 1
     $(".qtyminus").click(function(e) {
+        document.getElementById('Plan').style.display = "none";
         // Stop acting like a button
         e.preventDefault();
         // Get the field name

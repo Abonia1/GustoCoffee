@@ -17,7 +17,7 @@ class Stock_model extends CI_Model {
      */
     public function stocks()
     {
-        $query = $this->db->get('stock');
+        $query = $this->db->get('services');
 
         if($query->num_rows() >= 1)
         {
@@ -38,8 +38,8 @@ class Stock_model extends CI_Model {
      */
     public function stock($id)
     {
-        $query = $this->db->where( array('id' => $id) )
-        ->get('stock');
+        $query = $this->db->where( array('service_id' => $id) )
+        ->get('services');
 
         if($query->num_rows() >= 1)
         {
@@ -60,7 +60,7 @@ class Stock_model extends CI_Model {
      */
     public function ajouter($data)
     {
-        return $this->db->insert('stock', $data);
+        return $this->db->insert('services', $data);
     }
 
     // -----------------------------------------------------------------------
@@ -74,7 +74,7 @@ class Stock_model extends CI_Model {
      */
     public function supprimer($id)
     {
-      return $this->db->delete('stock', array('id' => $id));
+      return $this->db->delete('services', array('service_id' => $id));
     }
 
     // -----------------------------------------------------------------------
@@ -89,6 +89,6 @@ class Stock_model extends CI_Model {
      */
     public function modifier($data, $id)
     {
-        return $this->db->update('stock', $data, array('id' => $id));
+        return $this->db->update('services', $data, array('service_id' => $id));
     }
 }

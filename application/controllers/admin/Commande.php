@@ -119,7 +119,7 @@ class Commande extends CI_Controller {
                     $data[$key]["id"] = $produit->id;
                 }
             } else {
-                $data['label'] = "Aucun reservation n'a été trouvé";
+                $data['label'] = "Aucun service n'a été trouvé";
             }
 
             echo json_encode( $data );
