@@ -84,7 +84,7 @@ class Stock extends CI_Controller {
             exit;
         }
 
-        if( $this->stock->supprimer($id) )
+        if( $this->stock_model->supprimer($id) )
         {
             redirect('/admin/stock/liste');
             exit;

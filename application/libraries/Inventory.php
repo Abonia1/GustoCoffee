@@ -97,24 +97,24 @@ class Inventory {
             // }
             $datas = array();
         
-            $datas['id'] = $this->CI->input->post('product_id');
+            $datas['service_id'] = $this->CI->input->post('product_id');
            // $datas['reference'] = $this->CI->input->post('reference');
-            $datas['product'] = $this->CI->input->post('product');
-            $datas['menu_type'] = $this->CI->input->post('menu');
-            $datas['price'] = $this->CI->input->post('price');
+            $datas['service_nom'] = $this->CI->input->post('product');
+            $datas['service_type_id'] = $this->CI->input->post('menu');
+            $datas['service_prix'] = $this->CI->input->post('price');
 
                         /* Si l'upload fonctionne on ajoute en BD sinon on met à NULL */
                         $this->CI->load->library('upload', $config);
                         if( ! $this->CI->upload->do_upload('image') )
                         {
-                            $datas['image'] = NULL;
+                            $datas['service_image'] = NULL;
             
                             // $this->CI->session->set_flashdata('error_bidon', 'Le champ Image est obligatoire (JPG, PNG, 1024px, 2Mo maximum)');
                             // return FALSE;
                         }
                         else
                         {
-                            $datas['image'] = $this->CI->upload->data('file_name');
+                            $datas['service_image'] = $this->CI->upload->data('file_name');
                         }
           
 
@@ -192,21 +192,21 @@ class Inventory {
         
             //$datas['id'] = $this->CI->input->post('product_id');
            // $datas['reference'] = $this->CI->input->post('reference');
-            $datas['product'] = $this->CI->input->post('product');
-            $datas['menu_type'] = $this->CI->input->post('menu');
-            $datas['price'] = $this->CI->input->post('price');
+            $datas['service_nom'] = $this->CI->input->post('product');
+            $datas['service_type_id'] = $this->CI->input->post('menu');
+            $datas['service_prix'] = $this->CI->input->post('price');
              /* Si l'upload fonctionne on ajoute en BD sinon on met à NULL */
              $this->CI->load->library('upload', $config);
              if( ! $this->CI->upload->do_upload('image') )
              {
-                 $datas['image'] = NULL;
+                 $datas['service_image'] = NULL;
  
-                 // $this->CI->session->set_flashdata('error_bidon', 'Le champ Image est obligatoire (JPG, PNG, 1024px, 2Mo maximum)');
-                 // return FALSE;
+                 $this->CI->session->set_flashdata('error_bidon', 'Le champ Image est obligatoire (JPG, PNG, 1024px, 2Mo maximum)');
+                  return FALSE;
              }
              else
              {
-                 $datas['image'] = $this->CI->upload->data('file_name');
+                 $datas['service_image'] = $this->CI->upload->data('file_name');
              }
 
 
