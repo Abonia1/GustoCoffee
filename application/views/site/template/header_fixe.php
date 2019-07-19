@@ -92,7 +92,7 @@
 
 			        <address class="row">
 			            <p><strong>Gustocoffee</strong></p>
-			            <p>1 Rue de Paris</p>
+			            <p>1 rue de Condorcet</p>
 			            <p>75520 Paris</p>
 			            <p>01 50 51 52 00</p>
 			            <p>contact@Gustocoffee.fr</p>

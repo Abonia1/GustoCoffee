@@ -23,7 +23,7 @@
     <section class="container">
         <adress class="col-xs-12 col-sm-4 coordonnees">
             <h2>Gustocoffee</h2>
-            <p>1 Rue de Paris<br>95520, Paris</p>
+            <p>1 rue de Condorcet<br>75010, Paris</p>
         </adress>
 
         <div class="col-xs-12 col-sm-8 col-md-5 support">
@@ -72,5 +72,6 @@
 </script>
 
 <script src="<?= site_url('assets/js/panier.js'); ?>"></script>
+<script type="text/javascript" src="<?= site_url('assets/js/recherche.js'); ?>"></script>
 </body>
 </html>

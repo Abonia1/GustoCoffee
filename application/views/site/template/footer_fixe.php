@@ -24,7 +24,7 @@
     <section class="container">
         <adress class="col-xs-12 col-sm-4 coordonnees">
             <h2>GustoCoffee</h2>
-            <p>1 Rue de Paris<br>75520, Paris</p>
+            <p>1 rue de Condorcet<br>75520, Paris</p>
         </adress>
 
         <div class="col-xs-12 col-sm-8 col-md-5 support">

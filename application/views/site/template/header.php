@@ -11,10 +11,12 @@
     	<link rel="stylesheet" href="<?= site_url('assets/css/styles.css'); ?>" media="all">
 		<link rel="stylesheet" href="<?= site_url('assets/css/jquery.toast.css'); ?>" media="all">
 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>   -->
         <script type="text/javascript" src="<?= site_url('assets/js/jquery.themepunch.plugins.min.js'); ?>"></script>
 		<script type="text/javascript" src="<?= site_url('assets/js/jquery.themepunch.revolution.min.js'); ?>"></script>
 		<script type="text/javascript" src="<?= site_url('assets/js/jquery.toast.js'); ?>"></script>
+		
 		
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 		
@@ -149,10 +151,12 @@
 
 			        <address class="row">
 			            <p><strong>Gustocoffee</strong></p>
-			            <p>1 Rue de Paris</p>
+			            <p>1 rue de Condorcet</p>
 			            <p>75520 Paris</p>
 			            <p>01 50 51 52 00</p>
 			            <p>contact@Gustocoffee.fr</p>
 			        </address>
 			    </article>
 			</section>
+
+			<script type="text/javascript" src="<?= site_url('assets/js/recherche.js'); ?>"></script>
