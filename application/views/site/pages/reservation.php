@@ -18,12 +18,12 @@
             
             <div class="col-xs-12 col-sm-3">
                 <label>Date *</label>
-                <?= form_input(array('name' => 'Date', 'placeholder' => 'Date de reservation','onkeydown'=>"return false", 'id' => 'datepicker', 'class' => (empty(form_error('Date')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Date'))); ?>
+                <?= form_input(array('name' => 'Date','autocomplete' => 'off' , 'placeholder' => 'Date de reservation','onkeydown'=>"return false", 'id' => 'datepicker', 'class' => (empty(form_error('Date')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Date'))); ?>
             </div>
 
             <div class="col-xs-12 col-sm-3">
                 <label>Heure *</label>
-                <?= form_input(array('name' => 'Time', 'placeholder' => 'Heure de reservation ', 'onkeydown'=>"return false",'id' => 'timepicker', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Time'))); ?>
+                <?= form_input(array('name' => 'Time','autocomplete' => 'off' ,'placeholder' => 'Heure de reservation ', 'onkeydown'=>"return false",'id' => 'timepicker', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Time'))); ?>
             </div>
             
             <div class="col-xs-12 col-sm-3">
@@ -56,7 +56,7 @@
 
             </div> -->
             <header class="row" id="titleHeader">
-							<p class="header">Tables disponibles pour <span id='personheader'></span> personne(s) le <span id='dateheader'></span> à <span id='timeheader'></span> pour une durée de <span id="dureeheader"></span>.</p><!-- /.text-center pjRbSectionTitle pjRbSectionTitleSmall -->
+							<p class="header">Tables disponibles pour <span id='personheader'></span> personne(s) le <span id='dateheader'></span> à <span id='timeheader'></span> pour une durée de <span id="dureeheader"></span>h.</p><!-- /.text-center pjRbSectionTitle pjRbSectionTitleSmall -->
 
 							<p class="message">Cliquez sur une table disponible pour la réserver</p>
 						</header>

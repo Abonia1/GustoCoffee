@@ -82,20 +82,50 @@ $(document).ready(function() {
     // });
 });
 
-jQuery(document).ready(function() {
-    $("#durationpicker").focusin(function() {
-        var $el = $("#durationpicker");
-        var timeheader = document.getElementById('timepicker').value;
-        var t1 = timeheader.split(':');
-        var durationheader = 19 - t1[0];
-        $el.empty();
-        var i = 0;
-        while (i < durationheader) {
-            i = i + 1;
-            $el.append($("<option></option>").attr("value", i).text(i + "h"));
-        }
+    jQuery(document).ready(function() {
+        $( "#durationpicker" ).focusin(function() {
+            var $el = $("#durationpicker");
+            var timeheader = document.getElementById('timepicker').value;
+            var t1 = timeheader.split(':');
+            var durationheader = 19 - t1[0];
+            $el.empty();
+            var i = 0;
+            while(i < durationheader) {
+                i = i + 1;
+                $el.append($("<option></option>").attr("value", i).text(i+"h"));
+            }
+        });
+        $( "#datepicker" ).focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
+        $( "#timepicker" ).focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
+        $( "#durationpicker" ).focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
+        $('.qtyplus').focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
+        $(".qtyminus").focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
     });
-});
+    function changeheure() {
+        $('#durationpicker').timepicker('destroy');
+        $("#durationpicker").focusin(function() {
+            var $el = $("#durationpicker");
+            var timeheader = document.getElementById('timepicker').value;
+            var t1 = timeheader.split(':');
+            var durationheader = 19 - t1[0];
+            $el.empty();
+            var i = 0;
+            while (i < durationheader) {
+                i = i + 1;
+                $el.append($("<option></option>").attr("value", i).text(i + "h"));
+            }
+        });
+    };
 
 function changeheure() {
     $('#durationpicker').timepicker('destroy');
@@ -168,7 +198,14 @@ $("#checkbutton").click(function() {
     document.getElementById('timeheader').innerHTML = timeheader;
     var dureeheader = document.getElementById('durationpicker').value;
     document.getElementById('dureeheader').innerHTML = dureeheader;
-
+    
+    if((timeheader == '07:00' || timeheader == '16:00') && dureeheader >= 3) {
+        $(".message").append( "<p class='reduction'>Une réduction d'une heure vous est offerte pour la reservation d'une durée de 3h a compter de 7h et 16h, heures creuses</p>" );
+    }
+    else {
+        $( ".reduction" ).css("display","none");
+    }
+    
     if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || $("#durationpicker").val().length == 0 || quantity == 0)
     //{
     // if ($("#datepicker").val().length == 0) {
@@ -238,10 +275,9 @@ $("#checkbutton").click(function() {
         //var dateheader = document.getElementById('datepicker').value;
         var dateheader = $('input[name="Date"]').val();
         var timeheader = $('input[name="Time"]').val();
-        var dureeheader = $('input[name="Duree"]').val();
+        var dureeheader = $('select[name="Duree"]').val();
         //var dateheader = JSON.stringify({ dateheader: dateheader });
         var quantity = $('input[name="quantity"]').val();
-        console.log(dateheader);
         //var dataToSend = JSON.stringify({'dateheader':dateheader});
         tablenumbers = new Array();
         $.ajax({
@@ -251,7 +287,7 @@ $("#checkbutton").click(function() {
             //cache: false,
             //contentType: "application/json; charset=utf-8",
             //dataType: "json",
-            data: { quantity: quantity, 'dateheader': dateheader, 'timeheader': timeheader },
+            data: { quantity: quantity, 'dateheader': dateheader, 'timeheader': timeheader, 'duree': dureeheader },
             //data: JSON.stringify({ 'dateheader': dateheader, 'timeheader': timeheader, 'quantity': quantity }),
             // //data: { 'dateheader': dateheader, 'timeheader': timeheader, 'quantity': quantity },
             success: function(response) {

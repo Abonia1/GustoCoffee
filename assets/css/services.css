@@ -15,5 +15,6 @@ h1, h2 {
 }
 .rightdiv1b p {
     color: white !important;
-    min-height: 44px;
+    min-height: 30px;
+    line-height: 1.5 !important;
 }

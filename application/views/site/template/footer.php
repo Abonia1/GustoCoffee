@@ -26,7 +26,7 @@
             <p>1 rue de Condorcet<br>75010, Paris</p>
         </adress>
 
-        <div class="col-xs-12 col-sm-8 col-md-5 support">
+        <div class="col-xs-12 col-sm-8 col-md-4 support">
             <h2>Besoin d'aide ?</h2>
             <p>Nous répondons à vos questions du lundi au vendredi de 8h à 20h</p>
 
@@ -34,7 +34,7 @@
             <p>01 50 51 52 53<br><a href="mailto:contact@Gustocoffee.fr">contact@Gustocoffee.fr</a></p>
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-3 social">
+        <div class="col-xs-12 col-sm-12 col-md-4 social">
             <h2>Rejoignez la communauté Gustocoffee</h2>
             <a href="http://www.facebook.com">
                 <img src="<?= site_url('assets/images/facebook.svg'); ?>" alt="Facebook" width="10%">
