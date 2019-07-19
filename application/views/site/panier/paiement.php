@@ -43,7 +43,7 @@
                             <?= form_input(array('name' => 'tablenumber','id'=>"tablenumber",'value' =>$tablenumber )) ?><?= $tablenumber; ?>
                             </td>
                             <td>
-                            <?= form_input(array('name' => 'total','id'=>"tablenumber",'value' => $quantity*50)) ?><?= $quantity*50; ?>€
+                            <?= form_input(array('name' => 'total','id'=>"tablenumber",'value' => $quantity*2.5)) ?><?= $quantity*2.5; ?>€
                             </td>
       
                         </tr>

@@ -94,6 +94,21 @@ $(document).ready(function() {
                 $el.append($("<option></option>").attr("value", i).text(i+"h"));
             }
         });
+        $( "#datepicker" ).focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
+        $( "#timepicker" ).focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
+        $( "#durationpicker" ).focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
+        $('.qtyplus').focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
+        $(".qtyminus").focusin(function() {
+            $( "#Plan" ).css("display","none");
+        });
     });
     function changeheure() {
         $('#durationpicker').timepicker('destroy');
@@ -242,7 +257,7 @@ $("#checkbutton").click(function() {
             //cache: false,
             //contentType: "application/json; charset=utf-8",
             //dataType: "json",
-            data: { quantity: quantity, 'dateheader': dateheader, 'timeheader': timeheader },
+            data: { quantity: quantity, 'dateheader': dateheader, 'timeheader': timeheader, 'duration': dureeheader },
             //data: JSON.stringify({ 'dateheader': dateheader, 'timeheader': timeheader, 'quantity': quantity }),
             // //data: { 'dateheader': dateheader, 'timeheader': timeheader, 'quantity': quantity },
             success: function(response) {

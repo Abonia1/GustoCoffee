@@ -56,7 +56,7 @@
 
             </div> -->
             <header class="row" id="titleHeader">
-							<p class="header">Tables disponibles pour <span id='personheader'></span> personne(s) le <span id='dateheader'></span> à <span id='timeheader'></span> pour une durée de <span id="dureeheader"></span>.</p><!-- /.text-center pjRbSectionTitle pjRbSectionTitleSmall -->
+							<p class="header">Tables disponibles pour <span id='personheader'></span> personne(s) le <span id='dateheader'></span> à <span id='timeheader'></span> pour une durée de <span id="dureeheader"></span>h.</p><!-- /.text-center pjRbSectionTitle pjRbSectionTitleSmall -->
 
 							<p class="message">Cliquez sur une table disponible pour la réserver</p>
 						</header>
