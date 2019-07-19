@@ -28,7 +28,7 @@
             
             <div class="col-xs-12 col-sm-3">
                 <label>Durée *</label>
-                <?= form_input(array('name' => 'Duree', 'placeholder' => 'Durée de reservation ','onkeydown'=>"return false", 'id' => 'durationpicker', 'onclick' => 'dureereservation();', 'class' => (empty(form_error('Time')) ? "" : "has-error") . "col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('Duree'))); ?>
+                <select name="Duree" Placeholder="Durée de reservation" id="durationpicker" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></select>
             </div>
 
 
@@ -68,7 +68,7 @@
  
 <div class="map" id="map">
         <div class="map__image">
-          <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 571 620" style="enable-background:new 0 0 571 620;" xml:space="preserve">
+          <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 571 660" style="enable-background:new 0 0 571 660;" xml:space="preserve">
         
             <g>
             <image style="overflow:visible;enable-background:new;" width="587" height="637" id="svg_1" xlink:href="<?= site_url('assets/images/plan2.PNG'); ?>" transform="matrix(0.9438 0 0 0.9438 6 40.4055)"></image>
