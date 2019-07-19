@@ -15,6 +15,7 @@
                 <tr>
                     <th>Date</th>
                     <th>Heure</th>
+                    <th>Durée</th>
                     <th>Nombre de personnes</th>
                     <th>Numéro de table</th>
                     <th>Total</th>
@@ -35,7 +36,9 @@
                             <td>
                             <?= form_input(array('name' => 'Time','id'=>"tablenumber",'value' =>$time )) ?><?= $time; ?>
                             </td>
-
+                            <td>
+                            <?= form_input(array('name' => 'Duree','id'=>"tablenumber",'value' =>$duree )) ?><?= $duree; ?>h
+                            </td>
                             <td>
                             <?= form_input(array('name' => 'quantity','id'=>"tablenumber",'value' => $quantity)) ?><?= $quantity; ?>
                             </td>
@@ -43,7 +46,7 @@
                             <?= form_input(array('name' => 'tablenumber','id'=>"tablenumber",'value' =>$tablenumber )) ?><?= $tablenumber; ?>
                             </td>
                             <td>
-                            <?= form_input(array('name' => 'total','id'=>"tablenumber",'value' => $quantity*2.5)) ?><?= $quantity*2.5; ?>€
+                            <?= form_input(array('name' => 'total','id'=>"tablenumber",'value' => $duree*$quantity*2.5)) ?><?= $duree*$quantity*2.5; ?>€
                             </td>
       
                         </tr>
@@ -105,7 +108,7 @@
 
         </fieldset>
 
-        <a href="<?= site_url('site/reservations'); ?>" class="contact-button">Retour</a> - <input type="submit"  value="Valider votre commande" class="contact-button">
+        <a href="<?= site_url('/reservations'); ?>" class="contact-button">Retour</a> - <input type="submit"  value="Valider votre commande" class="contact-button">
         <?= form_close( '' ); ?>
 
 

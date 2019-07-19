@@ -27,7 +27,8 @@
                         <th class="text-left">Reference de Reservation</th>
                         <th class="text-left">Date</th>
                         <th class="text-left">Heure</th>
-                        <th class="text-center">Quantité</th>
+                        <th class="text-left">Durée</th>
+                        <th class="text-center">Places</th>
                         <th class="text-center">Table</th>
                         <th class="text-right">Statut</th>
                         <th class="text-right">Statut de Client</th>
@@ -42,6 +43,7 @@
                                 <td class="text-left"><?= $reservation->reservation_id; ?></td>
                                 <td class="text-left"><?= $reservation->date; ?></td>
                                 <td class="text-left"><?= $reservation->time; ?></td>
+                                <td class="text-left"><?= $reservation->duree; ?>h</td>
                                 <td class="text-center"><?= $reservation->quantity; ?></td>
                                 <td class="text-center"><?= $reservation->tbnumber; ?></td>
                                 <!-- <td class="text-center"><?= $reservation->status; ?></td> -->
@@ -78,7 +80,7 @@
 								?>
                 	                            </td>
                                 <!-- <td class="text-center"><?= $reservation->c_status; ?></td> -->
-                                <td class="text-right"><?= $reservation->quantity*50; ?> €</td>
+                                <td class="text-right"><?= $reservation->duree*$reservation->quantity*2.5; ?> €</td>
                             </tr>
                         <?php endforeach; ?>
                     <?php else : ?>

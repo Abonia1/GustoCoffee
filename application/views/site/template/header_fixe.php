@@ -25,15 +25,7 @@
 
   	<body>
 		<div class="container-fluid top-header">
-			<div class="container">
-				<div class="col-xs-12 renseignement-email">
-					<p>Besoin d'un renseignement ? <a href="mailto:contact@Gustocoffee.fr">contact@Gustocoffee.fr</a></p>
-				</div>
-
-				<!--<div class="col-sm-6 renseignement-telephone">
-					<p>Pour toute question <a href="tel:01 02 03 04 05">01 02 03 04 05</a></p>
-				</div>-->
-			</div>
+            <div class="container"></div>
 		</div>
 
 		<header class="container-fluid">

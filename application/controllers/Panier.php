@@ -31,6 +31,7 @@ class Panier extends CI_Controller {
 			$data = array(
 				'date' => $this->input->post('Date'),
 				'time' => $this->input->post('Time'),
+                'duree' => $this->input->post('Duree'),
 				'quantity' => $this->input->post('quantity'),
 				'tablenumber' => $this->input->post('tablenumber'),
 
@@ -92,6 +93,7 @@ class Panier extends CI_Controller {
 			'c_id' => $this->session->userdata['client']->id,
 			'date' => $this->input->post('Date'),
 			'time' => $this->input->post('Time'),
+            'duree' => $this->input->post('Duree'),
 			'quantity' => $this->input->post('quantity'),
 			'tbnumber' => $this->input->post('tablenumber'),
 			'payment' => $this->input->post('total')

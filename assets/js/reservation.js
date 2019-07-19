@@ -174,7 +174,14 @@ $("#checkbutton").click(function() {
     document.getElementById('timeheader').innerHTML = timeheader;
     var dureeheader = document.getElementById('durationpicker').value;
     document.getElementById('dureeheader').innerHTML = dureeheader;
-
+    
+    if((timeheader == '7:00' || timeheader == '16:00') && dureeheader >= 3) {
+        $(".message").append( "<p class='reduction'>Une réduction d'une heure vous est offerte pour la reservation d'une durée de 3h a compter de 7h et 16h, heures creuses</p>" );
+    }
+    else {
+        $( ".reduction" ).css("display","none");
+    }
+    
     if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || $("#durationpicker").val().length == 0 || quantity == 0)
     //{
     // if ($("#datepicker").val().length == 0) {
@@ -244,10 +251,9 @@ $("#checkbutton").click(function() {
         //var dateheader = document.getElementById('datepicker').value;
         var dateheader = $('input[name="Date"]').val();
         var timeheader = $('input[name="Time"]').val();
-        var dureeheader = $('input[name="Duree"]').val();
+        var dureeheader = $('select[name="Duree"]').val();
         //var dateheader = JSON.stringify({ dateheader: dateheader });
         var quantity = $('input[name="quantity"]').val();
-        console.log(dateheader);
         //var dataToSend = JSON.stringify({'dateheader':dateheader});
         tablenumbers = new Array();
         $.ajax({
@@ -257,7 +263,7 @@ $("#checkbutton").click(function() {
             //cache: false,
             //contentType: "application/json; charset=utf-8",
             //dataType: "json",
-            data: { quantity: quantity, 'dateheader': dateheader, 'timeheader': timeheader, 'duration': dureeheader },
+            data: { quantity: quantity, 'dateheader': dateheader, 'timeheader': timeheader, 'duree': dureeheader },
             //data: JSON.stringify({ 'dateheader': dateheader, 'timeheader': timeheader, 'quantity': quantity }),
             // //data: { 'dateheader': dateheader, 'timeheader': timeheader, 'quantity': quantity },
             success: function(response) {

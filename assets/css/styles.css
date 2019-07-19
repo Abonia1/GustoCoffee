@@ -164,7 +164,7 @@ h2 {
     font-weight: 500;
     letter-spacing: -0.3pt;
     line-height: 2.5rem;
-    color: #33903A;
+    color: #33903A !important;
     margin-bottom: 1.8rem;
 }
 
@@ -1530,7 +1530,7 @@ table.commande {
 
 .profil-form legend,
 .profil-table h2 {
-    color: #fff;
+    color: #fff !important;
     background-color: #33903A;
     padding: 12px 10px;
     font-size: 2rem;
@@ -1623,4 +1623,9 @@ table.commande {
 
 #codeigniter_profiler {
     font-size: 3rem;
+}
+.reduction {
+    padding: 5px 10px;
+    border: 1px solid #33903A;
+    text-transform: uppercase;
 }
