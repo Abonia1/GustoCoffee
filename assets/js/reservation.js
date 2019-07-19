@@ -82,25 +82,31 @@ $(document).ready(function() {
     // });
 });
 
-    jQuery(document).ready(function() {
-        $( "#durationpicker" ).focusin(function() {
-            var $el = $("#durationpicker");
-            var timeheader = document.getElementById('timepicker').value;
-            var t1 = timeheader.split(':');
-            var durationheader = 19 - t1[0];
-            $el.empty();
-            var i = 0;
-            while(i < durationheader) {
-                i = i + 1;
-                $el.append($("<option></option>").attr("value", i).text(i+"h"));
-            }
-        });
-    });
-    function changeheure() {
-        $('#durationpicker').timepicker('destroy');
+jQuery(document).ready(function() {
+    $("#durationpicker").focusin(function() {
         var $el = $("#durationpicker");
+        var timeheader = document.getElementById('timepicker').value;
+        var t1 = timeheader.split(':');
+        var durationheader = 19 - t1[0];
         $el.empty();
-    }
+        var i = 0;
+        while (i < durationheader) {
+            i = i + 1;
+            $el.append($("<option></option>").attr("value", i).text(i + "h"));
+        }
+    });
+});
+
+function changeheure() {
+    $('#durationpicker').timepicker('destroy');
+    var $el = $("#durationpicker");
+    $el.empty();
+}
+
+$('#datepicker,#timepicker,#durationpicker').bind('input', function() {
+    document.getElementById('Plan').style.display = "none";
+    // get the current value of the input field.
+});
 
 
 //Incrementer and decrementer 

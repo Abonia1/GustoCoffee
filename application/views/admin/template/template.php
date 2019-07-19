@@ -79,7 +79,7 @@
                         </li>
 
                         <li class="nav-item nav-dropdown">
-                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-basket-loaded"></i> Reservation</a>
+                            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-calendar"></i> Reservation</a>
                             <ul class="nav-dropdown-items">
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?= site_url('admin/reservation/liste'); ?>"><i class="icon-list"></i> Liste</a>

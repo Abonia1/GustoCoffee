@@ -75,8 +75,8 @@
 
 						   <?= form_input(array('name' => 'recherche', 'placeholder' => 'Rechercher un service', 'id' => 'recherche')); ?>
 						   <a onclick="document.getElementById('my_form').submit();" class="icon-block">  
-						   <span class="input-group-addon"><i aria-hidden="true" class="fa fa-search"></i>
-							</span>
+						   <!-- <span class="input-group-addon"><i aria-hidden="true" class="fa fa-search"></i>
+							</span> -->
 							</a>
 							<?= form_close(); ?>
 					   </div>
