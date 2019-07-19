@@ -141,6 +141,17 @@ table {
     border-spacing: 0;
 }
 
+.wrapper input[type="text"] {
+    position: relative;
+}
+
+.wrapper input {
+    font-family: 'FontAwesome';
+}
+
+
+/* This is for the placeholder */
+
 .input-group-addon {
     font-size: 0.875rem;
     font-weight: normal;
