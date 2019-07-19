@@ -1,4 +1,4 @@
-var url = 'http://aboweb.local:8080/plate-forme/admin/';
+var url = 'http://aboweb.local:8080/service';
 // var liste=[];
 // var table_produit= {};
 // var produit=[];
@@ -101,31 +101,38 @@ var url = 'http://aboweb.local:8080/plate-forme/admin/';
 // 	})
 // });
 
-$(document).ready(function() {
-    $("#rechercher").keydown(function() {
-        $("#rechercher").css("background-color", "red");
-    });
-    $("#rechercher").keyup(function() {
-        $("#rechercher").css("background-color", "yellow");
-    });
-});
-$("#rechercher").on("keyup", function() {
-    var frappe = $("#rechercher").val();
-    console.log(frappe);
+
+// $(document).ready(function() {
+//     $("#recherche").keydown(function() {
+//         $("#rechercher").css("background-color", "red");
+//         var test = $("#recherche").val();
+//         //console.log(test);
+//     });
+//     $("#recherche").keyup(function() {
+//         $("#recherche").css("background-color", "white");
+//     });
+// });
+$("#recherche").on("keyup", function() {
+    var frappe = $("#recherche").val();
+    //console.log(frappe);
+
     var data = {};
     data = { 'frappe': frappe };
-    console.log(frappe);
+    //console.log(data);
     motClef(data);
+
 });
+
+
 
 function motClef(data) {
     // requête ajax via le service $http
-    console.log(url);
+    // console.log(url);
     $.ajax({
-        url: 'reservation/recherche_produit_ajax/',
+        url: 'recherche_produit_ajax',
         type: 'GET',
         data: data,
-        dataType: 'json',
+        //type: 'POST',
         success: function(code_html, statut) {
             console.log(url);
             console.log(code_html);
@@ -134,7 +141,10 @@ function motClef(data) {
             console.log(code_html[0]['image']);
             $("#test").empty();
             if (code_html.length > 1) {
-                code_html.forEach(function(index) {
+                code_html.foreach(element => {
+
+                });
+                (function(index) {
                     console.log(index['label']);
                     console.log($("#test"));
                     $('<h2>', {
@@ -175,7 +185,7 @@ function motClef(data) {
         },
 
         error: function(resultat, statut, erreur) {
-
+            console.log("error");
         },
 
         complete: function(resultat, statut) {
@@ -184,3 +194,79 @@ function motClef(data) {
 
     });
 };
+
+/* Lorsqu'on recherche un produit avec l'autocomplétion */
+$(document).on('keydown.autocomplete', '.productName', function() {
+    $(this).autocomplete({
+        source: '../recherche_produit_ajax',
+        minLength: 2,
+        select: function(event, ui) {
+            var produit = ui.item.value;
+            var prix = ui.item.prix;
+            var remise = ui.item.remise;
+            var id_produit = ui.item.id;
+            var quantite = 1;
+
+            /***********************************************************************/
+            /* REMPLISSAGE CHAMPS AVEC INFORMATIONS PRODUIT */
+            $(this).val(produit);
+            $(this).siblings('.id_produit').val(id_produit);
+            $(this).parent().parent().siblings('.prix_ht').find('input').val(prix);
+            $(this).parent().parent().siblings('.remise').find('input').val(remise);
+            $(this).parent().parent().siblings('.quantite_produit').find('input').val(quantite);
+            /***********************************************************************/
+
+
+
+            /*********************************************************************************/
+            /* CALCUL PRIX TOTAL APRES REMISE */
+            var prix_ht_remise = calculRemise(prix, remise);
+            $(this).parent().parent().siblings('.total_ht').find('input').val(prix_ht_remise.toFixed(2));
+            /*********************************************************************************/
+
+
+
+            /******************************************************************************************/
+            /* AJOUT DE TOUS LES PRIX HT DE BASE POUR TOTAL HT COMMANDE */
+            var total_ht = 0.0;
+
+            $(".prix_ht_produit").each(function() {
+                quantite = $(this).parent().parent().siblings('.quantite_produit').find('input').val();
+                total_ht += calculPrixQuantite($(this).val(), quantite);
+            });
+
+            $('#prix_ht_final').text(total_ht.toFixed(2));
+            $('#prix_ht_final_cmd').val(total_ht.toFixed(2));
+            /******************************************************************************************/
+
+
+
+
+            /******************************************************************************/
+            /* AJOUT DE TOUS LES PRIX HT APRES REMISE POUR TOTAL HT APRES REMISE COMMANDE */
+            var total_ht_remise = 0.0;
+
+            $(".prix_total_ht").each(function() {
+                total_ht_remise += parseFloat($(this).val() * quantite);
+            });
+
+            $('#prix_ht_remise').text(total_ht_remise.toFixed(2));
+            $('#prix_ht_remise_cmd').val(total_ht_remise.toFixed(2));
+            /******************************************************************************/
+
+
+
+
+            /*************************************************************************************/
+            /* AJOUT DE TVA AU TOTAL HT COMMANDE POUR AVOIR PRIX FINAL TTC COMMANDE */
+            var total_ttc = calculTva(total_ht_remise, 20);
+            $('#prix_ttc_final').text(total_ttc.toFixed(2));
+            $('#prix_ttc_final_cmd').val(total_ttc.toFixed(2));
+            /*************************************************************************************/
+
+            return false;
+        }
+    });
+
+
+});

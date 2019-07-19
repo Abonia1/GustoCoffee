@@ -64,8 +64,9 @@ $(function() {
 });
 $(document).ready(function() {
     $('#timepicker').timepicker({
-        timeFormat: 'H:00',
-        dropdown: true,
+        timeFormat: 'HH:00',
+        'scrollDefault': 'now',
+        //dropdown: true,
         scrollbar: true,
         minTime: '07:00',
         maxTime: '18:00',
@@ -103,6 +104,7 @@ function dureereservation() {
 jQuery(document).ready(function() {
     // This button will increment the value
     $('.qtyplus').click(function(e) {
+        document.getElementById('Plan').style.display = "none";
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
@@ -122,6 +124,7 @@ jQuery(document).ready(function() {
     });
     // This button will decrement the value till 1
     $(".qtyminus").click(function(e) {
+        document.getElementById('Plan').style.display = "none";
         // Stop acting like a button
         e.preventDefault();
         // Get the field name

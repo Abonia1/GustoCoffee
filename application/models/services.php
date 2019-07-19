@@ -41,4 +41,28 @@ class services extends CI_Model {
 
         return FALSE;
     }
+            // -----------------------------------------------------------------------
+
+        /**
+         * Rechercher un produit par son nom.
+         *
+         * @param   string   Nom du produit à rechercher
+         * @return  mixed    La liste des produits sinon FALSE
+         */
+        public function rechercher_service($name)
+        {
+            if ($name==null){
+                return false;
+            }
+            $this->db->select('service_type_id, service_nom, service_image, service_prix');
+            $this->db->from('services');
+            $this->db->like('service_nom',$name);
+            $query = $this->db->get();
+
+            if($query->num_rows() >= 1) {
+                return $query->result();
+            } else {
+                return false;
+            }
+        }
 }
