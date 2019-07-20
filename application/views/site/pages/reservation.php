@@ -190,6 +190,11 @@
         </div>
       </div>
 
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         checked>
+  <label for="scales" >Aimerait collaborer avec d'autres dans un espace de coworking</label>
+</div>
                 
                 <?= form_input(array('name' => 'tablenumber','id'=>"tablenumber")) ?>
 
