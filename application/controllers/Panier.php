@@ -40,9 +40,6 @@ class Panier extends CI_Controller {
 			//$this->commande_model->ajouter_produit_commande($articles); // On ajoute les produits
 			// Show submitted data on view page again.
 
-			if (isset($_POST['mycheckbox'])) {
-				echo "checked!";
-			}
 		$this->load->view('site/template/header');
 		$this->load->view('site/panier/paiement', $data);
 		$this->load->view('site/template/footer');

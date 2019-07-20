@@ -93,7 +93,7 @@
                             </div>
                                 </div>
                             <div class="row">
-                    	<div class="form-group col-md-6">
+                    	<div class="form-group col-md-4">
                     		<?= form_label('Statut *', 'statut', array('class' => 'form-control-label')); ?>
                             <div class="">
                             	<?= form_dropdown('statut', array('0' => 'Annulée', '1' => 'Valide'), set_value('statut'), array('id' =>'statut', 'class' =>'form-control')); ?>
@@ -101,11 +101,18 @@
                             </div>
                     	</div>
 
-                    	<div class="form-group col-md-6">
+                    	<div class="form-group col-md-4">
                     		<?= form_label('Statut Client *', 'valide', array('class' => 'form-control-label')); ?>
                             <div class="">
                             	<?= form_dropdown('valide', array('0' => 'Out', '1' => 'In'), set_value('valide'), array('id' =>'valide', 'class' =>'form-control')); ?>
                                 <?= form_error('valide', '<small><span class="help-block text-danger">', '</span></small>'); ?>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                    		<?= form_label('Statut Collaboration *', 'colab', array('class' => 'form-control-label')); ?>
+                            <div class="">
+                            	<?= form_dropdown('colab', array('0' => 'NON', '1' => 'OUI'), set_value('colab'), array('id' =>'colab', 'class' =>'form-control')); ?>
+                                <?= form_error('colab', '<small><span class="help-block text-danger">', '</span></small>'); ?>
                             </div>
                     	</div>
                     </div>

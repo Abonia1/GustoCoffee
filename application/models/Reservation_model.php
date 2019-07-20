@@ -20,6 +20,7 @@ class Reservation_model extends CI_Model {
         $this->db->select('reservation.*,  c1.prenom AS prenom, c1.nom AS nom');
         $this->db->from('reservation');
         $this->db->join('client AS c1', 'c1.id = reservation.c_id', 'left');
+        $this->db->order_by("reservation_id", "asc");
         $query = $this->db->get();
 
         if( $query->num_rows() >= 1 )

@@ -31,6 +31,7 @@
 						<th class="text-center">Numéro de table</th>
 						<th class="text-center">Statut</th>
 						<th class="text-center">Client Statut</th>
+						<th class="text-center">Collaboration</th>
 						<th class="text-center">Paiement</th>
 						<th class="text-center">Action</th>
                     </tr>
@@ -83,6 +84,24 @@
 
                             	       case 1:
                             	           echo '<span class="badge badge-pill badge-success">In</span>';
+										   break;
+										
+										// case 2:
+										// echo '<span class="badge badge-pill badge-danger">Terminée</span>';
+										// break;
+									 }
+								?>
+								</td>
+								<td class="text-center align-middle">
+                            	<?php
+                            	   switch($val->colab)
+                            	   {
+							   			case 0:
+                            	           echo '<span class="badge badge-pill badge-danger">NON</span>';
+                            	           break;
+
+                            	       case 1:
+                            	           echo '<span class="badge badge-pill badge-success">OUI</span>';
 										   break;
 										
 										// case 2:

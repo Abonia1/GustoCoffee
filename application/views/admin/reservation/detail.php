@@ -65,7 +65,7 @@
                             	           echo '<span class="badge badge-pill badge-success">Confirmed</span>';
                             	           break;
                             	   }
-                            	?>
+                            	?><br>
 							Client Statut:
                             	<?php
                             	   switch($reservation->c_status)
@@ -82,7 +82,21 @@
 										echo '<span class="badge badge-pill badge-danger">Terminée</span>';
 										break;
 									 }
+								?><br>
+								Collaboration Statut:
+                            	<?php
+                            	   switch($reservation->colab)
+                            	   {
+							   			case 0:
+                            	           echo '<span class="badge badge-pill badge-danger">NON</span>';
+                            	           break;
+
+                            	       case 1:
+                            	           echo '<span class="badge badge-pill badge-success">OUI</span>';
+										   break;
+									 }
 								?>
+
 
         					
                         	<br><br>
