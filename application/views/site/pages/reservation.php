@@ -190,12 +190,15 @@
         </div>
       </div>
 
-<div>
-  <input type="checkbox" id="scales" name="scales"
+<!-- <div>
+  <input type="checkbox" id="colab" name="colab"
          checked>
-  <label for="scales" >Aimerait collaborer avec d'autres dans un espace de coworking</label>
-</div>
-                
+  <label for="colab" >Aimerait collaborer avec d'autres dans un espace de coworking</label>
+</div> --> 
+<div class="col-xl-12">
+<?= form_input(array('name' => 'colab','id' => 'colab', 'type'=>'checkbox')); ?>                
+<label>Aimerait collaborer avec d'autres dans un espace de coworking</label> 
+</div>           
                 <?= form_input(array('name' => 'tablenumber','id'=>"tablenumber")) ?>
 
         

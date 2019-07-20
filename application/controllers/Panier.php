@@ -34,14 +34,15 @@ class Panier extends CI_Controller {
                 'duree' => $this->input->post('Duree'),
 				'quantity' => $this->input->post('quantity'),
 				'tablenumber' => $this->input->post('tablenumber'),
-
 			);
 			 //$reservation = $this->reservation_model->ajouter($data); // ajout de la commande on recup l'id
 
 			//$this->commande_model->ajouter_produit_commande($articles); // On ajoute les produits
 			// Show submitted data on view page again.
 
-
+			if (isset($_POST['mycheckbox'])) {
+				echo "checked!";
+			}
 		$this->load->view('site/template/header');
 		$this->load->view('site/panier/paiement', $data);
 		$this->load->view('site/template/footer');
@@ -96,9 +97,9 @@ class Panier extends CI_Controller {
             'duree' => $this->input->post('Duree'),
 			'quantity' => $this->input->post('quantity'),
 			'tbnumber' => $this->input->post('tablenumber'),
-			'payment' => $this->input->post('total')
-	
-		);
+			'payment' => $this->input->post('total'),
+			'colab'=> $this->input->post('colab'),
+			);
 		$this->load->model('reservation_model');
 		$reservation = $this->reservation_model->ajouter($data); 
 
