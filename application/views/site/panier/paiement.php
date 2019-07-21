@@ -24,7 +24,7 @@
             </thead>
 
             <tbody>
-            <?= form_open( 'panier/reservationsuccess' , array('autocomplete' => 'off')); ?>
+            <?= form_open( 'panier/reservationsuccess' , array('autocomplete' => 'off','id'=>'myForm')); ?>
                 <?php if(isset($date) && isset($time) && isset($quantity) ) : ?>
                 
                     
@@ -48,9 +48,10 @@
                             <td>
                             <?= form_input(array('name' => 'total','id'=>"tablenumber",'value' => $duree*$quantity*2.5)) ?><?= $duree*$quantity*2.5; ?>€
                             </td>
+                            <input type="hidden" name="amount" value="<?php echo $duree*$quantity*2.5; ?>">
                             <?php if (isset($_POST['colab'])) :?>
                             <td style="display:none;">
-                            <?= form_input(array('name' => 'colab','id'=>"tablenumber",'value' => '1'))?><?= 1 ?>
+                            <?= form_input(array('name' => 'colab','id'=>"colab",'value' => '1'))?><?= 1 ?>
                             </td>
                             <?php endif; ?>
                         </tr>
@@ -79,9 +80,10 @@
     <div id="paypal-button-container"></div>
 
 <!-- Include the PayPal JavaScript SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR"></script>
 
 <script>
+   // var price = document.getElementById('price').value;
     // Render the PayPal button into #paypal-button-container
     paypal.Buttons({
 
@@ -90,6 +92,7 @@
             return actions.order.create({
                 purchase_units: [{
                     amount: {
+                        currency_code: 'EUR',
                         value: '0.01'
                     }
                 }]
@@ -100,8 +103,9 @@
         onApprove: function(data, actions) {
             return actions.order.capture().then(function(details) {
                 // Show a success message to the buyer
-                alert('Transaction completed by ' + details.payer.name.given_name + '!' );
-                window.location.href = "<?= site_url('site/reservationsuccess'); ?>";
+                //alert('Transaction completed by ' + details.payer.name.given_name + '!' );
+                //window.location.href = "<?= site_url('panier/reservationsuccess'); ?>";
+                $("#myForm").submit(); 
             });
         }
 
@@ -112,7 +116,7 @@
 
         </fieldset>
 
-        <a href="<?= site_url('/reservations'); ?>" class="contact-button">Retour</a> - <input type="submit"  value="Valider votre commande" class="contact-button">
+        <a href="<?= site_url('/reservations'); ?>" class="contact-button">Retour</a> - <input type="submit"  value="Valider votre commande" style="display:none" class="contact-button">
         <?= form_close( '' ); ?>
 
 

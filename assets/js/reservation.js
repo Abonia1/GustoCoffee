@@ -82,50 +82,51 @@ $(document).ready(function() {
     // });
 });
 
-    jQuery(document).ready(function() {
-        $( "#durationpicker" ).focusin(function() {
-            var $el = $("#durationpicker");
-            var timeheader = document.getElementById('timepicker').value;
-            var t1 = timeheader.split(':');
-            var durationheader = 19 - t1[0];
-            $el.empty();
-            var i = 0;
-            while(i < durationheader) {
-                i = i + 1;
-                $el.append($("<option></option>").attr("value", i).text(i+"h"));
-            }
-        });
-        $( "#datepicker" ).focusin(function() {
-            $( "#Plan" ).css("display","none");
-        });
-        $( "#timepicker" ).focusin(function() {
-            $( "#Plan" ).css("display","none");
-        });
-        $( "#durationpicker" ).focusin(function() {
-            $( "#Plan" ).css("display","none");
-        });
-        $('.qtyplus').focusin(function() {
-            $( "#Plan" ).css("display","none");
-        });
-        $(".qtyminus").focusin(function() {
-            $( "#Plan" ).css("display","none");
-        });
+jQuery(document).ready(function() {
+    $("#durationpicker").focusin(function() {
+        var $el = $("#durationpicker");
+        var timeheader = document.getElementById('timepicker').value;
+        var t1 = timeheader.split(':');
+        var durationheader = 19 - t1[0];
+        $el.empty();
+        var i = 0;
+        while (i < durationheader) {
+            i = i + 1;
+            $el.append($("<option></option>").attr("value", i).text(i + "h"));
+        }
     });
-    function changeheure() {
-        $('#durationpicker').timepicker('destroy');
-        $("#durationpicker").focusin(function() {
-            var $el = $("#durationpicker");
-            var timeheader = document.getElementById('timepicker').value;
-            var t1 = timeheader.split(':');
-            var durationheader = 19 - t1[0];
-            $el.empty();
-            var i = 0;
-            while (i < durationheader) {
-                i = i + 1;
-                $el.append($("<option></option>").attr("value", i).text(i + "h"));
-            }
-        });
-    };
+    $("#datepicker").focusin(function() {
+        $("#Plan").css("display", "none");
+    });
+    $("#timepicker").focusin(function() {
+        $("#Plan").css("display", "none");
+    });
+    $("#durationpicker").focusin(function() {
+        $("#Plan").css("display", "none");
+    });
+    $('.qtyplus').focusin(function() {
+        $("#Plan").css("display", "none");
+    });
+    $(".qtyminus").focusin(function() {
+        $("#Plan").css("display", "none");
+    });
+});
+
+function changeheure() {
+    $('#durationpicker').timepicker('destroy');
+    $("#durationpicker").focusin(function() {
+        var $el = $("#durationpicker");
+        var timeheader = document.getElementById('timepicker').value;
+        var t1 = timeheader.split(':');
+        var durationheader = 19 - t1[0];
+        $el.empty();
+        var i = 0;
+        while (i < durationheader) {
+            i = i + 1;
+            $el.append($("<option></option>").attr("value", i).text(i + "h"));
+        }
+    });
+};
 
 function changeheure() {
     $('#durationpicker').timepicker('destroy');
@@ -133,9 +134,10 @@ function changeheure() {
     $el.empty();
 }
 
-$('#datepicker,#timepicker,#durationpicker').bind('input', function() {
-    document.getElementById('Plan').style.display = "none";
-    // get the current value of the input field.
+$('#datepicker,#timepicker,#durationpicker').on('input', function() {
+    if (this.value != this.defaultValue) {
+        document.getElementById('Plan').style.display = "none";
+    }
 });
 
 
@@ -198,14 +200,13 @@ $("#checkbutton").click(function() {
     document.getElementById('timeheader').innerHTML = timeheader;
     var dureeheader = document.getElementById('durationpicker').value;
     document.getElementById('dureeheader').innerHTML = dureeheader;
-    
-    if((timeheader == '07:00' || timeheader == '16:00') && dureeheader >= 3) {
-        $(".message").append( "<p class='reduction'>Une réduction d'une heure vous est offerte pour la reservation d'une durée de 3h a compter de 7h et 16h, heures creuses</p>" );
+
+    if ((timeheader == '07:00' || timeheader == '16:00') && dureeheader >= 3) {
+        $(".message").append("<p class='reduction'>Une réduction d'une heure vous est offerte pour la reservation d'une durée de 3h a compter de 7h et 16h, heures creuses</p>");
+    } else {
+        $(".reduction").css("display", "none");
     }
-    else {
-        $( ".reduction" ).css("display","none");
-    }
-    
+
     if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || $("#durationpicker").val().length == 0 || quantity == 0)
     //{
     // if ($("#datepicker").val().length == 0) {
@@ -412,6 +413,7 @@ function changecolor1() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
 
     }
 }
@@ -424,6 +426,7 @@ function changecolor2() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -435,6 +438,7 @@ function changecolor3() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -446,6 +450,7 @@ function changecolor4() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -457,6 +462,7 @@ function changecolor5() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -468,6 +474,7 @@ function changecolor6() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -479,6 +486,7 @@ function changecolor7() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -490,6 +498,7 @@ function changecolor8() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -501,6 +510,7 @@ function changecolor9() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -512,6 +522,7 @@ function changecolor10() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -523,6 +534,7 @@ function changecolor11() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -534,6 +546,7 @@ function changecolor12() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -545,6 +558,7 @@ function changecolor13() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -556,6 +570,7 @@ function changecolor14() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -567,6 +582,7 @@ function changecolor15() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -578,6 +594,7 @@ function changecolor16() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -589,6 +606,7 @@ function changecolor17() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -600,6 +618,7 @@ function changecolor18() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -611,6 +630,7 @@ function changecolor19() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -622,6 +642,7 @@ function changecolor20() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -633,6 +654,7 @@ function changecolor21() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 
@@ -644,6 +666,7 @@ function changecolor22() {
         document.getElementById("selectionTitle").innerHTML = "Vous avez sélectionné la table " + title;
         $(document.getElementById("selectionTitle")).css("display", "block");
         document.getElementById("tablenumber").value = title;
+        document.getElementById('continue').style.display = "block";
     }
 }
 

@@ -189,12 +189,8 @@
           
         </div>
       </div>
-
-<!-- <div>
-  <input type="checkbox" id="colab" name="colab"
-         checked>
-  <label for="colab" >Aimerait collaborer avec d'autres dans un espace de coworking</label>
-</div> --> 
+      
+<div class='continue' id='continue' style="display:none">
 <div class="col-xl-12">
 <?= form_input(array('name' => 'colab','id' => 'colab', 'type'=>'checkbox')); ?>                
 <label>Aimerait collaborer avec d'autres dans un espace de coworking</label> 
@@ -206,7 +202,8 @@
 'value'=> 'Submit',
 'class'=> 'submit','class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
        <?= form_close(); ?>
-       </div>
+       </div>  
+</div>
     </section>
 </div>
 <script type="text/javascript" src="assets/js/reservation.js"></script>
