@@ -49,8 +49,14 @@
                             </td>
                             <input type="hidden" name="amount" value="<?php echo $duree*$quantity*2.5; ?>">
                             <?php if (isset($_POST['colab'])) :?>
-                            <td style="display:none;">
+                            <td style="display:none;"> 
                             <?= form_input(array('name' => 'colab','id'=>"colab",'value' => '1'))?><?= 1 ?>
+                            </td>
+                            
+                            <?php else :?>
+                            <td style="display:none;">
+                            
+                            <?= form_input(array('name' => 'colab','id'=>"colab",'value' => '0'))?><?= 0 ?>
                             </td>
                             <?php endif; ?>
                         </tr>
@@ -82,7 +88,7 @@
 <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR"></script>
 
 <script>
-   var price = document.getElementById('price').value;
+   //var price = document.getElementById('price').value;
     // Render the PayPal button into #paypal-button-container
     paypal.Buttons({
 
@@ -104,7 +110,33 @@
                 // Show a success message to the buyer
                 //alert('Transaction completed by ' + details.payer.name.given_name + '!' );
                 //window.location.href = "<?= site_url('panier/reservationsuccess'); ?>";
-                $("#myForm").submit(); 
+                $("#myForm").submit();
+    //             $("form").submit(function() {
+	// 	// submit more than once return false
+	// 	$(this).submit(function() {
+	// 		return false;
+	// 	});
+	// 	// submit once return true
+	// 	return true;
+	// }); 
+    // jQuery plugin to prevent double submission of forms
+jQuery.fn.preventDoubleSubmission = function() {
+  $(this).on('submit',function(e){
+    var $form = $(this);
+
+    if ($form.data('submitted') === true) {
+      // Previously submitted - don't submit again
+      e.preventDefault();
+    } else {
+      // Mark it so that the next submit can be ignored
+      $form.data('submitted', true);
+    }
+  });
+
+  // Keep chainability
+  return this;
+};
+$('#myForm').preventDoubleSubmission();
             });
         }
 

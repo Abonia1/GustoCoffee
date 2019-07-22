@@ -10,10 +10,11 @@ $config['stock'] = array(
     array(
      'field'     =>          'product',
      'label'     =>          'Nom de produit',
-     'rules'     =>          'required|trim',
+     'rules'     =>          'required|trim|strip_tags',
        'errors'    => array(
             'required'      => 'Le champ <strong>{field}</strong> est obligatoire',
-            'max_length'    => 'Le champ <strong>{field}</strong> ne doit pas dépasser {param} caractères'
+            'max_length'    => 'Le champ <strong>{field}</strong> ne doit pas dépasser {param} caractères',
+
       )
   ),
    
@@ -24,15 +25,17 @@ $config['stock'] = array(
 	   'rules'     =>          'required|trim',
        'errors'	   =>	array(
             'required'      => 'Le champ <strong>{field}</strong> est obligatoire',
-            'integer'     => 'Le champ <strong>{field}</strong> doit contenir un nombre entier'
+            'integer'     => 'Le champ <strong>{field}</strong> doit contenir un nombre entier',
+            
       )
 	),
     array(
      'field'     =>          'price',
      'label'     =>          'prix',
-     'rules'     =>          'required|trim',
+     'rules'     =>          'required|trim|strip_tags',
        'errors'    => array(
-            'required'      => 'Le champ <strong>{field}</strong> est obligatoire'
+            'required'      => 'Le champ <strong>{field}</strong> est obligatoire',
+
     
       )
   ),
@@ -94,10 +97,12 @@ $config['stock'] = array(
     array(
      'field'     =>          'product',
      'label'     =>          'Nom de produit',
-     'rules'     =>          'required|trim',
+     'rules'     =>          'required|trim|strip_tags',
        'errors'    => array(
             'required'      => 'Le champ <strong>{field}</strong> est obligatoire',
-            'max_length'    => 'Le champ <strong>{field}</strong> ne doit pas dépasser {param} caractères'
+            'max_length'    => 'Le champ <strong>{field}</strong> ne doit pas dépasser {param} caractères',
+
+            
       )
   ),
    
@@ -114,9 +119,10 @@ $config['stock'] = array(
     array(
      'field'     =>          'price',
      'label'     =>          'prix',
-     'rules'     =>          'required|trim',
+     'rules'     =>          'required|trim|strip_tags',
        'errors'    => array(
-            'required'      => 'Le champ <strong>{field}</strong> est obligatoire'
+            'required'      => 'Le champ <strong>{field}</strong> est obligatoire',
+
     
       )
   ),
