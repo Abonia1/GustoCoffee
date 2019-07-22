@@ -202,9 +202,10 @@ $("#checkbutton").click(function() {
     document.getElementById('dureeheader').innerHTML = dureeheader;
 
     if ((timeheader == '07:00' || timeheader == '16:00') && dureeheader >= 3) {
-        $(".message").append("<p class='reduction'>Une réduction d'une heure vous est offerte pour la reservation d'une durée de 3h a compter de 7h et 16h, heures creuses</p>");
+        $('#reduct').val(2.5);
     } else {
-        $(".reduction").css("display", "none");
+        $(".reduc").css("display", "none");
+        $('#reduct').val(0);
     }
 
     if ($("#datepicker").val().length == 0 || $("#timepicker").val().length == 0 || $("#durationpicker").val().length == 0 || quantity == 0)

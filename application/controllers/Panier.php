@@ -33,6 +33,7 @@ class Panier extends CI_Controller {
 				'time' => $this->input->post('Time'),
                 'duree' => $this->input->post('Duree'),
 				'quantity' => $this->input->post('quantity'),
+                'reduc' => $this->input->post('reduc'),
 				'tablenumber' => $this->input->post('tablenumber'),
 			);
 			 //$reservation = $this->reservation_model->ajouter($data); // ajout de la commande on recup l'id

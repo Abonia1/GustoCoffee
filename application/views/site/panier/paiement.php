@@ -27,7 +27,6 @@
             <?= form_open( 'panier/reservationsuccess' , array('autocomplete' => 'off','id'=>'myForm')); ?>
                 <?php if(isset($date) && isset($time) && isset($quantity) ) : ?>
                 
-                    
                         <tr>
                             <td>
                             <?= form_input(array('name' => 'Date','id'=>"tablenumber",'value' =>$date )) ?><?= $date; ?>
@@ -46,7 +45,7 @@
                             <?= form_input(array('name' => 'tablenumber','id'=>"tablenumber",'value' =>$tablenumber )) ?><?= $tablenumber; ?>
                             </td>
                             <td>
-                            <?= form_input(array('name' => 'total','id'=>"tablenumber",'value' => $duree*$quantity*2.5)) ?><?= $duree*$quantity*2.5; ?>€
+                            <?= form_input(array('name' => 'total','id'=>"tablenumber",'value' => (($duree*$quantity*2.5)-($quantity*$reduc)))) ?><?= (($duree*$quantity*2.5)-($quantity*$reduc)) ?>€
                             </td>
                             <input type="hidden" name="amount" value="<?php echo $duree*$quantity*2.5; ?>">
                             <?php if (isset($_POST['colab'])) :?>

@@ -34,7 +34,7 @@
 
             <div class="col-xs-12 col-sm-3 personnes">
                 <div>
-                    <label>Nombre de personnes *</label>    
+                    <label>Personnes *</label>    
                 </div>
                 <input type='button' value='+' field='quantity'
                     class='col-xs-12 col-sm-12 col-md-12 col-lg-12 qtyplus' />
@@ -59,6 +59,8 @@
 							<p class="header">Tables disponibles pour <span id='personheader'></span> personne(s) le <span id='dateheader'></span> à <span id='timeheader'></span> pour une durée de <span id="dureeheader"></span>h.</p><!-- /.text-center pjRbSectionTitle pjRbSectionTitleSmall -->
 
 							<p class="message">Cliquez sur une table disponible pour la réserver</p>
+							<div class='reduc'><p class='reduction'>Une réduction d'une heure vous est offerte pour la reservation d'une durée de 3h a compter de 7h et de 16h, heures creuses</p>
+							<?= form_input(array('name' => 'reduc', 'id' => 'reduct', 'autocomplete' => 'off', 'style' => 'display: none;', 'value' => 0)); ?></div>
 						</header>
             
             <div class="row">
