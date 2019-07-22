@@ -64,12 +64,12 @@
 					<div class="col-sm-3 col-xs-12">
 					<!-- <?= $attributes = array('id' => 'my_form');?> -->
 					   <?= form_open_multipart("serviceresult",array('id' => 'my_form')); ?>
-					   <div class="input-group mb-4 wrapper">	
-
-						   <?= form_input(array('name' => 'recherche', 'placeholder' => '&#xF002; Rechercher un service', 'id' => 'recherche')); ?>
+					   <div class="input-group mb-4 ">	
+					   <?= form_input(array('name' => 'recherche', 'placeholder' => ' Rechercher un service', 'id' => 'recherche')); ?>
+						   <!-- <?= form_input(array('name' => 'recherche', 'placeholder' => '&#xF002; Rechercher un service', 'id' => 'recherche')); ?> -->
 						   <a onclick="document.getElementById('my_form').submit();" class="icon-block">  
-						   <!-- <span class="input-group-addon"><i aria-hidden="true" class="fa fa-search"></i>
-							</span> -->
+						   <span class="input-group-addon"><i aria-hidden="true" class="fa fa-search"></i>
+							</span>
 							</a>
 							<?= form_close(); ?>
 					   </div>
