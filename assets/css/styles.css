@@ -151,7 +151,16 @@ table {
 
 
 /* This is for the placeholder */
+.produit-titre h2 {
+    text-align: center;
+}
 
+h2 {
+    font-size: 24px !important;
+}
+h3 {
+    font-size: 20px !important;
+}
 .input-group-addon {
     font-size: 0.875rem;
     font-weight: normal;
@@ -1658,4 +1667,14 @@ table.commande {
     padding: 5px 10px;
     border: 1px solid #33903A;
     text-transform: uppercase;
+}
+.rechercheservice input {
+    width: 86%;
+    float: left;
+}
+.rechercheservice .validrecherche {
+    width: 13%;
+    float: left;
+    margin-top: 21px;
+    margin-left: 3px;
 }

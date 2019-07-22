@@ -2,9 +2,7 @@
     <section>
         <h1>Reservez votre place en avance</h1>
 
-        <p>* Attention vous devez inscrire dans notre site avant de finaliser votre Reservation
-  
-        et si vous souhaitez réserver des places pour plus de 13 personnes, contactez-nous à partir <a href="contact">d'ici</a>
+        <p>* Attention vous devez être inscrit sur notre site avant de finaliser votre Reservation et si vous souhaitez réserver des places pour plus de 13 personnes, contactez-nous à partir <a href="contact">d'ici</a>
         </p><br>
     </section>
 

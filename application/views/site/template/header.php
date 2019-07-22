@@ -61,21 +61,21 @@
 						</a>
 	                </div>
 
-					<div class="col-sm-3 col-xs-12">
+					<div class="col-sm-4 col-xs-12 rechercheservice">
 					<!-- <?= $attributes = array('id' => 'my_form');?> -->
 					   <?= form_open_multipart("serviceresult",array('id' => 'my_form')); ?>
 					   <div class="input-group mb-4 ">	
 					   <?= form_input(array('name' => 'recherche', 'placeholder' => ' Rechercher un service', 'id' => 'recherche')); ?>
 						   <!-- <?= form_input(array('name' => 'recherche', 'placeholder' => '&#xF002; Rechercher un service', 'id' => 'recherche')); ?> -->
-						   <a onclick="document.getElementById('my_form').submit();" class="icon-block">  
+						   <div class="validrecherche"><a onclick="document.getElementById('my_form').submit();" class="icon-block">
 						   <span class="input-group-addon"><i aria-hidden="true" class="fa fa-search"></i>
 							</span>
-							</a>
+							</a></div>
 							<?= form_close(); ?>
 					   </div>
 				   </div>
 
-					<div class="col-xs-12 col-sm-6 menu-profil text-right">
+					<div class="col-xs-12 col-sm-5 menu-profil text-right">
 						<ul>
 							<li>
 								<?php if( isset($this->session->userdata['client']) && !empty($this->session->userdata['client']->prenom) ) : ?>
@@ -115,7 +115,7 @@
 					</div>
 	            </div>
 				<div id="panierBox" class="col-lg-3 col-md-3 col-sm-3 col-xs-4 panier panierEtat">
-					<h2>VOTRE RESERVATION</h2>
+					<p>VOTRE RESERVATION</p>
 					<div id="panier">
 					</div>
 					<hr>
@@ -150,7 +150,7 @@
 
 			<section class="col-xs-offset-8 col-xs-4 col-sm-offset-9 col-sm-3 col-md-offset-10 col-md-2 col-lg-offset-10 col-lg-2 style7">
 			    <article>
-			        <h1>Un renseignement ?</h1>
+			        <p>Un renseignement ?</p>
 			        <button type="button" name="button">CONTACTEZ-NOUS</button>
 
 			        <address class="row">

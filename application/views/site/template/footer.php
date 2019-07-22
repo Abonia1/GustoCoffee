@@ -5,8 +5,8 @@
         <div class="container">
             <div class="livraison-container">
                 <article class="col-xs-12 col-sm-6">
-                    <h1>Reserver Vos Places en avance</h1>
-                    <p>Reserver en avance et profiter nos offres</p>
+                    <h2 style='color: white !important;'>Reserver Vos Places en avance</h2>
+                    <p>Reserver en avance et profiter de réduction</p>
                 </article>
 
                 <aside class="col-xs-12 col-sm-6 livraison-icone">
@@ -22,20 +22,20 @@
 
     <section class="container">
         <adress class="col-xs-12 col-sm-4 coordonnees">
-            <h2>Gustocoffee</h2>
+            <h3>Gustocoffee</h3>
             <p>1 rue de Condorcet<br>75010, Paris</p>
         </adress>
 
         <div class="col-xs-12 col-sm-8 col-md-4 support">
-            <h2>Besoin d'aide ?</h2>
+            <h3>Besoin d'aide ?</h3>
             <p>Nous répondons à vos questions du lundi au vendredi de 8h à 20h</p>
 
-            <h2>Pour toute question</h2>
+            <h3>Pour toute question</h3>
             <p>01 50 51 52 53<br><a href="mailto:contact@Gustocoffee.fr">contact@Gustocoffee.fr</a></p>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-4 social">
-            <h2>Rejoignez la communauté Gustocoffee</h2>
+            <h3>Rejoignez la communauté Gustocoffee</h3>
             <a href="http://www.facebook.com">
                 <img src="<?= site_url('assets/images/facebook.svg'); ?>" alt="Facebook" width="10%">
             </a>
