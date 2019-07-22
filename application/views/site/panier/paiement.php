@@ -82,7 +82,7 @@
 <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR"></script>
 
 <script>
-   // var price = document.getElementById('price').value;
+   var price = document.getElementById('price').value;
     // Render the PayPal button into #paypal-button-container
     paypal.Buttons({
 
