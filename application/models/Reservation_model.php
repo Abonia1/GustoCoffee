@@ -120,11 +120,11 @@ class Reservation_model extends CI_Model {
     }
 
 
-    public function compare($quantity,$date,$time) {
+    public function compare($quantity,$date,$time,$duree) {
 
         $this->db->select('tbnumber');
         $this->db->from('reservation');
-        $this->db->where(array('quantity'=>$quantity, 'date'=>$date,'time'=>$time));
+        $this->db->where(array('quantity'=>$quantity, 'date'=>$date,'time'=>$time,'duree'=>$duree));
         //$recordSet = $this->db->get();
         //$data=$recordSet->result() ;
     
