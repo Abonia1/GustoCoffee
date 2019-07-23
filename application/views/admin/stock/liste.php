@@ -29,7 +29,7 @@
                         <tr>
                              <td class="text-center align-middle"><?= $val->service_id; ?></td>
                             <td class="text-center align-middle"><?= $val->service_nom; ?></td>
-                            <td class="text-center">
+                            <td class="text-center align-middle">
                             <?php
                                 		               switch($val->service_type_id)
                                     	   	           {

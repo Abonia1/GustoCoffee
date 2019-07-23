@@ -62,16 +62,9 @@ class Auth extends CI_Controller {
 		//si l'utilisateur est connecté on le redirige vers la page d'accueil qui lui est propre (page dedier -> client; page secteur spécifique -> prospret;)
 	    if( $this->authentification->est_connecte('client') )
       {
-        redirect('/');
+        redirect('');
         exit;
-      }
-
-      if( $this->customer->ajouter() )
-	    {
-        redirect('/');
-        exit;
-	    }
-
+	  }
         $this->load->helper('form');
         $pays = $this->client_model->liste_pays();
         $email = $this->input->post('identifiant');
@@ -79,6 +72,29 @@ class Auth extends CI_Controller {
         $this->load->view('site/template/header');
         $this->load->view('site/auth/inscription', array('pays' => $pays, 'email' => $email));
         $this->load->view('site/template/footer');
+
+	}
+	public function inscriptionsuccess()
+	{
+		//si l'utilisateur est connecté on le redirige vers la page d'accueil qui lui est propre (page dedier -> client; page secteur spécifique -> prospret;)
+	    if( $this->authentification->est_connecte('client') )
+      {
+        redirect('/');
+        exit;
+	  }
+	  if( $this->customer->ajouter() )
+	  {
+	  redirect('connexion');
+	  exit;
+	  }
+        $this->load->helper('form');
+        $pays = $this->client_model->liste_pays();
+        $email = $this->input->post('identifiant');
+
+        $this->load->view('site/template/header');
+        $this->load->view('site/auth/inscription', array('pays' => $pays, 'email' => $email));
+        $this->load->view('site/template/footer');
+	
 
 	}
 

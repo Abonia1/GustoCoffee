@@ -50,7 +50,7 @@
 
                             <td class="text-center"><?= $val->mobile; ?></td>
 
-                            <td class="text-center">
+                            <td class="text-center align-middle">
                             	<?php if( $val->statut != 0 ) : ?>
                             		<span class="badge badge-pill badge-success">Actif</span>
                         		<?php else : ?>
