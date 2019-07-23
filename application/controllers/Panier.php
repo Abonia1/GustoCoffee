@@ -41,7 +41,6 @@ class Panier extends CI_Controller {
                 }
                 
             }
-            var_dump($duree2);
 			// on récupère les informations de la commande
 			$data = array(
 				'date' => $this->input->post('Date'),

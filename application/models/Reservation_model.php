@@ -122,12 +122,32 @@ class Reservation_model extends CI_Model {
 
     public function compare($quantity,$date,$time,$duree) {
 
+        $heure = explode(":", $time);
         $this->db->select('tbnumber');
         $this->db->from('reservation');
-        $this->db->where(array('quantity'=>$quantity, 'date'=>$date,'time'=>$time,'duree'=>$duree));
+        $where = "date='".$date."' AND (time='".$time."' OR";
+        for ($i=0; $i < $duree; $i++){
+            $horaire = $heure[0]+$i;
+            if($horaire < 10) {
+                $duree2 = '0'.$horaire.'';
+            }
+            else {
+                $duree2 = ''.$horaire.'';
+            }
+            if ($i == 0) {
+                    $where .= " duration LIKE '%".$duree2."%'";
+                }
+            else {
+                $where .= " OR duration LIKE '%".$duree2."%'";
+            }
+        }
+        $where .= ")";
+        //$where= "date='25/07/2019' AND time='07:00' AND duration LIKE '%07%' OR duration LIKE '%08%' OR duration LIKE '%09%'";
+        $this->db->where($where);
+        
         //$recordSet = $this->db->get();
         //$data=$recordSet->result() ;
-    
+        
         $groups = $this->db->get()->result_array();
         foreach ($groups as $row) {
             $value[] = $row;

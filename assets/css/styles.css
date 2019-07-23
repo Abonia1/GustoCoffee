@@ -1669,12 +1669,16 @@ table.commande {
     text-transform: uppercase;
 }
 .rechercheservice input {
-    width: 86%;
+    width: 77%;
     float: left;
 }
 .rechercheservice .validrecherche {
-    width: 13%;
+    width: 21%;
     float: left;
     margin-top: 21px;
     margin-left: 3px;
+}
+#selectionTitle {
+    font-size: 24px;
+    color: #33903A;
 }
