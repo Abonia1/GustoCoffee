@@ -216,11 +216,13 @@ $config = Array(
 			$quantity = (int) $this->input->post('quantity');
 			$date = (string) $this->input->post('dateheader');
 			$time = (string) $this->input->post('timeheader');
-
+            $duree = (string) $this->input->post('duree');
+            
 			$this->load->model('reservation_model');
 			//$reservation = $this->reservation_model->comparetest($id);
-			$reservation = $this->reservation_model->compare($quantity,$date,$time);
+			$reservation = $this->reservation_model->compare($quantity,$date,$time,$duree);
 			echo ($reservation);
+
 		// 	if (!empty($id)) {
 		// 		echo json_encode(array(
 		// 			"is_error" => false,

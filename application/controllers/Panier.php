@@ -26,12 +26,28 @@ class Panier extends CI_Controller {
 
 		// form_validation run
 		else
-		{
+		{   
+            $duree = $this->input->post('Duree');
+            $time = $this->input->post('Time');
+            $heure = explode(":", $time);
+            $duree2 = null;
+            for($i=0; $i < $duree; $i++) {
+                $horaire = $heure[0]+$i;
+                if($horaire < 10) {
+                    $duree2 .= '0'.$horaire.':00-';    
+                }
+                else {
+                    $duree2 .= $horaire.':00-';
+                }
+                
+            }
+            var_dump($duree2);
 			// on récupère les informations de la commande
 			$data = array(
 				'date' => $this->input->post('Date'),
 				'time' => $this->input->post('Time'),
-                'duree' => $this->input->post('Duree'),
+                'duree' => $duree,
+                'duration' => $duree2,
 				'quantity' => $this->input->post('quantity'),
                 'reduc' => $this->input->post('reduc'),
 				'tablenumber' => $this->input->post('tablenumber'),
@@ -93,6 +109,7 @@ class Panier extends CI_Controller {
 			'date' => $this->input->post('Date'),
 			'time' => $this->input->post('Time'),
             'duree' => $this->input->post('Duree'),
+            'duration' => $this->input->post('Duration'),
 			'quantity' => $this->input->post('quantity'),
 			'tbnumber' => $this->input->post('tablenumber'),
 			'payment' => $this->input->post('total'),

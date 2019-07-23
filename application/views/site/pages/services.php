@@ -9,7 +9,7 @@
                     <img src="<?= site_url('assets/images/services/services_type/'.$service_type->s_image); ?>" alt="<?= $service_type->s_nom; ?>" />
 
                     <div class="produit-nom">
-                        <h2><?= $service_type->s_nom; ?></h2>
+                        <h2 style="color: white !important;"><?= $service_type->s_nom; ?></h2>
                     </div>
                 </div>
 

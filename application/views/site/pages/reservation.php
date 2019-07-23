@@ -62,7 +62,7 @@
 						</header>
             
             <div class="row">
-        <h1 id="selectionTitle" style="text-align: center" name='tablenumber' ></h1>
+        <p id="selectionTitle" style="text-align: center" name='tablenumber' ></p>
         </div>
 
  

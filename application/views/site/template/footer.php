@@ -47,7 +47,7 @@
 
         <div class="col-xs-12 copyright">
             <p>
-                Copyright <?= date('Y'); ?> Gustocoffee - <a href="<?= site_url('mentions-legales'); ?>">Mentions légales</a>
+                Copyright <?= date('Y'); ?> DAAB - <a href="<?= site_url('mentions-legales'); ?>">Mentions légales</a>
             </p>
         </div>
     </section>

@@ -114,15 +114,6 @@
 						</ul>
 					</div>
 	            </div>
-				<div id="panierBox" class="col-lg-3 col-md-3 col-sm-3 col-xs-4 panier panierEtat">
-					<p>VOTRE RESERVATION</p>
-					<div id="panier">
-					</div>
-					<hr>
-					<div class="row">
-						<button type="button" name="button"><a href="<?= site_url('profil/commandes'); ?>">VOIR MON RESERVATION</a></button>
-					</div>
-				</div>
 				<div class="row">
 					<nav class="row">
 		                <ul class="col-xs-12">

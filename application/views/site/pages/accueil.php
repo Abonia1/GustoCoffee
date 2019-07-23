@@ -74,7 +74,7 @@
 <section class="container-fluid priorite">
     <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h2 style="color: white !important;">Enjoy your Time</h2>
+            <h2 style="color: white !important;">Profitez de votre temps</h2>
 
             <div class="ancre">
                 <hr>
@@ -133,7 +133,7 @@
                     <img src="<?= site_url('assets/images/produit/accueil/'.$produit->image); ?>" alt="<?= $produit->nom; ?>" />
 
                     <div class="produit-nom">
-                        <h3><?= $produit->nom; ?></h3>
+                        <h3 style="color: white !important; text-align: center;"><?= $produit->nom; ?></h3>
                     </div>
                 </div>
 

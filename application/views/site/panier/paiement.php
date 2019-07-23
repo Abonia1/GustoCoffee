@@ -16,6 +16,7 @@
                     <th>Date</th>
                     <th>Heure</th>
                     <th>Durée</th>
+                    <th style="display: none">Duration</th>
                     <th>Nombre de personnes</th>
                     <th>Numéro de table</th>
                     <th>Total</th>
@@ -27,6 +28,7 @@
             <?= form_open( 'panier/reservationsuccess' , array('autocomplete' => 'off','id'=>'myForm')); ?>
                 <?php if(isset($date) && isset($time) && isset($quantity) ) : ?>
                 
+                       
                         <tr>
                             <td>
                             <?= form_input(array('name' => 'Date','id'=>"tablenumber",'value' =>$date )) ?><?= $date; ?>
@@ -37,6 +39,9 @@
                             </td>
                             <td>
                             <?= form_input(array('name' => 'Duree','id'=>"tablenumber",'value' =>$duree )) ?><?= $duree; ?>h
+                            </td>
+                            <td style='display: none;'>
+                            <?= form_input(array('name' => 'Duration','id'=>"tablenumber",'value' =>$duration )) ?><?= $duration; ?>
                             </td>
                             <td>
                             <?= form_input(array('name' => 'quantity','id'=>"tablenumber",'value' => $quantity)) ?><?= $quantity; ?>
