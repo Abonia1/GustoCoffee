@@ -70,12 +70,12 @@ class Customer {
 
         if( $this->CI->form_validation->run() !== FALSE )
         {
-            if(!$this->CI->input->post('accept')){
-                echo "<script type='text/javascript'>window.alert('Veuillez lire et accepter nos termes et conditions.');</script>";
-                //$this->CI->session->keep_flashdata('message', 'Veuillez lire et accepter nos termes et conditions.');
+            // if(!$this->CI->input->post('accept')){
+            //     echo "<script type='text/javascript'>window.alert('Veuillez lire et accepter nos termes et conditions.');</script>";
+            //     //$this->CI->session->keep_flashdata('message', 'Veuillez lire et accepter nos termes et conditions.');
 
-                return FALSE;
-            }
+            //     return FALSE;
+            // }
         	foreach( $this->client[$this->target]['champs_client'] AS $key => $element )
         	{
         	    if( !$this->CI->input->post($element) )
