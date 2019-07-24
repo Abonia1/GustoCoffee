@@ -55,7 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 /* Authentification */
 $route['inscription'] = 'auth/inscription';
-$route['inscriptionsuccess'] = 'auth/inscriptionsuccess';
+$route['inscriptionform'] = 'auth/inscriptionform';
 $route['connexion'] = 'auth/connexion';
 $route['deconnexion'] = 'auth/deconnexion';
 $route['mot-passe-oublie'] = 'auth/mot_passe_oublie';

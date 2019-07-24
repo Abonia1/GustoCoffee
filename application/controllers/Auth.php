@@ -74,7 +74,7 @@ class Auth extends CI_Controller {
         $this->load->view('site/template/footer');
 
 	}
-	public function inscriptionsuccess()
+	public function inscriptionform()
 	{
 		//si l'utilisateur est connecté on le redirige vers la page d'accueil qui lui est propre (page dedier -> client; page secteur spécifique -> prospret;)
 	    if( $this->authentification->est_connecte('client') )
@@ -84,7 +84,7 @@ class Auth extends CI_Controller {
 	  }
 	  if( $this->customer->ajouter() )
 	  {
-	  redirect('connexion');
+	  redirect('connexion','refresh');
 	  exit;
 	  }
         $this->load->helper('form');

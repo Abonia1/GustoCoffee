@@ -4,7 +4,7 @@
     </section>
 
     <section class="col-xs-12 contact-form">
-        <?= form_open( 'inscriptionsuccess' ); ?>
+        <?= form_open( 'inscriptionform' ); ?>
 
         <?= validation_errors('<div class="row"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="alert alert-danger">', '</div></div></div>'); ?>
 
@@ -99,7 +99,13 @@
                <?= form_label('Confirmation mot de passe *', 'mot_de_passe_check'); ?>
                <?= form_input(array('type' => 'password', 'name' => 'mot_de_passe_check', 'id' => 'mot_de_passe_check', 'class' => (empty(form_error('mot_de_passe_check')) ? "" : "has-error") . " col-xs-12 col-sm-12 col-md-12 col-lg-12", 'value' => set_value('mot_de_passe_check'))); ?>
            </div>
-       </div>
+       </div><br>
+       <div class="col-xl-12">
+<?= form_input(array('name' => 'accept','id' => 'accept', 'type'=>'checkbox')); ?>                
+<label style='font-size:12px;'>J'ai lu et accepté la politique de confidentialité, les conditions d'utilisation et les directives de la communauté
+
+</label> 
+</div>   
 
 
        <?= form_submit('envoyer', 'Créer mon compte', array('class' => 'col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 contact-button')); ?>
