@@ -101,8 +101,8 @@
            </div>
        </div><br>
        <div class="col-xl-12">
-<?= form_input(array('name' => 'accept','id' => 'accept', 'type'=>'checkbox')); ?>                
-<label style='font-size:12px;'>J'ai lu et accepté la politique de confidentialité, les conditions d'utilisation et les directives de la communauté
+<!-- <?= form_input(array('name' => 'accept','id' => 'accept', 'type'=>'checkbox')); ?>                 -->
+<label style='font-size:12px;'>En vous inscrivant, vous acceptez la politique de confidentialité, les conditions d'utilisation et les directives de la communauté
 
 </label> 
 </div>   
